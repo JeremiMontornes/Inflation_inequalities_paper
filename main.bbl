@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{39}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -199,6 +199,11 @@
 \textsc{Martin, R.~S.} (2022): \enquote{Revisiting taste change in
   cost-of-living measurement,} \emph{Journal of Economic and Social
   Measurement}, 46, 109--147.
+
+\bibitem[\protect\citeauthoryear{Menyhert}{Menyhert}{2023}]{menyhert2023inflation}
+\textsc{Menyhert, B.} (2023): \enquote{Inflation and Its Diverse Social
+  Consequences Across the Euro Area,} \emph{Quarterly Report on the Euro Area},
+  22, 7--16.
 
 \bibitem[\protect\citeauthoryear{Pallotti, Paz-Pardo, Slacalek, Tristani, and
   Violante}{Pallotti et~al.}{2024}]{pallotti2024bears}

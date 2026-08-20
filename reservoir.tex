@@ -19,9 +19,52 @@
 \usepackage[section]{placeins}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
+A related strand of recent literature emphasizes the distinction between homothetic and
+non-homothetic preferences and the role of taste change in cost-of-living measurement
+\citep{redding2020measuring,martin2022revisiting}. In cost-of-living terms, proportional price
+changes leave relative prices unchanged and therefore do not create heterogeneous fixed-basket
+inflation rates in an AIDS system. When price changes differ across products, by contrast, household
+inflation can be written as the interaction between budget shares and item-level price changes.
+Non-homothetic preferences provide one reason why these budget shares vary systematically with
+living standards, while age, household composition, housing status, and residence area generate
+additional variation in observed baskets. This connects cost-of-living index theory to evidence on
+quality adjustment in household demand \citep{coxWohlgenant1986prices,deaton1988quality} and to the
+recent literature on unequal gains from product innovation and cheapflation
+\citep{jaravel2019unequal,chen2024cheapflation,sangani2026cheapflation}.
 
 
+We
+therefore do not interpret the ratio of a country's reported budget to its estimated change in the
+inflation gap as a measure of cost-effectiveness. Such a comparison would require a microsimulation
+that allocates fiscal costs and benefits across households and expresses both in euros.
+Table~\ref{tab:country-heterogeneity-cumulative-gap} reports the observed inflation outcomes.
+We replace the observed HICP of the affected COICOP components with the country-specific
+counterfactual described above and aggregate them using the same expenditure weights, annual
+chaining procedure, 2020 base year, and euro-area country weights as in the observed indices. The
+reported policy effects use the sign convention ``observed minus no-policy'': a negative value means
+that household price policies lowered average inflation or the Quintile 1--Quintile 5 inflation gap.
 
+For transparency, the generic calibration can be written as follows. Let $\bar R_k$ denote the
+audited aggregate-equivalent no-policy-to-observed price ratio for measure $k$, let $\mathcal{T}_k$
+denote its active months, and let $w_{k,t}$ denote the normalized monthly wedge implied by the
+available price information. We choose $\theta_k$ as the solution to
+\begin{equation}
+\exp\!\left\{\frac{1}{|\mathcal{T}_k|}
+\sum_{t\in\mathcal{T}_k}\log\!\left(1+\theta_k w_{k,t}\right)\right\}
+=\bar R_k .
+\end{equation}
+For an external reference-price path, $w_{k,t}$ is the positive reference-to-observed price wedge.
+For a subsidy without a monthly unit-price series, $w_{k,t}=\bar P_j/P_{j,t}$, so a constant support
+amount in index units produces a larger proportional wedge when the observed component index is
+lower. For a tax measure with statutory gross-price factor
+$S_k=(1+\tau^0_k)/(1+\tau^1_k)$, the equivalent coverage and pass-through parameter has the closed
+form $\theta_k=\log(\bar R_k)/\log(S_k)$ and the implied ratio is $S_k^{\theta_k}$. If neither a
+monthly reference path nor a statutory profile exists, the calibrated wedge is constant and equals
+$\bar R_k$. Thus, calibration preserves the target average effect while allowing the available
+monthly price profile to determine its timing.
+
+\footnote{The following HBS
+wave is the 2025 wave, with increased harmonization between countries.} 
 
 
 \subsection{Policy Options}
