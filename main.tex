@@ -132,14 +132,17 @@ consumption baskets are more exposed to rapidly rising prices, in particular hou
 expenditure shares on energy and food. The 2021--2023 episode was
 a large relative-price shock, initially driven by imported energy and commodity prices. Its
 incidence therefore mainly depended on household exposure to energy, including heating and
-transport \citep{levell2024distributional}.
+transport.
 
 %\citep{charalampakis2022impact,gautier2024effects,corsello2026inflation}
 
 %The consumer price index (CPI) typically reflects an average rate of price change for an average household. However, households consume different baskets of goods, leading to wide variations around the average. The main objective of this paper is to document how households face heterogeneous inflation because of the differences in their consumption patterns, and to measure the effects of unconventional fiscal policies decided in 2022-2023.
 
 
-We examine how recent energy-price shocks and the fiscal response shaped household inflation
+Inflation inequality requires both relative-price changes and heterogeneous
+expenditure shares. If all prices rose proportionally, fixed-basket inflation would be identical
+across households. Inequality emerges when relative-price movements interact with differences in
+household consumption baskets. We examine how recent energy-price shocks and the fiscal response shaped household inflation
 exposure across the euro area. We construct monthly inflation indices by income, age, and residence
 area for each euro-area country and aggregate them using Eurostat's HICP methodology. We also use
 household-level expenditure records to measure within-group dispersion and construct counterfactual
@@ -172,39 +175,39 @@ expenditure patterns. Early contributions reweight aggregate price indices for d
 substantial dispersion within those groups \citep{kaplan2017inflation,argente2021cost}. More recently,
 \citet{jaravel2024distributional} constructs distributional consumer price indices for the United
 States from official price data and group-specific expenditure shares. For Europe,
-\citet{charalampakis2022impact} and \citet{menyhert2023inflation} show that food and energy inflation
-raised the effective inflation rates of lower-income households, with substantial differences across
-countries. \citet{pallotti2024bears} combines consumption, income, and balance-sheet channels to
-measure welfare losses across euro-area households. We instead isolate variation arising from
-consumption baskets and construct monthly indices by income, age, and residence area for all 20
+\citet{pallotti2024bears} combines consumption, income, and balance-sheet channels to
+measure welfare losses across euro-area households. Building on \citet{charalampakis2022impact}, 
+we construct monthly indices by income, age, and residence area for all 20
 euro-area countries. Unlike existing cross-country indicators, our group-specific baskets aggregate
 to official HICP item weights. Because we assign a common price index to all households within each
 COICOP category, our measures capture expenditure-share heterogeneity but not differences in prices
-paid, product quality, or within-category substitution.
+paid, product quality, or within-category substitution \citep{sangani2026cheapflation}.
 
-Consumption-based inflation inequality requires both relative-price changes and heterogeneous
-expenditure shares. If all prices rose proportionally, fixed-basket inflation would be identical
-across households. Inequality emerges when relative-price movements interact with differences in
-household consumption baskets.
-
-A related literature evaluates the fiscal response to the recent inflation surge. Using household
-microsimulation models, \citet{pallotti2024bears} and \citet{amores2025inflation} show that fiscal
-interventions reduced welfare losses and inequality, although broad price measures were less targeted
-than income support. We instead reconstruct monthly no-policy price paths at the COICOP-component
-level for all 20 euro-area countries. This approach identifies which products drove the distributional
-effect of price-based policies: lower electricity and gas prices reduced the Quintile 1--Quintile 5
-inflation gap, while fuel measures partly offset that reduction because higher-income households
-spend more on private transport.
+A related literature evaluates the fiscal response to the recent inflation surge. Using household microsimulation models,
+ \citet{pallotti2024bears} and \citet{amores2025inflation} show that fiscal interventions reduced welfare losses and inequality, 
+although broad price measures were less targeted than income support. Using detailed UK household data, 
+\citet{levell2026welfare} highlight a trade-off between targeting and efficiency: energy price subsidies 
+better protect households with high exposure to energy-price shocks, including within income groups, but distort consumption choices, 
+while transfers preserve price signals but may be less well targeted.  \citet{bonnet2025compensating} show in the cas of France that,
+ income-targeted transfers are more effective than fuel price subsidies at limiting welfare losses relative to household income.
+We instead reconstruct monthly no-policy price paths at the 
+COICOP-component level for all 20 euro-area countries. This approach identifies which products drove the distributional 
+effect of price-based policies: lower electricity and gas prices reduced the Quintile 1--Quintile 5 inflation gap,
+while fuel measures partly offset that reduction because higher-income households spend more on private transport.
 
 This paper makes two contributions. First, we construct harmonized household-group price indices
 that aggregate to official HICP weights for all 20 euro-area countries. These indices measure HBS
 budget shares at both the group and household levels while holding item-level price changes common
-across households. They therefore capture variation in expenditure shares rather than
-household-specific prices within narrowly defined products. Second, we show that price-based fiscal
-measures reduced inflation inequality in the euro area mainly by cushioning household-energy
-prices. The group-level indices document differences between income, age, and residence categories,
+across households. They therefore capture dispersion in expenditure shares rather than
+household-specific prices within narrowly defined products. The group-level indices 
+document differences between income, age, and residence categories,
 while the household-level indices reveal dispersion within those broad categories.
+ Second, we show that price-based fiscal measures reduced inflation inequality 
+in the euro area mainly by cushioning household-energy prices. 
 
+
+
+%This paper contributes to the understanding of inflation inequality by constructing publicly available and easily updatable inflation indicators for various household categories in the euro area. These indicators are based on harmonized country-level inflation data and are consistent with the official Harmonised Consumer Price Index (HICP). Additionally, the paper assesses the effect of unconventional fiscal policies implemented in 2022-2023, highlighting the mitigating effects of tariff shield policies and temporary VAT cuts across euro area countries.
 %Recent inflation episodes show that aggregate price indices can mask
 %substantial heterogeneity in the inflation shocks faced by households. The
 %standard decomposition attributes inflation inequality to differences in
@@ -216,7 +219,6 @@ while the household-level indices reveal dispersion within those broad categorie
 %We address this question by measuring heterogeneous inflation rates across household groups and by constructing counterfactual price indices that remove the main price-based fiscal interventions, including tariff shields, fuel rebates, price caps, and temporary VAT reductions.
 
 
-%This paper contributes to the understanding of inflation inequality by constructing publicly available and easily updatable inflation indicators for various household categories in the euro area. These indicators are based on harmonized country-level inflation data and are consistent with the official Harmonised Consumer Price Index (HICP). Additionally, the paper assesses the effect of unconventional fiscal policies implemented in 2022-2023, highlighting the mitigating effects of tariff shield policies and temporary VAT cuts across euro area countries.
 
 The remainder of the paper is organized as follows. Section~\ref{sec:data-methodology} describes the
 data and methodology. Section~\ref{sec:main-results} examines developments in inflation inequality
@@ -789,6 +791,7 @@ that directly changed consumer prices faced by households, including electricity
 VAT and energy-tax reductions, cuts in regulated charges, and fuel rebates.
 
 \subsection{Constructing No-Policy Counterfactual Price Indices}
+\label{sec:no-policy-construction}
 
 In response to the energy crisis, euro area governments introduced a broad array of measures to
 mitigate household exposure to rising energy costs
@@ -810,36 +813,30 @@ The measures differed substantially across euro area countries. Some governments
 primarily on regulated retail-price caps or tariff shields, while others used VAT and excise-tax
 reductions, fuel rebates, system-charge reductions, or calibrated block-tariff schemes.
 Table~\ref{tab:ea20-price-counterfactual-measures} in the appendix reports the euro-area inventory
-and indicates which measures are directly simulated in our price counterfactuals. We construct
-counterfactual price indices for the countries and policy instruments for which the necessary
-statutory, price, and unit-conversion information is available;
-Appendix~\ref{sec:app-counterfactuals} reports the corresponding country-level counterfactual
-series.
+and identifies the measures simulated in our price counterfactuals. We construct these indices
+where the necessary statutory, price, and unit-conversion information is available;
+Appendix~\ref{sec:app-counterfactuals} reports the country-level series.
 
-To quantify the effect of these fiscal measures on inflation inequality, we construct a
-counterfactual scenario in which no such price-based policies were enacted. Specifically, we compare
-the actual trajectory of policy-inclusive retail prices with estimated no-policy price paths for the
-affected products. This comparison allows us to isolate the extent to which fiscal policy
-contributed to reducing inflationary pressures and their unequal distribution across households.
-These measures are temporary support instruments rather than substitutes for monetary policy: their
-direct effect operates through administered prices, tax-inclusive prices, retail price ceilings, or
-unit rebates, and is therefore concentrated in the product categories to which they apply.
+We compare observed policy-inclusive retail prices with estimated no-policy price paths for the
+affected products. Because the measures operate through administered prices, tax-inclusive prices,
+retail price ceilings, or unit rebates, their direct effects are confined to the covered product
+categories.
 
 We distinguish three cases according to the information available. Measures with observed
-no-policy tariffs, statutory tax rates, or statutory unit rebates require no calibration: their
-affected component, policy window, and monthly price wedge come directly from the underlying
-sources, and we apply the observed or statutory ratio with unit intensity. Calibration enters only
-when the inventory identifies an intervention but lacks the monthly tariff path, unit price, or
-coverage weights needed for a direct reconstruction. In these cases, we choose one
+no-policy tariffs, statutory tax rates, or statutory unit rebates require no calibration: the
+affected component, policy window, and monthly price wedge come from the underlying sources, and
+we apply the observed or statutory ratio directly.
+When the inventory lacks the monthly tariff path, unit price, or coverage weights needed for direct
+reconstruction, we choose one
 measure-specific intensity parameter so that the geometric mean of the implied monthly no-policy
 price ratios over the active policy months equals an audited aggregate-equivalent target ratio.
-First, for regulated-price shields, price caps, and administered tariffs, we use an observed
-no-policy reference tariff when available. Otherwise, we calibrate an aggregate-equivalent price
-wedge. Second, for VAT and excise changes, we back out the reduced tax-inclusive price and reapply
-the normal rate; a coverage and pass-through parameter is needed only when full statutory coverage
-cannot be established. Third, for unit subsidies and fuel rebates, we add the statutory absolute
-price wedge back to the observed monthly price path; when no retail unit-price series is available,
-the wedge is calibrated in HICP component-index units. Evidence from
+For regulated-price shields, price caps, and administered tariffs, we use an observed no-policy
+reference tariff when available and otherwise calibrate an aggregate-equivalent price wedge. For
+VAT and excise changes, we back out the reduced tax-inclusive price and reapply the normal rate;
+coverage and pass-through are calibrated only when full statutory coverage cannot be established.
+For unit subsidies and fuel rebates, we add the statutory absolute price wedge to the observed
+monthly price path or, without a retail unit-price series, calibrate it in HICP component-index
+units. Evidence from
 \citet{drolsbach2023pass} suggests that temporary fuel-tax reductions and discounts were largely
 passed through to consumer prices in 2022 in several euro area countries, although pass-through
 varied over time and by fuel type. This supports treating these measures as retail-price wedges in
@@ -958,9 +955,9 @@ applied only to the relevant COICOP energy components and policy months, and the
 assumption tables are reported with the counterfactual outputs. These layers should be interpreted
 as aggregate-equivalent price effects, not as statutory tariff reconstructions.
 
-We therefore distinguish the information basis of the counterfactuals. The first layer uses statutory
-tax rates, unit rebates, or observed reference tariffs; the second uses aggregate-equivalent calibrated
-wedges when a statutory reconstruction is incomplete. 
+%We therefore distinguish the information basis of the counterfactuals. The first layer uses statutory
+%tax rates, unit rebates, or observed reference tariffs; the second uses aggregate-equivalent calibrated
+%wedges when a statutory reconstruction is incomplete. 
 
 %We identifiy the layer used
 %for each measure. Uncertainty about the choice of components, dates, price trajectories, and treatment
@@ -971,22 +968,36 @@ wedges when a statutory reconstruction is incomplete.
 %headline estimate is the contribution of calibrated layers and is the appropriate object for sensitivity
 %analysis.
 
-The counterfactual component indices are then used in the same household-group inflation procedure
-as the observed indices. Replacing the observed component indices $P_{j,t}$ with $\widetilde
-P_{j,t}$ yields a chained counterfactual group index $\widetilde I_{g,t}$. The counterfactual
-inflation rate for group $g$ is then computed as the year-on-year growth rate of this index.
+%The counterfactual component indices are then used in the same household-group inflation procedure
+%as the observed indices. Replacing the observed component indices $P_{j,t}$ with $\widetilde
+%P_{j,t}$ yields a chained counterfactual group index $\widetilde I_{g,t}$. The counterfactual
+%inflation rate for group $g$ is then computed as the year-on-year growth rate of this index.
+
+Table~\ref{tab:ea20-policy-category-contributions} summarizes the resulting policy decomposition.
+We allocate overlapping measures across four policy families using their absolute monthly log
+wedges, then anchor the contributions to the aggregate effects reported below.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tables/tab_EA20_policy_category_contributions_2021_06_2023_06}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\subsection{Temporal Effects of Unconventional Fiscal Policies}
+\label{sec:temporal-fiscal-effects}
 
-\subsection{Effect of Household Price Policies on Average Inflation}
+The price-based measures changed both the level and the timing of inflation during the energy
+crisis. We compare observed inflation with counterfactual paths that remove the interventions
+described in Section~\ref{sec:no-policy-construction}. This comparison isolates their direct effect
+on consumer prices; it does not include income transfers or measures directed only at firms.
 
-We aggregate the country-level policy counterfactuals across all 20 countries using Eurostat HICP country weights. 
-
-Figure~\ref{fig:ea_policy_total_cpi_counterfactual} shows that the simulated household price policies
-compressed euro-area inflation during the energy crisis. The gap between observed all-items HICP
-inflation for the euro area and the corresponding no-policy counterfactual is largest
-around the peak of the 2022--23 energy
-shock, when VAT reductions, fuel rebates, price shields and regulated-price caps were simultaneously active across countries.
+Figure~\ref{fig:ea_policy_total_cpi_counterfactual} shows the effect on average euro-area inflation.
+The no-policy path lies above observed inflation during the main phase of the energy shock, with the
+largest difference around the inflation peak in late 2022. VAT and excise reductions, fuel rebates,
+price shields, and regulated-price caps therefore compressed the peak rather than preventing the
+underlying rise in inflation. As measures expired, the ordering temporarily reversed: year-on-year
+inflation was then calculated relative to policy-depressed prices twelve months earlier. This base
+effect shifts measured inflation across time and should not be interpreted as evidence that the
+measures raised the underlying price level.
 
 \begin{figure}[H]
 \centering
@@ -998,20 +1009,16 @@ shock, when VAT reductions, fuel rebates, price shields and regulated-price caps
 Sources: Eurostat HICP; Bruegel energy-policy dataset; authors' calculations.}
 \end{figure}
 
-
-
-\subsection{Effect of Household Price Policies on Inflation Inequality}
-\label{sec:fiscal-policy-inflation-inequalities}
-
-Table~\ref{tab:country-heterogeneity-counterfactual-gap} reports the fiscal cost of household price
-policies and cumulative no-policy inflation, together with the corresponding income-quintile indices and inflation gap. The
-fiscal costs provide context for the scale of the interventions\footnote{These
-fiscal costs are not inputs into the price-index counterfactual and do not measure the monetary
-benefit received by each household group}. 
-
-Without the simulated price-based fiscal interventions, inflation for the first income quintile
-would have risen further above inflation for the fifth quintile. Figure~\ref{fig:ea-counterfactual-income-inflation}
-shows the corresponding monthly no-policy paths.
+The same timing has a distributional counterpart. Figure~\ref{fig:ea-counterfactual-income-inflation}
+shows that, without the price measures, inflation for the first income quintile would have exceeded
+that of the fifth quintile by a wider margin during the 2022 peak. The gap subsequently narrowed and
+briefly reversed during disinflation as energy inflation fell and the earlier policy wedges entered
+the year-on-year comparison base. Together with the observed paths in
+Figure~\ref{fig:ea20_short_run_income}, this pattern indicates that the measures primarily protected
+lower-income households when energy prices were rising fastest. This finding is consistent with
+microsimulation evidence that the European fiscal response reduced distributional losses, although
+broad price measures were less targeted than income support
+\citep{pallotti2024bears,amores2025inflation}.
 
 \begin{figure}[H]
 \centering
@@ -1024,42 +1031,23 @@ shows the corresponding monthly no-policy paths.
 Sources: Eurostat HICP and country weights; household budget surveys; Bruegel energy-policy dataset; authors' calculations.}
 \end{figure}
 
+\subsection{Heterogeneity Across Countries and Products}
+\label{sec:fiscal-policy-inflation-inequalities}
+
+The aggregate time paths conceal substantial heterogeneity in the effects of the measures. We first
+compare countries and then decompose the euro-area effect by product group.
+
+\subsubsection{Differences Across Countries}
+
+Table~\ref{tab:country-heterogeneity-counterfactual-gap} reports the fiscal cost of household price
+policies and cumulative no-policy inflation, together with the corresponding income-quintile indices and inflation gap. The
+fiscal costs provide context for the scale of the interventions\footnote{These
+fiscal costs are not inputs into the price-index counterfactual and do not measure the monetary
+benefit received by each household group}. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tables/tab_EA20_country_income_q1_q5_counterfactual_gap_2021_06_2023_06}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Table~\ref{tab:ea20-counterfactual-income-gap-product-contributions} reproduces the product-group
-decomposition of Table~\ref{tab:ea20-income-gap-product-contributions} using the no-policy
-counterfactual price paths. It reports each product group's contribution to counterfactual cumulative
-inflation and to the Quintile 1--Quintile 5 gap, together with the estimated effect of household price policies
-on inflation inequality.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{tables/tab_EA20_counterfactual_income_gap_product_contributions_2021_06_2023_06}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-For the euro area, cumulative inflation from the total no-policy HICP index is 15.4 percent.
-Counterfactual cumulative inflation is 18.2 percent for Quintile 1 and 16.2 percent for Quintile 5,
-compared with observed values of 15.2 and 14.4 percent reported in Table~\ref{tab:country-heterogeneity-cumulative-gap}.
-The observed Quintile 1--Quintile 5 gap is therefore 0.9 point,
-compared with 2.0 points without the simulated measures.
-Using unrounded indices, the resulting policy effect is $-1.2$ points. For comparison, the U.S.
-distributional CPIs of \citet{jaravel2024distributional} imply cumulative inflation of 13.0 percent
-for the first income quintile and 13.5 percent for the fifth between May 2020 and May 2022, a
-Q1--Q5 gap of $-0.5$ point. The U.S. profile is inverse U-shaped---inflation reaches 14.7 percent
-for the middle class---rather than monotonically declining with income. The sign and size of
-inflation inequality therefore depend on both the composition of the price shock and the policies
-affecting the most exposed categories.
-
-The product decomposition shows the mechanism behind the $-1.2$-point effect. Household price
-policies reduce the contribution of electricity and gas to the Q1--Q5 gap by
-1.4 points. Their effect through transport instead increases the gap by 0.2 point, because fuel-price
-measures also benefit the transport-intensive baskets of higher-income households. Effects through
-the remaining product groups are close to zero. This pattern mirrors the input--output simulation:
-both exercises identify household energy as the dominant distributional channel, while transport
-partly offsets it. The fiscal measures thus dampen the same direct exposure that generates most of
-the simulated energy-shock gap; they do less to undo the smaller component transmitted indirectly
-through production networks.
 
 The distributional effects are heterogeneous across countries. Among the countries included in the
 euro-area aggregate, the largest reductions in the Quintile 1--Quintile 5 gap are estimated for
@@ -1080,6 +1068,39 @@ points, not as a monetary gain, and it cannot be divided meaningfully by expendi
 cost-effectiveness analysis would need household-level policy eligibility, quantities consumed,
 tax and transfer rules, and counterfactual expenditures to calculate the fiscal cost and purchasing-
 power benefit for each household in a common monetary unit.
+
+\subsubsection{Differences Across Products}
+
+For the euro area, cumulative inflation from the total no-policy HICP index is 15.4 percent.
+Counterfactual cumulative inflation is 18.2 percent for Quintile 1 and 16.2 percent for Quintile 5,
+compared with observed values of 15.2 and 14.4 percent reported in Table~\ref{tab:country-heterogeneity-cumulative-gap}.
+The observed Quintile 1--Quintile 5 gap is therefore 0.9 point, compared with 2.0 points without the
+simulated measures. Using unrounded indices, the resulting policy effect is $-1.2$ points.
+
+Table~\ref{tab:ea20-counterfactual-income-gap-product-contributions} reproduces the product-group
+decomposition of Table~\ref{tab:ea20-income-gap-product-contributions} using the no-policy paths. It
+reports each product group's contribution to cumulative inflation and to the Quintile 1--Quintile 5
+gap, together with the effect of the price measures.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tables/tab_EA20_counterfactual_income_gap_product_contributions_2021_06_2023_06}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Household energy accounts for the distributional effect. The measures reduce the contribution of
+electricity and gas to the Q1--Q5 gap by 1.4 points. Their effect through transport instead increases
+the gap by 0.2 point because fuel-price measures also benefit the transport-intensive baskets of
+higher-income households; effects through the remaining product groups are close to zero. This
+pattern mirrors the input--output simulation: both exercises identify household energy as the main
+distributional channel, while transport partly offsets it. The measures thus dampen the direct
+exposure that generates most of the energy-shock gap but do less to undo propagation through
+production networks.
+
+For comparison, the U.S. distributional CPIs of \citet{jaravel2024distributional} imply cumulative
+inflation of 13.0 percent for the first income quintile and 13.5 percent for the fifth between May
+2020 and May 2022, a Q1--Q5 gap of $-0.5$ point. The U.S. profile is inverse U-shaped---inflation
+reaches 14.7 percent for the middle class---rather than monotonically declining with income. The
+sign and size of inflation inequality therefore depend on the composition of the price shock and on
+the policies affecting the most exposed products.
 
 
 \section{Household-Level Inflation}
@@ -1336,15 +1357,15 @@ firms' input costs.
 
 %Consumption-based inflation inequality captures only one dimension of the distributional effects of inflation. A complete assessment also requires accounting for income indexation, transfers, and wealth effects, which may dominate consumption-basket effects for some households \citep{cardoso2022heterogeneous,pallotti2024bears}.
 
-In the euro area, price-based fiscal measures temporarily cushioned the distributional effects of the 2021--2023 inflation surge, 
-while the subsequent disinflation unfolded alongside monetary tightening aimed at restoring aggregate price stability.
-Recent fiscal measures reduced inflation inequality in the euro area, while assessing the distributional
- effects of monetary policy lies beyond the scope of this paper and requires a heterogeneous-agent model.
-
 Income alone does not identify vulnerable households: residence and age also capture
 differences in heating technology, mobility constraints, and the ability to substitute between
 products. More granular transaction and expenditure data would allow future work to measure substitution
 within product categories.
+
+In the euro area, price-based fiscal measures temporarily cushioned the distributional effects of the 2021--2023 inflation surge, 
+while the subsequent disinflation unfolded alongside monetary tightening aimed at restoring aggregate price stability.
+Recent fiscal measures reduced inflation inequality in the euro area, while assessing the distributional
+ effects of monetary policy lies beyond the scope of this paper (\cite{ampudia2024shopping}).
 
 An extension of this article would combine household-specific price indices with harmonized euro-area household balance-sheet surveys 
 to assess the heterogeneous effects of inflation on household wealth, particularly across debtors and creditors and across 
