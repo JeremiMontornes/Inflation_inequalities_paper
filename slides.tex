@@ -74,10 +74,9 @@
 % 3
 \begin{frame}{Main Messages}
 \begin{itemize}
-  \item The euro-area inflation gap was \textbf{0.9 point}, but cross-country differences were large; age and residence also identify vulnerable households.
-  \item Housing energy and food widened the inflation gap, while transport partly offset it; production networks added indirect exposure.
-  \item Unconventional fiscal policies lowered cumulative average inflation by \textbf{1.9 points} and the Q1--Q5 gap by \textbf{1.1 points}.
-  \item The distributional effect came mainly from measures on housing energy: gas and electricity measures reduced the inflation gap by \textbf{1.4 points}, while fuel measures increased it by \textbf{0.2 point}.
+  \item Inflation differed substantially across households and countries.
+  \item Housing energy was the main driver of the Q1--Q5 inflation gap.
+  \item Fiscal policies reduced both average inflation and inflation inequality.
 \end{itemize}
 \end{frame}
 
@@ -86,19 +85,19 @@
 \begin{itemize}
   \item We link monthly Eurostat HICP prices and official item weights to HBS expenditure shares through a harmonized COICOP bridge.
   \item HBS tabulations identify baskets by income, age, and residence; microdata add household expenditures, disposable income, demographics, and survey weights.
-  \item RAS balancing distributes official HICP weights across groups; chained Laspeyres indices preserve cross-country comparability and consistency with headline inflation.
+  \item Household expenditure shares come from the HBS; product-level totals are subsequently calibrated to official HICP weights using RAS.
 \end{itemize}
 \[
 P_{g,y,m}
 =
 \sum_{j \in \mathcal{J}_y}
-\omega_{j,g,y}\frac{p_{j,y,m}}{p_{j,y,0}}.
+\hat{\omega}_{j,g,y}\frac{p_{j,y,m}}{p_{j,y,0}}.
 \]
 \[
-\underbrace{\sum_g M_{j,g,y}=\bar{\omega}^{\mathrm{HICP}}_{j,y}}
+\underbrace{\sum_g \hat{\omega}_{j,g,y}=\bar{\omega}^{\mathrm{HICP}}_{j,y}}
 _{\text{product margin}},
 \qquad
-\underbrace{\sum_{j \in \mathcal{J}_y}M_{j,g,y}=s_{g,y}}
+\underbrace{\sum_{j \in \mathcal{J}_y}\hat{\omega}_{j,g,y}=s_{g,y}}
 _{\text{group expenditure-share margin}}.
 \]
 \vspace{-0.35em}
@@ -107,43 +106,11 @@ _{\text{group expenditure-share margin}}.
 \end{itemize}
 \end{frame}
 
-% 5
-\begin{frame}{Household-Level Price Indices}
-\begin{itemize}
-  \item We treat each household as an elementary group and combine its 2020 expenditure shares with monthly HICP price changes.
-\end{itemize}
-\[
-P_{i,y,m}
-=
-\sum_{j \in \mathcal{J}_{i,2020,y}}
-\omega^{\mathrm{HBS}}_{j,i,2020}
-\frac{p_{j,y,m}}{p_{j,y,0}}.
-\]
-\begin{itemize}
-  \item Individual indices measure inflation heterogeneity within income, age, and residence categories, which broad group averages conceal.
-  \item This within-category dispersion was substantial during the 2021--2023 inflation surge.
-\end{itemize}
-\end{frame}
-
 % 6
 \begin{frame}{Low-Income Households Faced Higher Inflation During the Energy Shock}
 \centering
 \includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png}
 \source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
-\end{frame}
-
-% 5
-\begin{frame}{Older Households Faced Higher Inflation}
-\centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
-\source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
-\end{frame}
-
-% 8 -- formerly slide 24
-\begin{frame}{Household Groups Hide Household-Level Dispersion}
-\centering
-\includegraphics[width=0.96\textwidth,height=0.72\textheight,keepaspectratio]{fig/fig_EA20_household_inflation_distribution_2021_2023.png}
-\source{Eurostat HICP and HBS microdata; authors' calculations. Units: annual household inflation (x) and household share (y), in percent.}
 \end{frame}
 
 % 9
@@ -182,10 +149,49 @@ Other & 5.0 & 0.2 & 0.3 & -0.1\\
 \source{Eurostat HICP and HBS; authors' calculations. Units: contributions to cumulative inflation, June 2021--June 2023, in percentage points.}
 \end{frame}
 
+
+% 5
+\begin{frame}{Older Households Faced Higher Inflation}
+\centering
+\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
+\source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
+\end{frame}
+
+% 8
+\begin{frame}{Household-Level Price Indices}
+\begin{itemize}
+  \item We treat each household as an elementary group. Its individual weight $\omega^{\mathrm{HBS}}_{j,i,2020}$ combines its expenditure on item $j$ with the official HICP weight for that item.
+\end{itemize}
+\vspace{0.5em}
+\[
+P_{i,y,m}
+=
+\sum_{j \in \mathcal{J}_{i,2020,y}}
+\omega^{\mathrm{HBS}}_{j,i,2020}
+\frac{p_{j,y,m}}{p_{j,y,0}}.
+\]
+\vspace{0.5em}
+\begin{itemize}
+  \item Individual indices measure inflation heterogeneity within income, age, and residence categories, which broad group averages conceal.
+  \item This within-category dispersion was substantial during the 2021--2023 inflation surge.
+\end{itemize}
+\end{frame}
+
+% 8 -- formerly slide 24
+\begin{frame}{Household Groups Hide Household-Level Dispersion}
+\centering
+{\small\color{WarmGray}Average inflation and dispersion were both higher in 2022.\par}
+\vspace{0.15em}
+\includegraphics[width=0.96\textwidth,height=0.65\textheight,keepaspectratio]{fig/fig_EA20_household_inflation_distribution_2021_2023.png}
+\source{Eurostat HICP and HBS microdata; authors' calculations. Units: annual household inflation (x) and household share (y), in percent.}
+\end{frame}
+
+
 % 11
 \begin{frame}{Three Instruments Lowered Retail Energy Prices}
 \small
 \begin{itemize}
+  \item Euro-area price policies cost \textbf{EUR 268 billion}; most were untargeted (\textbf{EUR 235.2 billion, or 88\%}).
   \item \textbf{Price caps and tariff shields} limited household electricity and gas prices.\\
   \textit{Exemple : en France, tarifs réglementés du gaz gelés à leur niveau d'\textbf{octobre 2021} dès novembre 2021 et hausse du tarif réglementé de l'électricité plafonnée à \textbf{4\%} en février 2022.}
   \item \textbf{Temporary VAT and excise-tax reductions} lowered consumer energy prices.\\
@@ -234,7 +240,7 @@ $j=\text{électricité}$ avec $t=$ mars 2022--décembre 2023.
   \fill[WarmOrange,opacity=0.09] (policySW) rectangle (policyNE);
   \node[anchor=north west,font=\scriptsize\bfseries,text=WarmOrange,
         fill=SoftWhite,fill opacity=0.88,text opacity=1,inner sep=2pt]
-        at ($(policyplot.north west)!0.295!(policyplot.north east)+(0,-0.18)$) {Policy period: June 2021--June 2023};
+        at ($(policyplot.north west)!0.600!(policyplot.north east)+(0,-0.18)$) {Policy period: June 2021--June 2023};
 \end{tikzpicture}
 \vspace{-0.2em}
 
@@ -245,15 +251,34 @@ $j=\text{électricité}$ avec $t=$ mars 2022--décembre 2023.
 \end{frame}
 
 % 12
-\begin{frame}{Unconventional Fiscal Policies Narrowed the Inflation Gap by 1.1 pp}
+\begin{frame}{Policies Narrowed the Q1--Q5 Inflation Gap}
 \centering
-\begin{tikzpicture}
-  \node[inner sep=0] (gapplot) {\includegraphics[width=0.88\textwidth,height=0.64\textheight,keepaspectratio]{fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1_Q5.png}};
-  \draw[-{Latex[length=3.2mm,width=2.4mm]},line width=1.8pt,DeepNavy]
-    ($(gapplot.south west)!0.34!(gapplot.south east)+(0,3.95cm)$) --
-    ($(gapplot.south west)!0.34!(gapplot.south east)+(0,3.15cm)$);
-\end{tikzpicture}
-\source{Eurostat and national statistical institutes; authors' calculations. Units: no-policy year-on-year inflation, in percent; Jan. 2021--July 2026.}
+{\small
+\[
+\Delta\text{Gap}
+=
+\underbrace{\Delta Q1}_{\text{policy effect}}
+-
+\underbrace{\Delta Q5}_{\text{policy effect}}
+=
+\mathbf{-1.1\text{ pp}}
+\]
+}
+\vspace{0.05em}
+
+\begin{columns}[T,onlytextwidth]
+  \begin{column}{0.495\textwidth}
+    \centering
+    {\bfseries Q1}\par\vspace{0.2em}
+    \includegraphics[width=\linewidth,height=0.46\textheight,keepaspectratio]{fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1.png}
+  \end{column}
+  \begin{column}{0.495\textwidth}
+    \centering
+    {\bfseries Q5}\par\vspace{0.2em}
+    \includegraphics[width=\linewidth,height=0.46\textheight,keepaspectratio]{fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q5.png}
+  \end{column}
+\end{columns}
+\source{Eurostat and national statistical institutes; authors' calculations. Units: year-on-year inflation, in percent; Jan. 2021--July 2026.}
 \end{frame}
 
 % 17
@@ -262,7 +287,7 @@ $j=\text{électricité}$ avec $t=$ mars 2022--décembre 2023.
   \item The euro-area inflation gap was \textbf{0.9 point}, but cross-country differences were large; age and residence also identify vulnerable households.
   \item Housing energy and food widened the inflation gap, while transport partly offset it; production networks added indirect exposure.
   \item Unconventional fiscal policies lowered cumulative average inflation by \textbf{1.9 points} and the Q1--Q5 gap by \textbf{1.1 points}.
-  \item The distributional effect came mainly from measures on housing energy: gas and electricity measures reduced the inflation gap by \textbf{1.4 points}, while fuel measures increased it by \textbf{0.2 point}.
+  \item The positive distributional effect came mainly from measures on housing energy, while fuel measures are regressive.
 \end{itemize}
 \end{frame}
 
