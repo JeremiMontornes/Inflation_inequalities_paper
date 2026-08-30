@@ -5,44 +5,47 @@ Reallocating 'name_of_file' (item size: 1) to 5 items.
 The style file: ecta.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
+Warning--empty journal in levell2025welfare
+Warning--empty journal in levell2026welfare
 You've used 39 entries,
             2849 wiz_defined-function locations,
-            823 strings with 11840 characters,
-and the built_in function-call counts, 24056 in all, are:
-= -- 1953
+            820 strings with 11667 characters,
+and the built_in function-call counts, 23876 in all, are:
+= -- 1927
 > -- 1210
 < -- 48
-+ -- 398
++ -- 400
 - -- 345
-* -- 2071
-:= -- 3742
+* -- 2067
+:= -- 3724
 add.period$ -- 77
 call.type$ -- 39
-change.case$ -- 274
+change.case$ -- 273
 chr.to.int$ -- 39
-cite$ -- 39
-duplicate$ -- 1774
-empty$ -- 1643
+cite$ -- 41
+duplicate$ -- 1759
+empty$ -- 1629
 format.name$ -- 529
-if$ -- 4746
+if$ -- 4696
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 326
+missing$ -- 323
 newline$ -- 122
 num.names$ -- 195
 pop$ -- 635
 preamble$ -- 1
 purify$ -- 271
 quote$ -- 0
-skip$ -- 642
+skip$ -- 633
 stack$ -- 0
-substring$ -- 960
-swap$ -- 892
+substring$ -- 938
+swap$ -- 875
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 464
-warning$ -- 0
-while$ -- 153
+warning$ -- 2
+while$ -- 150
 width$ -- 0
-write$ -- 462
+write$ -- 458
+(There were 2 warnings)
