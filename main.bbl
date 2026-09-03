@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{40}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -227,5 +227,11 @@
 \textsc{Sgaravatti, G., S.~Tagliapietra, C.~Trasi, and G.~Zachmann} (2021):
   \enquote{National policies to shield consumers from rising energy prices,}
   Bruegel Datasets.
+
+\bibitem[\protect\citeauthoryear{Strasser, Messner, Rumler, and
+  Ampudia}{Strasser et~al.}{2023}]{strasser2023inflation}
+\textsc{Strasser, G., T.~Messner, F.~Rumler, and M.~Ampudia} (2023):
+  \enquote{Inflation Heterogeneity at the Household Level,} ECB Occasional
+  Paper Series 325, European Central Bank.
 
 \end{thebibliography}

@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
 Warning--empty journal in levell2025welfare
 Warning--empty journal in levell2026welfare
-You've used 39 entries,
+You've used 40 entries,
             2849 wiz_defined-function locations,
-            820 strings with 11667 characters,
-and the built_in function-call counts, 23876 in all, are:
-= -- 1927
-> -- 1210
-< -- 48
-+ -- 400
-- -- 345
-* -- 2067
-:= -- 3724
-add.period$ -- 77
-call.type$ -- 39
-change.case$ -- 273
-chr.to.int$ -- 39
-cite$ -- 41
-duplicate$ -- 1759
-empty$ -- 1629
-format.name$ -- 529
-if$ -- 4696
+            825 strings with 11837 characters,
+and the built_in function-call counts, 24511 in all, are:
+= -- 1974
+> -- 1251
+< -- 49
++ -- 413
+- -- 357
+* -- 2124
+:= -- 3824
+add.period$ -- 79
+call.type$ -- 40
+change.case$ -- 281
+chr.to.int$ -- 40
+cite$ -- 42
+duplicate$ -- 1808
+empty$ -- 1666
+format.name$ -- 545
+if$ -- 4817
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 323
-newline$ -- 122
-num.names$ -- 195
-pop$ -- 635
+missing$ -- 333
+newline$ -- 125
+num.names$ -- 200
+pop$ -- 657
 preamble$ -- 1
-purify$ -- 271
+purify$ -- 279
 quote$ -- 0
-skip$ -- 633
+skip$ -- 647
 stack$ -- 0
-substring$ -- 938
-swap$ -- 875
-text.length$ -- 4
+substring$ -- 950
+swap$ -- 901
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 464
+type$ -- 476
 warning$ -- 2
-while$ -- 150
+while$ -- 153
 width$ -- 0
-write$ -- 458
+write$ -- 470
 (There were 2 warnings)
