@@ -14,9 +14,9 @@ orange <- "#E07A3F"
 gray <- "#E8ECEF"
 
 pdf(out, width = 9.8, height = 4.6, family = "sans", useDingbats = FALSE)
-par(mar = c(3.5, 4.4, 0.3, 1.8), fg = navy, col.axis = navy,
+par(mar = c(5.0, 4.4, 0.3, 1.8), fg = navy, col.axis = navy,
     col.lab = navy, family = "sans", bty = "n", las = 1,
-    cex.axis = 1.18, cex.lab = 1.28)
+    cex.axis = 1.40, cex.lab = 1.52, xpd = NA)
 
 plot(year, observed, type = "n", xlim = c(2020.9, 2023.18),
      ylim = c(-0.05, 1.48), xaxt = "n", yaxt = "n",
@@ -33,13 +33,23 @@ lines(year, observed, col = navy, lwd = 3)
 points(year, observed, col = navy, bg = "white", pch = 21, lwd = 2, cex = 1.45)
 
 text(year, no_policy + 0.09, sprintf("%.1f", no_policy), col = orange,
-     font = 2, cex = 1.05)
+     font = 2, cex = 1.25)
 text(year, observed - c(0.10, 0.11, -0.10), sprintf("%.1f", observed),
-     col = navy, font = 2, cex = 1.05)
+     col = navy, font = 2, cex = 1.25)
 
-text(2023.04, no_policy[3], "No policy", col = orange, adj = 0,
-     font = 2, cex = 1.08)
-text(2023.04, observed[3] + 0.02, "Observed", col = navy, adj = 0,
-     font = 2, cex = 1.08)
+arrow_x <- c(2022.12, 2023.08)
+arrows(arrow_x, no_policy[2:3] - 0.04,
+       arrow_x, observed[2:3] + 0.04,
+       length = 0.10, angle = 25, lwd = 1.8, col = navy)
+text(2022.18, mean(c(no_policy[2], observed[2])) - 0.12, "-0.4 pp",
+     col = navy, adj = 0, font = 2, cex = 1.22)
+text(2022.92, mean(c(no_policy[3], observed[3])) + 0.09, "-0.5 pp",
+     col = navy, adj = 1, font = 2, cex = 1.22)
+
+legend(mean(par("usr")[1:2]), par("usr")[3] - 0.30,
+       legend = c("No policy", "Observed"),
+       col = c(orange, navy), lwd = 3, pch = 21,
+       pt.bg = "white", pt.cex = 1.2,
+       horiz = TRUE, xjust = 0.5, bty = "n", cex = 1.30)
 
 dev.off()
