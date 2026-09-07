@@ -192,7 +192,7 @@ better protect households with high exposure to energy-price shocks, including w
 while transfers preserve price signals but may be less well targeted.
 
 \citet{bonnet2025compensating} show, for France, that income-targeted transfers are more effective than fuel price subsidies at limiting welfare losses relative to household income.
-We instead reconstruct monthly no-policy price paths at the 
+We instead reconstruct monthly counterfactual price paths at the 
 COICOP-component level for all 20 euro-area countries. This approach identifies which products drove the distributional 
 effect of price-based policies: lower electricity and gas prices reduce the Quintile 1--Quintile 5 inflation gap,
 while fuel measures partly offset that reduction because higher-income households spend more on private transport.
@@ -536,7 +536,9 @@ weight of product $j$, while $I_{g,y,m}$ is the resulting monthly chained price 
 \label{sec:main-results}
 
 This section presents our main results. We focus on inflation inequality in the wake of the 2021--2023
-energy crisis and also document long-run inflation inequality in the euro area.
+energy crisis and also document long-run inflation inequality in the euro area. We further examine
+cross-country heterogeneity in inflation inequality, documenting how its magnitude and sign vary
+across euro-area countries.
 
 \subsection{Inflation Inequality in the Euro Area}
 
@@ -587,7 +589,8 @@ segmented by age and residence area. In the household-level regressions pooling 
 annual inflation is 0.95 point higher for households whose reference person is aged 60 or over than
 for those under 30, and 0.76 point higher in rural areas than in cities. The monthly annual inflation
 rates in the figure show that both gradients vary over time and temporarily narrow or reverse as
-energy inflation recedes.
+energy inflation recedes. \citet{gautier2024effects} obtain similar age-related results under
+slightly different assumptions.
 
 The residence-area differentials reflect differences in the structure of
 energy demand. Rural households tend to spend a larger share of their budget on transport fuels and
@@ -678,7 +681,9 @@ Table~\ref{tab:country-heterogeneity-cumulative-gap} documents this cross-countr
 reporting annual-average inflation and the annual Quintile 1--Quintile 5 inflation gap. The gap is
 largest in 2022 in most countries: it exceeds 3 points in Estonia, Latvia, and Lithuania and reaches
 2.8 points in Ireland. Several countries subsequently record a negative gap in 2023 as energy-price
-pressures recede, while the euro-area gap falls from 0.9 point in 2022 to 0.0 point in 2023.
+pressures recede, while the euro-area gap falls from 0.9 point in 2022 to 0.0 point in 2023. This
+cross-country pattern is qualitatively similar to \citet{claeys2022inflation}, who also find larger
+inflation gaps between low- and high-income households in countries with higher inflation.
 
 The interaction between country-specific price dynamics, exposures, and fiscal policies and
 group-specific expenditure shares explains these differences. A price increase in a product category generates inflation inequality only to
@@ -694,13 +699,13 @@ components.
 \input{tables/tab_EA20_country_income_q1_q5_cumulative_gap_2021_06_2023_06}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The product decomposition in Table~\ref{tab:ea20-income-gap-product-contributions} clarifies these
-offsetting forces. In 2022, household energy and food contribute 1.6 and 0.6 points, respectively,
-to the 0.9-point Quintile 1--Quintile 5 gap, whereas the operation of personal transport equipment,
-transport excluding vehicle operation, and other
-products contribute $-0.4$, $-0.3$, and $-0.5$ point. In 2023, positive food contributions are
-again offset by negative contributions from several other product groups, leaving a zero aggregate
-gap after rounding.
+Table~\ref{tab:ea20-income-gap-product-contributions} decomposes euro-area inflation and the
+$Q1$--$Q5$ gap by product group. In 2022, household energy accounts for 2.9 points of average
+inflation and contributes 1.6 points to the 0.9-point gap; food adds 1.8 points to average inflation
+and 0.6 point to the gap. These positive distributional contributions are partly offset by personal
+transport, other transport, and other products, which contribute $-0.4$, $-0.3$, and $-0.5$ point
+to the gap. In 2023, the positive food contribution is again offset by other product groups, leaving
+a zero aggregate gap after rounding.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tables/tab_EA20_income_gap_product_contributions_2021_06_2023_06}
@@ -814,7 +819,7 @@ This section evaluates the distributional effects of unconventional fiscal polic
 that directly changed consumer prices faced by households, including electricity and gas price caps and shields, 
 VAT and energy-tax reductions, cuts in regulated charges, and fuel rebates.
 
-\subsection{Constructing No-Policy Counterfactual Price Indices}
+\subsection{Constructing Counterfactual Price Indices}
 \label{sec:no-policy-construction}
 
 In response to the energy crisis, euro-area governments introduced a broad array of measures to
@@ -843,24 +848,24 @@ Appendix~\ref{sec:app-counterfactuals} reports the country-level series.
  %to identify the price-relevant measures and dates. We then
 %construct counterfactual HICP component paths without those interventions.
 
-We compare observed policy-inclusive retail prices with estimated no-policy price paths for the
-affected products. Because the measures operate through administered prices, tax-inclusive prices,
+We compare observed policy-inclusive retail prices with estimated counterfactual price paths for
+energy and food products. Because the measures operate through administered prices, tax-inclusive prices,
 retail price ceilings, or unit rebates, their direct effects are confined to the covered product
 categories.
 
 We distinguish three cases according to the information available. Measures with observed
-no-policy tariffs, statutory tax rates, or statutory unit rebates require no calibration.
+counterfactual tariffs, statutory tax rates, or statutory unit rebates require no calibration.
 % the
 %affected component, policy window, and monthly price wedge come from the underlying sources, and
 %we apply the observed or statutory ratio directly.
 When the inventory lacks the monthly tariff path, unit price, or coverage weights needed for direct
 reconstruction, we choose one
-measure-specific intensity parameter so that the mean of the implied monthly no-policy
+measure-specific intensity parameter so that the mean of the implied monthly counterfactual
 price ratios over the active policy months equals the aggregate-equivalent ratio.
 
 
 Counterfactual price indices are constructed at COICOP digit 3 by replacing each observed
-HICP component index with its no-policy counterpart. Let $P_{j,t}$
+HICP component index with its counterfactual counterpart. Let $P_{j,t}$
 denote the observed HICP component index for product $j$ in month $t$, and let $\widetilde P_{j,t}$
 denote the corresponding counterfactual index. For each simulated measure, we recover a
 counterfactual retail price $\widetilde p_{j,t}$ and apply the implied price ratio to the observed
@@ -879,7 +884,7 @@ coverage and pass-through are calibrated only when full statutory coverage canno
 For VAT reductions, the observed retail price includes the temporary VAT rate. The same
 tax-inclusive-price adjustment applies to excise-tax reductions.
 Following the standard tax-inclusive price logic used to assess the inflation effects of VAT changes
-\citep{gautier2013vat}, the no-policy price is obtained by backing out the reduced tax-inclusive
+\citep{gautier2013vat}, the counterfactual price is obtained by backing out the reduced tax-inclusive
 price and reapplying the normal tax rate:
 \begin{equation}
 \widetilde p_{j,t}
@@ -902,17 +907,18 @@ where $\tau^{0}_{j,t}$ is the VAT rate and $\tau^{1}_{j,t}$ is the temporary VAT
 %aggregate-equivalent wedge is retained and explicitly classified as such.
 
 \paragraph{Administered Prices.}
-For regulated-price shields, price caps, and administered tariffs, we use an observed no-policy
-reference tariff when available and otherwise calibrate an aggregate-equivalent price wedge. 
+For regulated-price shields, price caps, and administered tariffs, we use a directly documented
+counterfactual reference tariff when available and otherwise calibrate an aggregate-equivalent price wedge. 
 
 For regulated measures, such as electricity or gas tariff shields and retail
-price caps, the counterfactual price is taken from an extrenal reference path (commidity price, regulation agency (CRE in France, etc.) :
+price caps, the counterfactual price is taken from an external reference path, such as a commodity-price
+benchmark or a tariff published by the national regulator (for example, the CRE in France):
 \begin{equation}
 \widetilde p_{j,t}
 =
 p^{\mathrm{ref}}_{j,t}.
 \end{equation}
-When the observed tariff and the no-policy reference tariff are both available, the no-policy retail
+When the observed tariff and the counterfactual reference tariff are both available, the counterfactual retail
 price is obtained by rescaling the observed price. If $T^{\mathrm{obs}}_{j,t}$ denotes the regulated
 tariff actually applied and $T^{\mathrm{ref}}_{j,t}$ the tariff that would have applied without the
 intervention, then:
@@ -945,7 +951,7 @@ passed through to consumer prices in 2022 in several euro-area countries, althou
 varied over time and by fuel type. This supports treating these measures as retail-price wedges in
 the counterfactual construction.
 For unit subsidies, fuel rebates, or per-kWh support schemes, the observed price is lower than the
-no-policy price by the statutory support amount. The counterfactual price is obtained by adding the
+counterfactual price by the statutory support amount. The counterfactual price is obtained by adding the
 support amount $s_{j,t}$ back to the observed unit price:
 \begin{equation}
 \widetilde p_{j,t}
@@ -981,8 +987,9 @@ $1+\delta_k\bar P_j/P_{j,t}$. The single parameter $\delta_k$ is calibrated.
 %accordingly, using the country-specific information reported in the policy inventory.
 
 For a small set of price-relevant interventions, the policy inventories identify the measure but do
-not provide the monthly no-policy tariff schedule, tariff-block utilization, or eligible-household
-weights needed for a direct statutory reconstruction. We therefore add these cases as separate
+not provide the monthly counterfactual tariff schedule, the distribution of household consumption
+across tariff blocks, or the eligible-household weights needed for a direct statutory reconstruction.
+We therefore add these cases as separate
 calibrated layers, identified from \citet{sgaravatti2021national} and \citet{arregui2022targeted},
 rather than merging them with the VAT or unit-subsidy calculations. This applies to block-tariff or
 price-cap schemes in Germany, the Netherlands, Cyprus, Ireland, Italy, and Slovenia, and to
@@ -1030,21 +1037,19 @@ This comparison isolates their direct effect
 on consumer prices.
 
 Figure~\ref{fig:ea_policy_total_cpi_counterfactual} shows the effect of unconventional policies on average euro-area inflation.
-The no-policy index lies above observed inflation during the main phase of the energy shock, with the
+The counterfactual index lies above observed inflation during the main phase of the energy shock, with the
 largest difference around the inflation peak in late 2022. VAT and excise reductions, fuel rebates,
 price shields, and regulated-price caps therefore compressed the peak rather than preventing the
 underlying rise in inflation. As measures expire, the ordering temporarily reverses: year-on-year
-inflation is then calculated relative to policy-depressed prices twelve months earlier. This base
-effect shifts measured inflation across time and should not be interpreted as evidence that the
-measures raised the underlying price level.
+inflation is then calculated relative to policy-depressed prices twelve months earlier.
 
 \begin{figure}[H]
 \centering
-\caption{Household price policies: observed and no-policy euro-area inflation (year on year, in \%)}
+\caption{Household price policies: observed and counterfactual euro-area inflation (year on year, in \%)}
 \includegraphics[width=0.86\textwidth,height=0.42\textheight,keepaspectratio]{fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png}
 \label{fig:ea_policy_total_cpi_counterfactual}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: The no-policy series removes fiscal interventions that directly affected consumer prices. The figure reports year-on-year inflation for all 20 euro-area countries, aggregated with annual HICP country weights, from January 2021 to July 2026. Policy effects are defined as observed minus no-policy inflation.\\
+\caption*{Notes: The counterfactual series removes fiscal interventions that directly affected consumer prices. The figure reports year-on-year inflation for all 20 euro-area countries, aggregated with annual HICP country weights, from January 2021 to July 2026. Policy effects are defined as observed minus counterfactual inflation.\\
 Sources: Eurostat HICP; Bruegel energy-policy dataset; authors' calculations.}
 \end{figure}
 
@@ -1061,7 +1066,7 @@ broad price measures were less targeted than income support
 
 \begin{figure}[H]
 \centering
-\caption{Household price policies: no-policy euro-area inflation by income quintile (year on year, in \%)}
+\caption{Household price policies: counterfactual euro-area inflation by income quintile (year on year, in \%)}
 \begin{subfigure}[t]{0.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1.png}
@@ -1127,7 +1132,7 @@ the three years, the policies therefore lower annual inflation by about 0.7 poin
 inflation inequality by about 0.3 point.
 
 Table~\ref{tab:ea20-counterfactual-income-gap-product-contributions} reproduces the product-group
-decomposition of Table~\ref{tab:ea20-income-gap-product-contributions} using the no-policy paths. It
+decomposition of Table~\ref{tab:ea20-income-gap-product-contributions} using the counterfactual paths. It
 reports each product group's contribution to the annual policy effects on average inflation and the
 Quintile 1--Quintile 5 gap. 
 
@@ -1217,7 +1222,7 @@ This annual average is the inflation measure used in the household-level regress
 inflation-burden calculation below.
 
 Figure~\ref{fig:ea20-household-observed-counterfactual-distribution} directly compares the observed
-and no-policy household-inflation distributions in 2021, 2022, and 2023.
+and counterfactual household-inflation distributions in 2021, 2022, and 2023.
 
 \begin{figure}[H]
 \centering
@@ -1225,7 +1230,7 @@ and no-policy household-inflation distributions in 2021, 2022, and 2023.
 \includegraphics[width=0.86\textwidth,height=0.68\textheight,keepaspectratio]{fig/fig_EA20_household_observed_counterfactual_distribution_2021_2023.png}
 \label{fig:ea20-household-observed-counterfactual-distribution}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Histograms report survey-weighted household shares. Each panel uses one color for the year; the no-policy distribution is shown with the lighter fill and the observed distribution with the darker fill. The counterfactual removes the household price measures modelled in Section~\ref{sec:fiscal-policies}; both calculations use identical fixed 2020 household baskets. Vertical lines mark scenario-specific medians. The displayed range excludes the outer 0.1 percent of the pooled weighted distribution.\\
+\caption*{Notes: Histograms report survey-weighted household shares. Each panel uses one color for the year; the counterfactual distribution is shown with the lighter fill and the observed distribution with the darker fill. The counterfactual removes the household price measures modelled in Section~\ref{sec:fiscal-policies}; both calculations use identical fixed 2020 household baskets. Vertical lines mark scenario-specific medians. The displayed range excludes the outer 0.1 percent of the pooled weighted distribution.\\
 Sources: Eurostat HICP and HBS microdata; authors' calculations.}
 \end{figure}
 

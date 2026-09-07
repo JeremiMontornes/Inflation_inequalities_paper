@@ -1,14 +1,64 @@
-\section{Aggregation Bias Across COICOP Levels}
+\section{Aggregation Bias Across COICOP Digits}
 \label{app:aggregation-bias}
 
-This appendix assesses whether the level of product aggregation affects the measured inflation gap
-between the first and fifth income quintiles. We construct the same fixed-basket indices at COICOP
-levels 1 and 2 and define aggregation bias as the Q1--Q5 inflation gap at level 1 minus the
-corresponding gap at level 2. Both calculations use the same starting year and group definitions.
+This appendix assesses how the number of COICOP digits used to classify products affects the measured inflation gap
+between households in the first and fifth income quintiles. In contrast to a calculation based on
+country-level group baskets, Table~\ref{tab:individual-distribution-aggregation-bias-2022-excluding-rents}
+is constructed from the household-level HBS microdata used in the individual inflation-distribution
+pipeline and reports the pipeline's pooled income-quintile specification. Germany, France, Spain,
+the Netherlands, and Belgium are included. Italy is excluded
+because income is unavailable in the HBS file and households therefore cannot be assigned to income
+quintiles.
 
-\input{tables/tab_EU6_aggregation_bias_level1_level2}
+\paragraph{Construction of the table.}
+Households are ranked by equivalised disposable income, defined as reported household net income
+divided by the modified-OECD equivalence scale. Survey-weighted quintile thresholds are calculated
+on the pooled five-country HBS sample, as in the individual-distribution pipeline. The first and
+fifth quintiles are denoted by $Q1$ and $Q5$. As a first step, actual rents (COICOP 041) and imputed
+rents (COICOP 042) are removed from both the household expenditure universe and the price universe.
+The remaining expenditures are then renormalised to sum to one within each household.
 
-The level of aggregation materially affects the estimated income gap. In France, Italy, and the
-Netherlands, moving from level 1 to level 2 changes its sign. The comparison therefore shows that
-broad product categories can conceal offsetting price movements within categories. These estimates
-are a measurement diagnostic: they do not quantify household substitution between products.
+For household $h$ and COICOP category $j$ at digit depth $d$, the fixed 2020 budget share is
+\begin{equation}
+ s^{d}_{hj}
+ =
+ \frac{x^{d}_{hj,2020}}
+ {\sum_{k \in \mathcal{J}^{d}_{h}}x^{d}_{hk,2020}},
+\end{equation}
+where $\mathcal{J}^{d}_{h}$ contains the non-rent categories with matched price observations. All
+coarser baskets are reconstructed from the same finest set of expenditure variables available for a
+given country. Consequently, changes across digit depths reflect product aggregation rather than a change
+in the underlying HBS expenditure universe.
+
+For each product, annual inflation in 2022 is the arithmetic mean of the available monthly
+year-on-year rates:
+\begin{equation}
+ \bar{\pi}^{d}_{j,2022}
+ =
+ \frac{1}{M_j}\sum_{m=1}^{M_j}
+ \left(\frac{P^{d}_{j,2022,m}}{P^{d}_{j,2021,m}}-1\right)100,
+\end{equation}
+with at least ten matched months required. Household-specific inflation is then
+\begin{equation}
+ \pi^{d}_{h,2022}
+ =
+ \sum_{j \in \mathcal{J}^{d}_{h}}s^{d}_{hj}\bar{\pi}^{d}_{j,2022}.
+\end{equation}
+The inflation rate of quintile $q$ is the HBS survey-weighted mean of household inflation,
+$\pi^{d}_{q,2022}$. The reported gap and aggregation bias are
+\begin{align}
+ G^{d}_{2022} &= \pi^{d}_{Q1,2022}-\pi^{d}_{Q5,2022},\\
+ B^{d,d+1}_{2022} &= G^{d}_{2022}-G^{d+1}_{2022}.
+\end{align}
+A positive gap means that low-income households experienced higher inflation than high-income
+households. A negative aggregation bias means that moving to the finer classification increases the
+measured $Q1$--$Q5$ gap.
+
+\input{tables/tab_EU5_individual_distribution_aggregation_bias_2022_excluding_rents}
+
+The finer classification increases the estimated $Q1$--$Q5$ gap in all five countries. For the
+Netherlands and Belgium, moving from digit 3 to digit 4 raises it by a further 1.315 and 0.674
+percentage points. Digit 4 is unavailable for Germany, France, and Spain because their harmonised
+HBS files stop at digit 3. Since product-price matching declines at finer digit depths, the estimates
+combine aggregation with residual COICOP coverage limits. They are a measurement diagnostic, not a
+measure of household substitution.
