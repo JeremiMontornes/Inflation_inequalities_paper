@@ -73,6 +73,7 @@
 \begin{frame}{Inflation Inequality and Policy Effects, 2021--2023}
 \begin{itemize}
   \item Euro-area Q1--Q5 inflation gap rose to \textbf{0.9 point}, from 0.1 point in 2021, and returned to zero in 2023.
+  \item Group averages conceal substantial within-category heterogeneity: households in the same income quintile can face markedly different inflation rates.
   \item Household energy contributed \textbf{1.6 points} to the 2022 Q1--Q5 gap; fuel, transport, and other products offset most of this exposure.
   \item Household price policies lowered annual inflation by \textbf{1.3 points in 2022} and \textbf{0.6 point in 2023}, while narrowing the Q1--Q5 gap by \textbf{0.4} and \textbf{0.5 point}.
 \end{itemize}
@@ -82,7 +83,7 @@
 \begin{frame}{Linking Official Prices to Household Baskets}
 \begin{itemize}
   \item We link monthly Eurostat HICP prices and official item weights to HBS expenditure shares through a harmonized COICOP bridge.
-  \item HBS tabulations identify baskets by income, age, and residence; microdata add household expenditures, disposable income, and demographics.
+  \item Public HBS data provide consumption baskets by income, age, and residence; microdata add household expenditures, disposable income, and demographics.
   \item We use RAS to calculate expenditure weights that simultaneously satisfy two margins: the expenditure share of each household category and the official HICP weight of each product.
 \end{itemize}
 \vspace{0.5em}
@@ -136,43 +137,6 @@ Other & -0.1 & \cellcolor{LightGray}-1.0 & -0.5\\
 
 {\small Food kept widening the Q1--Q5 gap in 2023, but offsets elsewhere brought the aggregate Q1--Q5 gap back to zero.}
 \source{Eurostat HICP and HBS; authors' calculations. Product rows are contributions to the Q1--Q5 annual inflation-rate gap, in percentage points.}
-\end{frame}
-
-
-% 5
-\begin{frame}{Older Households Faced Higher Inflation}
-\centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
-\source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
-\end{frame}
-
-% 8
-\begin{frame}{Household-Level Price Indices}
-\begin{itemize}
-  \item We treat each household as an elementary group. Its individual weight $\omega^{\mathrm{HBS}}_{j,i,2020}$ combines its expenditure on item $j$ with the official HICP weight for that item.
-\end{itemize}
-\vspace{0.5em}
-\[
-P_{i,y,m}
-=
-\sum_{j \in \mathcal{J}_{i,2020,y}}
-\omega^{\mathrm{HBS}}_{j,i,2020}
-\frac{p_{j,y,m}}{p_{j,y,0}}.
-\]
-\vspace{0.5em}
-\begin{itemize}
-  \item Individual indices measure inflation heterogeneity within income, age, and residence categories, which broad group averages conceal.
-  \item This within-category dispersion was substantial during the 2021--2023 inflation surge.
-\end{itemize}
-\end{frame}
-
-% 8 -- formerly slide 24
-\begin{frame}{Household-Level Inflation Dispersion in France}
-\centering
-{\small\color{WarmGray}French household-level inflation remained widely dispersed within both income groups in 2023.\par}
-\vspace{0.15em}
-\includegraphics[width=0.96\textwidth,height=0.65\textheight,keepaspectratio]{fig/fig_FR_household_level_inflation_distribution_q1_q5_2023_HBS.png}
-\source{Eurostat HICP and French HBS microdata; authors' calculations. Units: 2023 annual household inflation (x) and household share (y), in percent.}
 \end{frame}
 
 
@@ -242,10 +206,68 @@ $j=\text{electricity}$ and $t=$ March 2022--December 2023.
 \source{Eurostat and national statistical institutes; authors' calculations. Annual-average Q1--Q5 inflation-rate gaps, in percentage points.}
 \end{frame}
 
+% 8
+\begin{frame}{Household-Level Price Indices}
+\begin{itemize}
+  \item We treat each household as an elementary group. Its individual weight $\omega^{\mathrm{HBS}}_{j,i,2020}$ combines its expenditure on item $j$ with the official HICP weight for that item.
+\end{itemize}
+\vspace{0.5em}
+\[
+P_{i,y,m}
+=
+\sum_{j \in \mathcal{J}_{i,2020,y}}
+\omega^{\mathrm{HBS}}_{j,i,2020}
+\frac{p_{j,y,m}}{p_{j,y,0}}.
+\]
+\vspace{0.5em}
+\begin{itemize}
+  \item Individual indices measure inflation heterogeneity within income, age, and residence categories, which broad group averages conceal.
+  \item This within-category dispersion was substantial during the 2021--2023 inflation surge.
+\end{itemize}
+\end{frame}
+
+% 8 -- formerly slide 24
+\begin{frame}{Households Within the Same Income Quintile Faced Very Different Inflation}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.64\textwidth}
+\centering
+\includegraphics[width=\textwidth,height=0.62\textheight,keepaspectratio]{fig/slide11_fr_household_inflation_q1_q5_2022.pdf}
+\end{column}
+\begin{column}{0.33\textwidth}
+\vspace{0.6em}
+{\large\bfseries\color{Teal}98.9\%\par}
+{\small of household-inflation variance lies \textbf{within} income quintiles.\par}
+\vspace{1.0em}
+{\small
+\[
+\operatorname{Var}(\pi_h)=4.4595
+\]
+}
+{\footnotesize
+\centering
+$\underbrace{0.0472}_{\text{between quintiles}}$
+
+$+$
+
+$\underbrace{4.4123}_{\text{within quintiles}}$
+\par}
+\end{column}
+\end{columns}
+\source{Eurostat HICP and French HBS microdata; authors' calculations.}
+\end{frame}
+
+% 5
+\begin{frame}{Older Households Faced Higher Inflation}
+\centering
+\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
+\source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
+\end{frame}
+
 % 17
 \begin{frame}{Price Policies Reduced Average Inflation and Inflation Inequality}
 \begin{itemize}
   \item Q1--Q5 inflation inequality rose from \textbf{0.1 point in 2021} to \textbf{0.9 point in 2022}, then returned to zero in 2023; national experiences remained far more dispersed.
+  \item Income-group averages mask substantial household heterogeneity: most inflation dispersion occurs \textbf{within} categories rather than between them.
   \item Household energy contributed \textbf{1.6 points} to the 2022 Q1--Q5 gap, while fuel, transport, and other consumption categories offset it.
   \item Price policies reduced annual inflation by \textbf{1.3 points in 2022} and \textbf{0.6 point in 2023}; they reduced inequality by \textbf{0.4} and \textbf{0.5 point}.
   \item Administered household-energy prices generated most of the distributional cushioning; fuel support was mildly regressive in 2022.
