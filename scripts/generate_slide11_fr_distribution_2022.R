@@ -14,9 +14,11 @@ root <- normalizePath(file.path(dirname(script), ".."), mustWork = TRUE)
 output <- file.path(root, "fig", "slide11_fr_household_inflation_q1_q5_2022.pdf")
 
 d <- readRDS(input)
-required <- c("year", "mean_inflation", "equivalised_income", "weight")
+required <- c("year", "mean_inflation", "net_income", "weight", "income_quintile_num", "method")
 if (length(setdiff(required, names(d)))) stop("The input cache lacks required columns.")
 if ("country" %in% names(d)) d <- d[d$country == "FR", ]
+if (!nrow(d) || !all(d$method == "a1_relative_expenditure_no_rents_annual_index_v14"))
+  stop("Use the Section 4 observed v14 cache (A1 relative-expenditure method).")
 
 weighted_quantile <- function(x, w, probs) {
   ok <- is.finite(x) & is.finite(w) & w > 0
@@ -29,20 +31,8 @@ weighted_quantile <- function(x, w, probs) {
   vapply(probs, function(p) x[which(cw >= p)[1]], numeric(1))
 }
 
-# Follow the source pipeline: define HA10-weighted income quintiles on the
-# complete annual file before selecting the comparison year.
-income_rows <- d
-breaks <- weighted_quantile(
-  income_rows$equivalised_income,
-  income_rows$weight,
-  seq(0.2, 0.8, by = 0.2)
-)
-d$quintile <- cut(
-  d$equivalised_income,
-  breaks = c(-Inf, breaks, Inf),
-  labels = paste0("Q", 1:5),
-  include.lowest = TRUE
-)
+# Reuse national total-income quintiles defined before price matching, as in A1.
+d$quintile <- factor(d$income_quintile_num, levels = 1:5, labels = paste0("Q", 1:5))
 
 z <- d[d$year == 2022 & d$quintile %in% c("Q1", "Q5"), ]
 z <- z[is.finite(z$mean_inflation) & is.finite(z$weight) & z$weight > 0, ]
@@ -108,4 +98,11 @@ total <- weighted.mean((y$mean_inflation - overall_mean)^2, y$weight)
 message(sprintf("Q1 mean: %.4f; Q5 mean: %.4f", means["Q1"], means["Q5"]))
 message(sprintf("Variance: between %.4f + within %.4f = total %.4f",
                 between, within, total))
+stopifnot(abs(between + within - total) < 1e-10)
+writeLines(c(
+  sprintf("\\newcommand{\\MicroWithinShare}{%.1f}", 100 * within / total),
+  sprintf("\\newcommand{\\MicroTotalVariance}{%.4f}", total),
+  sprintf("\\newcommand{\\MicroBetweenVariance}{%.4f}", between),
+  sprintf("\\newcommand{\\MicroWithinVariance}{%.4f}", within)
+), file.path(root, "tables", "slide15_fr_micro_variance.tex"))
 message("Exported: ", output)

@@ -6,7 +6,7 @@ out <- file.path(root, "fig", "slide15_observed_no_policy_q1_q5_gap.pdf")
 
 year <- 2021:2023
 observed <- c(0.1, 0.9, 0.0)
-policy_effect <- c(-0.1, -0.4, -0.5) # observed minus no-policy gap
+policy_effect <- c(-0.1, -0.4, -0.4) # observed minus no-policy gap
 no_policy <- observed - policy_effect
 
 navy <- "#24364B"
@@ -43,7 +43,7 @@ arrows(arrow_x, no_policy[2:3] - 0.04,
        length = 0.10, angle = 25, lwd = 1.8, col = navy)
 text(2022.18, mean(c(no_policy[2], observed[2])) - 0.12, "-0.4 pp",
      col = navy, adj = 0, font = 2, cex = 1.22)
-text(2022.92, mean(c(no_policy[3], observed[3])) + 0.09, "-0.5 pp",
+text(2022.92, mean(c(no_policy[3], observed[3])) + 0.09, "-0.4 pp",
      col = navy, adj = 1, font = 2, cex = 1.22)
 
 legend(mean(par("usr")[1:2]), par("usr")[3] - 0.30,

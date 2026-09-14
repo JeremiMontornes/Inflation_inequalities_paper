@@ -1,64 +1,60 @@
 \section{Aggregation Bias Across COICOP Digits}
 \label{app:aggregation-bias}
 
-This appendix assesses how the number of COICOP digits used to classify products affects the measured inflation gap
-between households in the first and fifth income quintiles. In contrast to a calculation based on
-country-level group baskets, Table~\ref{tab:individual-distribution-aggregation-bias-2022-excluding-rents}
-is constructed from the household-level HBS microdata used in the individual inflation-distribution
-pipeline and reports the pipeline's pooled income-quintile specification. Germany, France, Spain,
-the Netherlands, and Belgium are included. Italy is excluded
-because income is unavailable in the HBS file and households therefore cannot be assigned to income
-quintiles.
+Table~\ref{tab:aggregation-bias-excluding-rents-harmonized} compares inflation gaps across COICOP
+digit depths using HBS microdata and reports a digit-3 benchmark from Eurostat national-quintile HBS aggregates.
+Macro D3 excl. and all microdata columns exclude actual and imputed rents (HBS 041 and 042)
+and the corresponding HICP actual-rent component (041), and use relative-expenditure weights.
+All columns use annual-average chained-index inflation. Macro D3 excl. exactly reproduces the
+excluding-rents gap in Table~\ref{tab:rent-mapping-robustness}.
 
-\paragraph{Construction of the table.}
-Households are ranked by equivalised disposable income, defined as reported household net income
-divided by the modified-OECD equivalence scale. Survey-weighted quintile thresholds are calculated
-on the pooled five-country HBS sample, as in the individual-distribution pipeline. The first and
-fifth quintiles are denoted by $Q1$ and $Q5$. As a first step, actual rents (COICOP 041) and imputed
-rents (COICOP 042) are removed from both the household expenditure universe and the price universe.
-The remaining expenditures are then renormalised to sum to one within each household.
+\paragraph{Micro--macro consistency.}
+We first reaggregate the 2020 household records into national income quintiles and compare
+survey-weighted expenditure shares with Eurostat's published HBS shares on a common digit-3
+support, excluding rents. Ranking households by total net household income substantially improves
+this match relative to ranking them by equivalised income. Across products and quintiles, the mean
+absolute difference in budget shares falls from 0.20 to 0.05 percentage points in the Netherlands
+and from 0.31 to 0.04 in Belgium; the corresponding figures for France are 0.19 and 0.03.
+This comparison precedes HICP calibration and therefore identifies a difference in the construction
+of income groups rather than an effect of the inflation-index weighting method. We use total
+household income for the microdata quintiles throughout this appendix.
 
-For household $h$ and COICOP category $j$ at digit depth $d$, the fixed 2020 budget share is
+\paragraph{Baskets and weights.}
+Microdata quintiles are defined separately within each country using survey-weighted net household
+income without division by an equivalence scale (total household income). The sample covers Germany, France, Spain,
+the Netherlands and Belgium; Italy is excluded because household income is unavailable in its
+microdata file. The 2020 microdata expenditure baskets are reconstructed at each digit depth from
+the same finest available expenditure variables after removing rents. Nonpositive or missing
+expenditure entries contribute zero, while eligible households remain in the survey denominators.
+
+For product $j$ in quintile $q$, let $\bar{x}_{qj}$ be survey-weighted mean HBS expenditure and
+$\bar{x}_j$ the corresponding national mean. The group weight in year $y$ is
 \begin{equation}
- s^{d}_{hj}
- =
- \frac{x^{d}_{hj,2020}}
- {\sum_{k \in \mathcal{J}^{d}_{h}}x^{d}_{hk,2020}},
+ \omega_{qj,y}=
+ \frac{W^{HICP}_{j,y}\,\bar{x}_{qj}/\bar{x}_j}
+ {\sum_{k\in\mathcal J}W^{HICP}_{k,y}\,\bar{x}_{qk}/\bar{x}_k},
 \end{equation}
-where $\mathcal{J}^{d}_{h}$ contains the non-rent categories with matched price observations. All
-coarser baskets are reconstructed from the same finest set of expenditure variables available for a
-given country. Consequently, changes across digit depths reflect product aggregation rather than a change
-in the underlying HBS expenditure universe.
+where $\mathcal J$ contains the matched non-rent products. Macro baskets use the corresponding
+relative-expenditure information in the published Eurostat HBS tables, using the most recent available preceding HBS wave for each matched item. Each basket is normalised to one. RAS is not used in this table. Prices
+are mapped to the HBS classification and reaggregated with annual HICP weights; rent components
+are removed before constructing the broad housing index.
 
-For each product, annual inflation in 2022 is the arithmetic mean of the available monthly
-year-on-year rates:
+\paragraph{Inflation and aggregation bias.}
+Let $I^d_{q,y,m}$ denote the chained Laspeyres index for quintile $q$ at digit depth $d$.
+Inflation in 2022 is calculated from annual-average indices,
 \begin{equation}
- \bar{\pi}^{d}_{j,2022}
- =
- \frac{1}{M_j}\sum_{m=1}^{M_j}
- \left(\frac{P^{d}_{j,2022,m}}{P^{d}_{j,2021,m}}-1\right)100,
+ \pi^d_{q,2022}=100\left(
+ \frac{\frac{1}{12}\sum_{m=1}^{12} I^d_{q,2022,m}}
+ {\frac{1}{12}\sum_{m=1}^{12} I^d_{q,2021,m}}-1\right).
 \end{equation}
-with at least ten matched months required. Household-specific inflation is then
-\begin{equation}
- \pi^{d}_{h,2022}
- =
- \sum_{j \in \mathcal{J}^{d}_{h}}s^{d}_{hj}\bar{\pi}^{d}_{j,2022}.
-\end{equation}
-The inflation rate of quintile $q$ is the HBS survey-weighted mean of household inflation,
-$\pi^{d}_{q,2022}$. The reported gap and aggregation bias are
-\begin{align}
- G^{d}_{2022} &= \pi^{d}_{Q1,2022}-\pi^{d}_{Q5,2022},\\
- B^{d,d+1}_{2022} &= G^{d}_{2022}-G^{d+1}_{2022}.
-\end{align}
-A positive gap means that low-income households experienced higher inflation than high-income
-households. A negative aggregation bias means that moving to the finer classification increases the
-measured $Q1$--$Q5$ gap.
+The gap is $G^d=\pi^d_{Q1,2022}-\pi^d_{Q5,2022}$ and the microdata aggregation bias is
+$B^{d,d'}=G^d-G^{d'}$ for $d'>d$. Thus, negative bias indicates a larger gap at finer digit depth.
 
-\input{tables/tab_EU5_individual_distribution_aggregation_bias_2022_excluding_rents}
+\input{tables/tab_EU5_aggregation_bias_excluding_rents_harmonized}
 
-The finer classification increases the estimated $Q1$--$Q5$ gap in all five countries. For the
-Netherlands and Belgium, moving from digit 3 to digit 4 raises it by a further 1.315 and 0.674
-percentage points. Digit 4 is unavailable for Germany, France, and Spain because their harmonised
-HBS files stop at digit 3. Since product-price matching declines at finer digit depths, the estimates
-combine aggregation with residual COICOP coverage limits. They are a measurement diagnostic, not a
-measure of household substitution.
+At digit 3, the micro--macro gap difference is below 0.1 percentage point in Germany, France,
+Spain and Belgium, and about 0.3 point in the Netherlands. These residual differences should not
+be interpreted as aggregation bias: the latter is measured within the microdata across digit
+depths. The comparison with published HBS shares uses native digit-3 variables, whereas the
+inflation calculations aggregate the finest available expenditure variables. In the Netherlands
+and Belgium, these two constructions need not coincide, notably for insurance expenditure.
