@@ -163,10 +163,13 @@ Other consumption & 90\% & 94\% & --\\
 Product group & 2021 & \cellcolor{LightGray}\textbf{2022} & 2023\\
 \midrule
 Food and non-alcoholic beverages & 0.1 & \cellcolor{LightGray}0.6 & 0.6\\
+Alcohol, tobacco and narcotics & 0.1 & \cellcolor{LightGray}0.1 & 0.2\\
+Clothing and footwear & 0.0 & \cellcolor{LightGray}0.0 & -0.1\\
+Housing (rentals and repairs) & 0.0 & \cellcolor{LightGray}-0.2 & -0.1\\
 Housing energy & 0.4 & \cellcolor{LightGray}\textbf{1.6} & 0.1\\
 Operation of personal transport equipment & -0.2 & \cellcolor{LightGray}-0.4 & 0.0\\
 Transport (excluding vehicle operation) & -0.1 & \cellcolor{LightGray}-0.3 & -0.2\\
-Other & -0.1 & \cellcolor{LightGray}-1.0 & -0.5\\
+Other & -0.1 & \cellcolor{LightGray}-0.5 & -0.5\\
 \midrule
 \textbf{Total} & \textbf{0.1} & \cellcolor{LightGray}\textbf{0.9} & \textbf{0.0}\\
 \bottomrule
@@ -194,30 +197,70 @@ The counterfactual covers \textbf{100 price-policy measures} (prices held below 
 \end{frame}
 
 % 12
+
+
+
+% France: component-level reconstruction, matching the documented implementation.
 \begin{frame}{Defining the Price-Policy Counterfactual}
-\begin{itemize}
-  \item The counterfactual removes these price-based interventions component by component while retaining observed prices for unaffected products.
-\end{itemize}
-\vspace{0.4em}
-\textbf{Example: reversing a temporary VAT cut}
+\scriptsize\setlength{\abovedisplayskip}{1pt}\setlength{\belowdisplayskip}{1pt}\setlength{\abovedisplayshortskip}{2pt}\setlength{\belowdisplayshortskip}{2pt}
+\textcolor{WarmGray}{$CF$ = counterfactual; $O$ = observed; $TRV_{\mathrm{gas}}$: gas tariff (EUR/kWh); $TRV_e$: electricity tariff (EUR/kWh).}\par
+\par\vspace{0.5em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\textcolor{Teal}{\textbf{1. Gas \enspace|\enspace Nov. 2021--June 2023}}
 \[
-\widetilde p_{j,t}
-=
-p_{j,t}
-\frac{1+\tau^{0}_{j,t}}{1+\tau^{1}_{j,t}},
-\qquad
-\tau^{0}_{j,t}=\text{VAT rate},\quad
-\tau^{1}_{j,t}=\text{temporary VAT rate}.
+\boxed{\Delta P_{\mathrm{gas},t}^{CF}=\beta_{\mathrm{gas}}\,\Delta TRV_{\mathrm{gas},t}^{CF}}
 \]
-\centering
-\textit{Belgium: cutting VAT from \textbf{21\%} to \textbf{6\%} implies}
+{\color{WarmGray}unit-free decimal rates.}\par
+
+$\beta_{\mathrm{gas}}=0.82$.
+\par\vspace{0.5em}
+\textcolor{Teal}{\textbf{3. Motor fuels \enspace|\enspace Apr.--Dec. 2022}}
 \[
-\widetilde p_{j,t}=p_{j,t}\frac{1.21}{1.06}\simeq 1.142\,p_{j,t}.
+\boxed{p_{\mathrm{fuel},t}^{CF}=p_{\mathrm{fuel},t}^{O}+r_t}
+\qquad\text{(EUR/litre, incl. taxes)}
 \]
-{\small
-$j=\text{electricity}$ and $t=$ March 2022--December 2023.
-}
-\source{National policy sources, Sgaravatti et al.; authors' calculations.}
+Chained index:
+\[
+P_{\mathrm{fuel},t}^{CF}=P_{\mathrm{fuel},t-1}^{CF}
+\frac{p_{\mathrm{fuel},t}^{O}+r_t}{p_{\mathrm{fuel},t-1}^{O}+r_{t-1}}.
+\]
+Monthly rebates (EUR/litre):
+\par\smallskip
+\begin{tabular}{@{}lr@{\qquad}lr@{}}
+Apr.--Aug. & $r=0.18$ & Sept.--Oct. & $r=0.30$\\
+November & $r=0.22$ & December & $r=0.10$
+\end{tabular}
+\par\smallskip
+
+\end{column}
+\begin{column}{0.49\textwidth}
+\textcolor{Teal}{\textbf{2. Electricity \enspace|\enspace Feb. 2022--Feb. 2024}}
+\[
+\boxed{\Delta P_{e,t}^{CF}=\beta_e\,\Delta TRV_{e,t}^{CF}}
+\]
+{\color{WarmGray}unit-free decimal rates.}\par
+
+$\beta_e=1.02$.
+\par\smallskip
+\begin{tabular}{@{}lll@{}}
+\toprule
+Date & Observed reference & $\Delta TRV_{e,t}^{CF}$\\
+\midrule
+Feb. 2022 & Jan. 2022 & $33.24\%$\\
+Feb. 2023 & Jan. 2023 & $108.91\%$\\
+Feb. 2024 & Feb. 2024 & $0\%^{\dagger}$\\
+\bottomrule
+\end{tabular}
+\par\smallskip
+
+\par\smallskip
+
+\par\smallskip
+$^{\dagger}$Model closure, not a tariff estimate: $P_{e,t}^{CF}=P_{e,t}^{O}$.
+\end{column}
+\end{columns}
+
 \end{frame}
 
 % 13
@@ -304,6 +347,42 @@ $\underbrace{\MicroWithinVariance}_{\text{within quintiles}}$
   \vfill
 \end{frame}
 
+
+% Appendix: same data as the six French energy charts, indices only.
+\begin{frame}{Defining the Price-Policy Counterfactual}
+\begin{itemize}
+  \item The counterfactual removes these price-based interventions component by component while retaining observed prices for unaffected products.
+\end{itemize}
+\vspace{0.4em}
+\textbf{Example: reversing a temporary VAT cut}
+\[
+\widetilde p_{j,t}
+=
+p_{j,t}
+\frac{1+\tau^{0}_{j,t}}{1+\tau^{1}_{j,t}},
+\qquad
+\tau^{0}_{j,t}=\text{VAT rate},\quad
+\tau^{1}_{j,t}=\text{temporary VAT rate}.
+\]
+\centering
+\textit{Belgium: cutting VAT from \textbf{21\%} to \textbf{6\%} implies}
+\[
+\widetilde p_{j,t}=p_{j,t}\frac{1.21}{1.06}\simeq 1.142\,p_{j,t}.
+\]
+{\small
+$j=\text{electricity}$ and $t=$ March 2022--December 2023.
+}
+\source{National policy sources, Sgaravatti et al.; authors' calculations.}
+\end{frame}
+
+\begin{frame}{France: Observed and Counterfactual Energy Price Indices}
+\noindent{\small\color{WarmGray}January 2020 = 100; January 2020--June 2026. Vertical scales differ across panels.\par}
+\vspace{0.5em}
+\centering
+\includegraphics[width=\textwidth,height=0.69\textheight,keepaspectratio]{fig/slide_fr_energy_price_indices.pdf}
+\source{French observed and no-policy component price series; authors' calculations.}
+\end{frame}
+
 % Appendix -- household weighting method (formerly slide 14)
 \begin{frame}{Household Weights Combine HBS and HICP}
 \noindent{\small Fixed 2020 expenditures; annual official HICP weights; actual and imputed rents excluded.\par}
@@ -355,27 +434,31 @@ Slovakia & 0.0 & 0.0 & -3.0 & 0.0 & 0.0 & -1.9\\
 \end{frame}
 
 % A2
-\begin{frame}{A Uniform Energy Shock Mostly Raises Average Inflation, Not the Q1--Q5 Gap}
+\begin{frame}{Energy Import Prices Mainly Raise Average Inflation}
 \centering
 \scriptsize
+\setlength{\tabcolsep}{2pt}
 \begin{tabular}{lrrrr}
 \toprule
 Product group & Average inflation & Q1--Q5 gap & Direct Q1--Q5 gap & Indirect Q1--Q5 gap\\
 \midrule
-Food & 0.7 & 0.1 & 0.0 & 0.1\\
-Housing energy & 2.9 & 0.9 & 0.7 & 0.3\\
-Fuel & 1.4 & -0.6 & -0.5 & -0.1\\
-Transport excluding fuel & 0.9 & -0.1 & 0.0 & -0.1\\
-Other products & 1.7 & -0.1 & 0.0 & -0.1\\
+Food and non-alcoholic beverages & 0.5 & 0.1 & 0.0 & 0.1\\
+Alcohol, tobacco and narcotics & 0.1 & 0.1 & 0.0 & 0.1\\
+Clothing and footwear & 0.1 & 0.0 & 0.0 & 0.0\\
+Housing (rentals and repairs) & 0.2 & 0.0 & 0.0 & 0.0\\
+Housing energy & 1.6 & 0.7 & 0.2 & 0.5\\
+Vehicle operation & 1.7 & -0.6 & -0.1 & -0.6\\
+Transport (excluding vehicle operation) & 1.1 & -0.1 & 0.0 & -0.1\\
+Other & 0.7 & -0.2 & 0.0 & -0.1\\
 \midrule
-\textbf{Total} & \textbf{7.6} & \textbf{0.2} & \textbf{0.1} & \textbf{0.1}\\
+\textbf{Total} & \textbf{6.0} & \textbf{-0.1} & \textbf{0.0} & \textbf{-0.1}\\
 \bottomrule
 \end{tabular}
 \vspace{0.5em}
 \begin{itemize}
-  \item Housing energy widens the Q1--Q5 gap by \textbf{0.9 point}, but greater Q5 exposure to fuel and transport offsets most of it.
+  \item Housing energy widens the Q1--Q5 gap by \textbf{0.7 point}; other products offset this effect.
 \end{itemize}
-\source{Eurostat HICP, HBS and 2022 FIGARO; authors' calculations. Simulation of a uniform 40\% energy-sector shock; percentage-point effects.}
+\source{Eurostat trade statistics, HBS and FIGARO; authors' calculations. Observed extra-EU energy import-price shock: 83.9\% in 2022. Effects in pp; components sum before rounding.}
 \end{frame}
 
 % A3 -- formerly slide 15
@@ -480,15 +563,16 @@ Administered prices & 163.8 & 0.0 & -0.5 & -0.8 & 0.0 & -0.3 & -0.5\\
 Fuel subsidies and rebates & 17.0 & 0.0 & -0.3 & 0.3 & 0.0 & 0.1 & -0.1\\
 Other calibrated layer & 16.3 & 0.0 & -0.3 & 0.1 & 0.0 & -0.2 & 0.0\\
 Unallocated costs & 8.5 & -- & -- & -- & -- & -- & --\\
-\textbf{Total} & \textbf{268.9} & \textbf{-0.1} & \textbf{-1.2} & \textbf{-0.5} & \textbf{-0.1} & \textbf{-0.4} & \textbf{-0.5}\\
+\textbf{Decomposition total} & \textbf{268.9} & \textbf{-0.1} & \textbf{-1.2} & \textbf{-0.5} & \textbf{-0.1} & \textbf{-0.4} & \textbf{-0.5}\\
 \midrule
 Untargeted measures & 236.2 & -0.1 & -0.8 & -0.1 & 0.0 & -0.2 & -0.3\\
 Targeted measures & 32.8 & 0.0 & -0.5 & -0.4 & 0.0 & -0.2 & -0.2\\
+\midrule
+Main-paper joint effect & 268.9 & -0.1 & -1.3 & -0.3 & -0.1 & -0.4 & -0.4\\
 \bottomrule
 \end{tabular}
-\vspace{0.8em}
-\par\vspace{0.6em}
-{\small Negative values indicate that policies reduced inflation or the Q1--Q5 inflation gap.\par}
+\vspace{0.3em}
+\par{\scriptsize\color{WarmOrange}The decomposition has not yet been reconciled with the main-paper joint effect.\par}
 \source{Bruegel; national sources; authors' calculations. Annual policy effects are observed minus no-policy rates, in percentage points. Category effects need not sum because policies interact.}
 \end{frame}
 
@@ -517,7 +601,7 @@ CEPREMAP & CepreHANK & --1.1 pp & --1.8 pp & NR & NR\\
 \end{tabular}
 \par\vspace{0.5em}
 {\scriptsize\color{WarmGray}\RaggedRight NR: not reported in the cited study. Policy coverage and inflation conventions differ.\par}
-\source{This paper, France (slide 19); \href{https://www.banque-france.fr/system/files/2024-07/BDF253_4_Bouclier_tarifaire_web.pdf}{BdF (2024)}; \href{https://cae-eco.fr/static/pdf/focus97-bouclier-tarifaire-230711-web.pdf}{OFCE/CAE (2023)}; \href{https://www.cepremap.fr/2022/11/loi-de-finance-2023-quel-impact-a-eu-le-bouclier-tarifaire-sur-la-croissance-linflation-la-dette-publique-et-les-inegalites/}{CEPREMAP (2022)}.}
+\source{This paper, France (slide 21); \href{https://www.banque-france.fr/system/files/2024-07/BDF253_4_Bouclier_tarifaire_web.pdf}{BdF (2024)}; \href{https://cae-eco.fr/static/pdf/focus97-bouclier-tarifaire-230711-web.pdf}{OFCE/CAE (2023)}; \href{https://www.cepremap.fr/2022/11/loi-de-finance-2023-quel-impact-a-eu-le-bouclier-tarifaire-sur-la-croissance-linflation-la-dette-publique-et-les-inegalites/}{CEPREMAP (2022)}.}
 \end{frame}
 % Selected references from references.bib
 \begin{frame}{Selected References}

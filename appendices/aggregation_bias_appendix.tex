@@ -4,9 +4,9 @@
 Table~\ref{tab:aggregation-bias-excluding-rents-harmonized} compares inflation gaps across COICOP
 digit depths using HBS microdata and reports a digit-3 benchmark from Eurostat national-quintile HBS aggregates.
 Macro D3 excl. and all microdata columns exclude actual and imputed rents (HBS 041 and 042)
-and the corresponding HICP actual-rent component (041), and use relative-expenditure weights.
-All columns use annual-average chained-index inflation. Macro D3 excl. exactly reproduces the
-excluding-rents gap in Table~\ref{tab:rent-mapping-robustness}.
+and the corresponding HICP actual-rent component (041), and use RAS-calibrated weights.
+All columns use annual-average chained-index inflation. The macro benchmark is recalculated
+with RAS; the rent-robustness table retains its relative-expenditure specification.
 
 \paragraph{Micro--macro consistency.}
 We first reaggregate the 2020 household records into national income quintiles and compare
@@ -21,23 +21,47 @@ household income for the microdata quintiles throughout this appendix.
 
 \paragraph{Baskets and weights.}
 Microdata quintiles are defined separately within each country using survey-weighted net household
-income without division by an equivalence scale (total household income). The sample covers Germany, France, Spain,
-the Netherlands and Belgium; Italy is excluded because household income is unavailable in its
-microdata file. The 2020 microdata expenditure baskets are reconstructed at each digit depth from
+income without division by an equivalence scale (total household income). The sample covers 18 euro-area countries. Fifteen countries provide expenditure variables
+through digit 5; Germany, France and Spain provide digit 3 in the local microdata files.
+Italy is excluded because household income is unavailable, and Portugal because its detailed
+expenditure columns are unpopulated. The 2020 microdata expenditure baskets are reconstructed at each digit depth from
 the same finest available expenditure variables after removing rents. Nonpositive or missing
 expenditure entries contribute zero, while eligible households remain in the survey denominators.
 
-For product $j$ in quintile $q$, let $\bar{x}_{qj}$ be survey-weighted mean HBS expenditure and
-$\bar{x}_j$ the corresponding national mean. The group weight in year $y$ is
+For product $j$ in quintile $q$, let $\bar{x}_{qj}$ be survey-weighted mean HBS expenditure,
+$\bar{x}_j$ the national mean, $s_{q,y}$ the package's consumption share of quintile $q$,
+and $w^{HICP}_{j,y}$ the HICP product share on matched support. RAS iteratively rescales
+rows and columns of the positive seed
+$\max\{s_{q,y}w^{HICP}_{j,y}\bar{x}_{qj}/\bar{x}_j,10^{-12}\}$.
+The calibrated expenditure masses $M_{qj,y}$ satisfy
 \begin{equation}
- \omega_{qj,y}=
- \frac{W^{HICP}_{j,y}\,\bar{x}_{qj}/\bar{x}_j}
- {\sum_{k\in\mathcal J}W^{HICP}_{k,y}\,\bar{x}_{qk}/\bar{x}_k},
+ \sum_j M_{qj,y}=s_{q,y},\qquad
+ \sum_q M_{qj,y}=w^{HICP}_{j,y},\qquad
+ \omega_{qj,y}=M_{qj,y}/s_{q,y}.
 \end{equation}
-where $\mathcal J$ contains the matched non-rent products. Macro baskets use the corresponding
-relative-expenditure information in the published Eurostat HBS tables, using the most recent available preceding HBS wave for each matched item. Each basket is normalised to one. RAS is not used in this table. Prices
-are mapped to the HBS classification and reaggregated with annual HICP weights; rent components
-are removed before constructing the broad housing index.
+Both the macro and micro calculations use the package's published consumption shares by
+income quintile, selecting the latest available wave preceding each weight year, and annual
+HICP product margins. These quintile margins are not re-estimated from the matched microdata
+at each digit depth. A shared ECOICOP1 correspondence table defines the D2--D5 mappings for both the
+household-index function and this appendix. Expenditures and historical HICP prices
+use the same canonical product codes; rents are removed before D2 aggregation.
+Micro expenditures are aggregated by quintile before RAS calibration;
+the table does not average separately chained household indices.
+Macro baskets use the corresponding published Eurostat HBS expenditures, selecting the most
+recent available preceding wave for each matched item. Micro prices
+use the archived ECOICOP1 HICP indices and item weights, which match the HBS classification,
+and are reaggregated with annual HICP weights. An undivided terminal HICP class is matched
+to its identical HBS code padded with zeros (for example, electricity 0451/04510
+and hospital services 063/06300). Five additional terminal correspondences for hospital
+services and education are validated against the HBS manual and Eurostat labels and
+recorded in an explicit mapping table. Each corresponding published price and weight
+enters once; no distinct subclass receives an imputed parent price. Fuzzy label matching
+is used to propose candidates, and unvalidated candidates are excluded.
+Rent components are removed before constructing the broad housing index. Products without
+complete monthly prices or annual weights are excluded; prices are not imputed to distinct
+subclasses. Matched expenditure coverage can vary across digit depths, so the reported
+differences can combine aggregation and coverage effects. The macro benchmark retains
+the price source and classification bridge used in the rent-robustness appendix.
 
 \paragraph{Inflation and aggregation bias.}
 Let $I^d_{q,y,m}$ denote the chained Laspeyres index for quintile $q$ at digit depth $d$.
@@ -52,9 +76,8 @@ $B^{d,d'}=G^d-G^{d'}$ for $d'>d$. Thus, negative bias indicates a larger gap at 
 
 \input{tables/tab_EU5_aggregation_bias_excluding_rents_harmonized}
 
-At digit 3, the micro--macro gap difference is below 0.1 percentage point in Germany, France,
-Spain and Belgium, and about 0.3 point in the Netherlands. These residual differences should not
-be interpreted as aggregation bias: the latter is measured within the microdata across digit
-depths. The comparison with published HBS shares uses native digit-3 variables, whereas the
-inflation calculations aggregate the finest available expenditure variables. In the Netherlands
-and Belgium, these two constructions need not coincide, notably for insurance expenditure.
+The micro--macro comparison also reflects differences in source, matched products and income-group
+construction; it should not be interpreted as aggregation bias. The earlier validation of
+published HBS expenditure shares uses native digit-3 variables, whereas the inflation
+calculations aggregate the finest available expenditure variables within each country.
+In Belgium and the Netherlands, these constructions can differ, notably for insurance expenditure.
