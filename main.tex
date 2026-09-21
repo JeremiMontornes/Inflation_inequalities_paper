@@ -1202,26 +1202,25 @@ Sources: HBS microdata, Eurostat HICP; authors' calculations.}
 \end{figure}
 \clearpage
 
-\paragraph{Relation to the other household estimates.}
-The euro-area counterfactual distributions below, and the burden estimates in the following subsection, retain their relative-expenditure indices and survey-weighted summaries. For these indices, each HICP product weight is multiplied by household expenditure relative to the survey-weighted national mean for that product. The resulting weights are normalized within each household. They do not use the household RAS calibration or the histogram weights $\lambda_{ic,y}$. Their inflation rates are calculated from annual-average indices. The regressions instead use the RAS-calibrated indices described above, recomputed on the income-eligible sample; estimation is unweighted. Income quintiles are national quintiles of total net household income, without equivalisation; the income-based samples retain finite income and a positive reported equivalence scale. The scale is not used to divide income.
+Income quintiles are defined within each country using total net household income, without equivalisation. Income-based analyses retain households with finite income and a positive reported equivalence scale.
 
 Figure~\ref{fig:ea20-household-observed-counterfactual-distribution} directly compares the observed
 and counterfactual household-inflation distributions in 2021, 2022, and 2023. Dispersion increases
 sharply in 2022, with a long upper tail, before narrowing in 2023. The observed distribution lies
 to the left of the no-policy counterfactual in 2022, consistent with household price measures
-limiting inflation exposure. The observed and counterfactual medians are respectively 2.76 and
-2.89 percent in 2021, 9.29 and 10.83 percent in 2022, and 5.97 and 6.23 percent in 2023.
-The median difference is therefore largest in 2022, at 1.54 points, and narrows to 0.26 point
-in 2023. These differences between scenario medians need not equal either the median household
+limiting inflation exposure. The observed and counterfactual medians are respectively 2.67 and
+2.76 percent in 2021, 8.51 and 9.73 percent in 2022, and 5.80 and 6.02 percent in 2023.
+The median difference is 1.22 points in 2022 and 0.22 point in 2023.
+These differences between scenario medians need not equal either the median household
 policy effect or the aggregate inflation effect in Table~\ref{tab:country-heterogeneity-counterfactual-gap}.
 
 \begin{figure}[H]
 \centering
 \caption{Observed and counterfactual household-inflation distributions in the euro area, 2021--2023}
-\includegraphics[width=0.86\textwidth,height=0.68\textheight,keepaspectratio]{fig/fig_EA20_household_observed_counterfactual_distribution_2021_2023.png}
+\includegraphics[width=0.86\textwidth,height=0.66\textheight,keepaspectratio]{fig/fig_EA20_household_observed_counterfactual_distribution_2021_2023.png}
 \label{fig:ea20-household-observed-counterfactual-distribution}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Histograms report survey-weighted household shares. Each panel uses one color for the year; the counterfactual distribution is shown with the lighter fill and the observed distribution with the darker fill. The counterfactual removes the household price measures modelled in Section~\ref{sec:fiscal-policies}; both calculations use identical 2020 relative-expenditure profiles and annual HICP weights, excluding rents. Policy price ratios are reaggregated from detailed products with the same HICP weights and applied to the observed price series. Solid vertical lines mark observed medians and dashed lines counterfactual medians. The displayed range excludes the outer 0.1 percent of the pooled weighted distribution.\\
+\caption*{Notes: Histograms report shares of revalued expenditure, with weights proportional to survey weights times retained non-rent expenditure times the previous-year annual-average household index. Each panel uses one color for the year; the counterfactual distribution is shown with the lighter fill and the observed distribution with the darker fill. The counterfactual removes the household price measures modelled in Section~\ref{sec:fiscal-policies}; both calculations use RAS at COICOP digit 3, identical 2020 HBS expenditures and annual HICP margins, excluding rents. The sample covers 19 countries, including Italy; Portugal lacks the expenditure detail needed to isolate rents. Policy price ratios are reaggregated from detailed products with the same HICP weights and applied to the observed price series. Solid vertical lines mark observed medians and dashed lines counterfactual medians. The displayed range excludes each outer 0.1 percent of the pooled weighted distribution, without renormalizing the displayed bins.\\
 Sources: Eurostat HICP and HBS microdata; authors' calculations.}
 \end{figure}
 
@@ -1237,7 +1236,7 @@ not directly express the cost of inflation relative to household resources. We t
 the burden from HBS microdata rather than combining group-level inflation with an external aggregate
 consumption-to-income ratio. For household $i$ in country $c$, let $X_{ic}$ denote total consumption
 expenditure, $Y_{ic}$ net household income, and $\bar{\pi}_{ic,y}$ the household's average annual
-inflation rate in year $y$, computed with the relative-expenditure weights described at the end of Section~\ref{sec:household-inflation-rates}. The raw household-level burden is
+inflation rate in year $y$, computed with the RAS-calibrated weights described in Section~\ref{sec:household-inflation-rates}. The raw household-level burden is
 \begin{equation}
 \mathcal{B}^{\mathrm{raw}}_{ic,y}=\bar{\pi}_{ic,y}\frac{X_{ic}}{Y_{ic}},
 \label{eq:micro-inflation-burden}
@@ -1275,7 +1274,7 @@ composition.
 
 Figure~\ref{fig:ea20-inflation-burden} reports the weighted household-level burden. The first
 quintile faces a substantially larger burden in every year: 3.5 percent of net income in 2021,
-12.3 percent in 2022, and 6.6 percent in 2023, compared with 2.0, 6.1, and 3.8 percent for the fifth
+12.3 percent in 2022, and 6.6 percent in 2023, compared with 2.0, 6.0, and 3.8 percent for the fifth
 quintile. The Q1--Q5 burden gap widens from 1.6 points in 2021 to 6.2 points in 2022, before
 narrowing to 2.8 points in 2023. Gaps are calculated before rounding the quintile estimates.
 
@@ -1286,7 +1285,7 @@ narrowing to 2.8 points in 2023. Gaps are calculated before rounding the quintil
 \includegraphics[width=0.78\textwidth,height=0.31\textheight,keepaspectratio]{fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png}
 \vspace{4pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: The burden is computed for each household as its annual non-rent HBS--HICP inflation rate multiplied by its total-consumption-to-net-income ratio. Ratios are winsorized at the survey-weighted national 99th percentile; income quintiles are defined within countries. Estimates use the 2020 HBS microdata and annual inflation for 2021--2023. Italy is excluded because the harmonized micro-income input is unavailable. Portugal is absent because no household basket can be matched to the annual HICP series. The resulting sample covers 18 euro-area countries.\\
+\caption*{Notes: The burden is computed for each household as its annual non-rent RAS-calibrated HBS--HICP inflation rate multiplied by its total-consumption-to-net-income ratio. Ratios are winsorized at the survey-weighted national 99th percentile; income quintiles are defined within countries. Estimates use the 2020 HBS microdata and annual inflation for 2021--2023. Italy is excluded because the harmonized micro-income input is unavailable. Portugal is absent because its expenditure data do not allow rents to be isolated. The resulting sample covers 18 euro-area countries.\\
 Sources: Eurostat HICP and HBS microdata; authors' calculations.}
 \end{figure}
 
