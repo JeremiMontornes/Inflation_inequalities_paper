@@ -19,6 +19,8 @@ This comparison precedes HICP calibration and therefore identifies a difference 
 of income groups rather than an effect of the inflation-index weighting method. We use total
 household income for the microdata quintiles throughout this appendix.
 
+This appendix retains its original comparison design: expenditure is rebuilt from the finest available codes and quintile calibration margins come from published tabulations. The main microdata pipeline instead prioritizes directly observed expenditure at the required depth and computes group expenditure margins from the same household sample. The appendix therefore provides a separate digit-depth sensitivity exercise, rather than a replication of the updated baseline.
+
 \paragraph{Baskets and weights.}
 Microdata quintiles are defined separately within each country using survey-weighted net household
 income without division by an equivalence scale (total household income). The sample covers 18 euro-area countries. Fifteen countries provide expenditure variables
@@ -32,7 +34,7 @@ For product $j$ in quintile $q$, let $\bar{x}_{qj}$ be survey-weighted mean HBS 
 $\bar{x}_j$ the national mean, $s_{q,y}$ the package's consumption share of quintile $q$,
 and $w^{HICP}_{j,y}$ the HICP product share on matched support. RAS iteratively rescales
 rows and columns of the positive seed
-$\max\{s_{q,y}w^{HICP}_{j,y}\bar{x}_{qj}/\bar{x}_j,10^{-12}\}$.
+\[\max\{s_{q,y}w^{HICP}_{j,y}\bar{x}_{qj}/\bar{x}_j,10^{-12}\}.\]
 The calibrated expenditure masses $M_{qj,y}$ satisfy
 \begin{equation}
  \sum_j M_{qj,y}=s_{q,y},\qquad
