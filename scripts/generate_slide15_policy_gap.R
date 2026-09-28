@@ -1,0 +1,13 @@
+args <- commandArgs(FALSE)
+f <- sub("^--file=", "", args[grepl("^--file=",args)][1]);root <- normalizePath(file.path(dirname(f),".."))
+d <- read.csv(file.path(root,"fig/slide_policy_gap_data.csv"))
+navy <- "#24364B";orange <- "#E07A3F"
+pdf(file.path(root,"fig/slide15_observed_no_policy_q1_q5_gap.pdf"),width=9.8,height=4.6,family="sans",useDingbats=FALSE)
+par(mar=c(3.5,4.4,.8,1),fg=navy,col.axis=navy,col.lab=navy,bty="n",las=1,cex=1.25)
+plot(d$year,d$observed,type="n",xlim=c(2020.9,2023.15),ylim=c(-.1,2),xlab="",ylab="Annual Q1-Q5 inflation gap (pp)",xaxt="n",yaxt="n")
+abline(h=seq(0,2,.5),col="#E8ECEF",lwd=.7);axis(1,at=d$year,tick=FALSE);axis(2,at=seq(0,2,.5),tick=FALSE)
+lines(d$year,d$no_policy,col=orange,lwd=2.5,type="b",pch=1);lines(d$year,d$observed,col=navy,lwd=2.5,type="b",pch=1)
+text(d$year,d$no_policy+.13,sprintf("%.1f",d$no_policy),col=orange,cex=.9)
+text(d$year,d$observed-.12,sprintf("%.1f",d$observed),col=navy,cex=.9)
+legend("topright",legend=c("No policy","Observed"),col=c(orange,navy),lty=1,lwd=2.5,bty="n",cex=.85)
+dev.off()

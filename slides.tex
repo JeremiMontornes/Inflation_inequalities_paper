@@ -1,4 +1,4 @@
-\documentclass[10pt,aspectratio=169]{beamer}
+\documentclass[11pt,aspectratio=169]{beamer}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -7,32 +7,47 @@
 \usepackage{booktabs}
 \usepackage{adjustbox}
 \usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usetikzlibrary{calc,arrows.meta}
+
+\definecolor{DeepNavy}{HTML}{24364B}
+\definecolor{Teal}{HTML}{178C8C}
+\definecolor{WarmOrange}{HTML}{E07A3F}
+\definecolor{WarmGray}{HTML}{7A838C}
+\definecolor{LightGray}{HTML}{E8ECEF}
+\definecolor{SoftWhite}{HTML}{FAFAF8}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{headline}{}
 \setbeamertemplate{footline}{%
-  \hfill\raisebox{0.6em}{\scriptsize\insertframenumber/\inserttotalframenumber}\hspace{1em}}
+  \hfill\raisebox{0.6em}{\scriptsize\color{WarmGray}\insertframenumber/\inserttotalframenumber}\hspace{1em}}
 \setbeamertemplate{frametitle}{%
-  \vspace{0.35em}\insertframetitle\par\vspace{0.25em}}
-\setbeamercolor{normal text}{fg=black,bg=white}
-\setbeamercolor{background canvas}{bg=white}
-\setbeamercolor{frametitle}{fg=black,bg=white}
-\setbeamercolor{title}{fg=black}
-\setbeamercolor{subtitle}{fg=black}
-\setbeamercolor{author}{fg=black}
-\setbeamercolor{institute}{fg=black}
-\setbeamercolor{itemize item}{fg=black}
-\setbeamercolor{itemize subitem}{fg=black}
+  \vspace{0.30em}\hspace{-0.20em}\textcolor{Teal}{\rule{1.5mm}{1.05em}}\hspace{0.45em}\insertframetitle\par\vspace{0.20em}}
+\setbeamercolor{normal text}{fg=DeepNavy,bg=SoftWhite}
+\setbeamercolor{background canvas}{bg=SoftWhite}
+\setbeamercolor{frametitle}{fg=DeepNavy,bg=SoftWhite}
+\setbeamercolor{title}{fg=DeepNavy}
+\setbeamercolor{subtitle}{fg=WarmGray}
+\setbeamercolor{author}{fg=DeepNavy}
+\setbeamercolor{institute}{fg=WarmGray}
+\setbeamercolor{itemize item}{fg=WarmOrange}
+\setbeamercolor{itemize subitem}{fg=Teal}
 \setbeamerfont{frametitle}{size=\Large,series=\bfseries}
 \setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\usefonttheme{professionalfonts}
+\AtBeginDocument{\RaggedRight}
 
-\newcommand{\source}[1]{\par\vspace{0.2em}{\scriptsize\color{gray}Source: #1}}
+\newcommand{\source}[1]{\par\vspace{0.2em}{\scriptsize\color{WarmGray}Source: #1}}
 
 \title{Inflation Inequality Across the Euro Area}
 \author{Erwan Gautier \and J\'er\'emi Montorn\`es}
 \institute{Banque de France}
-\date{}
+\date{15/10/2026}
 
+\input{tables/slide15_fr_micro_variance}
 \begin{document}
 
 % 1
@@ -44,256 +59,580 @@
   {\large Erwan Gautier \qquad J\'er\'emi Montorn\`es\par}
   \vspace{0.6em}
   {\normalsize Banque de France\par}
+  \vspace{0.6em}
+  {\normalsize 15/10/2026\par}
 \end{frame}
 
 % 2
-\begin{frame}{Motivation, Research Question, and Literature}
+\begin{frame}{What We Do}
 \begin{itemize}
-  \item Central banks target aggregate inflation, but households consume different baskets.
-  \item The 2021--2023 episode combined high aggregate inflation with large relative-price shocks in energy and food.
-  \item How different was inflation across income, age, and residence groups in the euro area?
-  \item Which products and production-network channels generated these differences?
-  \item Did household price policies reduce average inflation and inflation inequality?
-  \item The paper connects research on household-specific inflation, distributional inflation channels, energy exposure, and unconventional fiscal policy.
-  \item Related work includes Doepke and Schneider; Kaplan and Schulhofer-Wohl; Jaravel; Pallotti et al.; Claeys et al.; Levell et al.; and Gautier et al.
+  \item Inflation inequality across households increases when relative-price shocks interact with heterogeneous household baskets.
+  \item We construct monthly indices by income, age, and residence for all 20 euro-area countries, calibrated to official HICP weights.
+  \item We simulate the effects of temporary VAT cuts, gas and electricity price measures, and fuel rebates on average inflation and inflation inequality.
 \end{itemize}
+\vspace{0.5em}
+\textbf{Our contribution}
+\begin{enumerate}
+  \item A comprehensive framework to assess inflation inequality.
+  \item We connect household inflation exposure to price policies, quantifying their effects on both average inflation and income-group gaps.
+\end{enumerate}
 \end{frame}
 
 % 3
-\begin{frame}{Data and Methodology}
+\begin{frame}{Inflation Inequality and Policy Effects, 2021--2023}
 \begin{itemize}
-  \item Monthly Eurostat HICP price indices and item weights, harmonized across euro-area countries.
-  \item Aggregate HBS tabulations provide expenditure shares by income, age, residence, and COICOP category.
-  \item Individual HBS microdata provide household expenditures, disposable income, demographics, and survey weights.
-  \item HBS expenditures are harmonized with HICP items through a COICOP bridge.
-  \item Group-specific expenditure weights are estimated using RAS balancing.
-  \item Country-level chained Laspeyres indices are aggregated using annual HICP country weights.
+  \item Euro-area Q1--Q5 inflation gap rose to \textbf{0.9 point}, from 0.1 point in 2021, and returned to zero in 2023.
+  \item Group averages conceal substantial within-category heterogeneity: households in the same income quintile can face markedly different inflation rates.
+  \item Household energy contributed \textbf{1.6 points} to the 2022 Q1--Q5 gap; fuel, transport, and other products offset most of this exposure.
+  \item Household price policies lowered annual inflation by \textbf{1.3 points in 2022} and \textbf{0.3 point in 2023}, while narrowing the Q1--Q5 gap by \textbf{0.4 point in both years}.
 \end{itemize}
-\[
-P_{g,t}=P_{g,t-1}\sum_k w_{gk,t-1}\frac{p_{k,t}}{p_{k,t-1}},
-\qquad
-\pi_{g,t}=100\left(\frac{P_{g,t}}{P_{g,t-12}}-1\right).
-\]
 \end{frame}
 
 % 4
-\begin{frame}{Short-Run Inflation Inequality by Income Quintile}
-\centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png}
-\source{Eurostat HICP and HBS; authors' calculations.}
+\begin{frame}{Linking Official Prices to Household Baskets}
+\begin{itemize}
+  \item We link monthly Eurostat HICP prices and official item weights to HBS expenditure shares through a harmonized COICOP bridge.
+  \item Public HBS data provide consumption baskets by income, age, and residence; microdata add household expenditures, disposable income, and demographics.
+  \item We use RAS to calculate expenditure weights that simultaneously satisfy two margins: the expenditure share of each household category and the official HICP weight of each product.
+\end{itemize}
+\vspace{0.5em}
+\begin{itemize}
+  \item Interpretation: baskets are held fixed between HBS waves, so the baseline abstracts from substitution and within-group heterogeneity (behavioral responses are not taken into account).
+\end{itemize}
 \end{frame}
-
-% 5
-\begin{frame}{Inflation Inequality by Age}
+% Illustrative example after slide 4
+\begin{frame}{Different Consumption Baskets, Different Inflation Exposure}
+\noindent{\small\color{WarmGray}Effect of a 40\% energy price shock\par}
+\vspace{0.5em}
 \centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
-\source{Eurostat HICP and HBS; authors' calculations.}
+\small
+\renewcommand{\arraystretch}{1.6}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}>{\RaggedRight\arraybackslash}p{0.39\textwidth}>{\centering\arraybackslash}p{0.17\textwidth}>{\centering\arraybackslash}p{0.17\textwidth}>{\centering\arraybackslash}p{0.17\textwidth}@{}}
+\toprule
+\textbf{Expenditure share} & \textbf{First quintile}\newline of income & \textbf{Fifth quintile}\newline of income & \textbf{Inflation gap (Q1--Q5)}\\
+\midrule
+Housing Energy & 10\% & 6\% & --\\
+Other consumption & 90\% & 94\% & --\\
+\midrule
+\textbf{Inflation if housing energy prices rise by 40\%} & \textbf{4.0\%} & \textbf{2.4\%} & \textcolor{Teal}{\textbf{1.6 pp}}\\
+\bottomrule
+\end{tabular}
+\par\vspace{1em}
+{\small\color{WarmGray}Illustrative example; other prices unchanged, fixed expenditure weights.\par}
 \end{frame}
 
 % 6
-\begin{frame}{Inflation Inequality by Residence Area}
+\begin{frame}{Low-Income Households Faced Higher Inflation During the Energy Shock}
+\noindent{\small\color{WarmGray}ECB analysis reports similar findings using a slightly different methodology (Bobasu et al., 2023).\par}
+\vspace{0.3em}
 \centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png}
-\source{Eurostat HICP and HBS; authors' calculations.}
-\end{frame}
-
-% 7
-\begin{frame}{Long-Run Inflation Inequality by Income Quintile}
-\centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png}
-\source{Eurostat HICP and HBS; authors' calculations.}
-\end{frame}
-
-% 8
-\begin{frame}{Cumulative Inflation Gap Across Countries, June 2021--June 2023}
-\centering
-\scriptsize
-\begin{tabular}{lrrrr}
-\toprule
-Country & Total inflation & Q1 inflation & Q5 inflation & Gap\\
-\midrule
-Austria & 17.2 & 17.5 & 17.1 & 0.4\\
-Cyprus & 12.0 & 12.7 & 12.0 & 0.7\\
-Estonia & 33.0 & 38.7 & 31.2 & 7.5\\
-Finland & 12.5 & 11.5 & 12.7 & -1.2\\
-France & 12.2 & 12.3 & 12.1 & 0.2\\
-Germany & 15.6 & 16.5 & 15.2 & 1.3\\
-Ireland & 14.9 & 17.2 & 13.3 & 3.8\\
-Italy & 15.8 & 17.2 & 15.1 & 2.1\\
-Latvia & 28.9 & 36.0 & 26.5 & 9.5\\
-Lithuania & 30.4 & 33.6 & 29.0 & 4.6\\
-Netherlands & 16.9 & 17.7 & 16.5 & 1.2\\
-Portugal & 14.2 & 13.1 & 15.4 & -2.3\\
-Slovakia & 25.4 & 26.7 & 24.0 & 2.7\\
-Spain & 11.8 & 11.8 & 11.7 & 0.1\\
-\midrule
-\textbf{Euro area} & \textbf{14.7} & \textbf{15.2} & \textbf{14.4} & \textbf{0.9}\\
-\bottomrule
-\end{tabular}
-\source{Eurostat HICP and HBS; authors' calculations. Percentage points.}
+\includegraphics[width=0.82\textwidth,height=0.57\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png}
+\source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
 \end{frame}
 
 % 9
-\begin{frame}{Product Contributions to the Income Inflation Gap}
+\begin{frame}{Since 2000, Only the 2021--23 Shock Had a Sizable Effect on Inflation Inequality}
+\noindent{\small\color{WarmGray}A return of the annual Q1--Q5 inflation gap to zero does not imply that the cumulative price-level gap has disappeared.\par}
+\vspace{0.3em}
 \centering
-\small
-\begin{tabular}{lrrrr}
-\toprule
-Product group & Headline & Q1 & Q5 & Gap\\
-\midrule
-Food and non-alcoholic beverages & 4.3 & 5.2 & 4.5 & 0.7\\
-Alcohol, tobacco and narcotics & 0.5 & 0.7 & 0.4 & 0.2\\
-Clothing and footwear & 0.3 & 0.3 & 0.4 & -0.1\\
-Housing, rentals and repairs & 1.2 & 0.4 & 0.6 & -0.2\\
-Water, electricity, gas and fuels & 1.5 & 6.9 & 5.3 & 1.5\\
-Transport & 1.9 & 1.6 & 2.8 & -1.2\\
-Other & 5.0 & 0.2 & 0.3 & -0.1\\
-\midrule
-\textbf{Total} & \textbf{14.7} & \textbf{15.2} & \textbf{14.4} & \textbf{0.9}\\
-\bottomrule
-\end{tabular}
-\vspace{1em}
-\begin{itemize}
-  \item Energy and food increase the Q1--Q5 gap; transport exposure offsets much of it.
-\end{itemize}
-\source{Eurostat HICP and HBS; authors' calculations. Percentage points.}
+\includegraphics[width=0.82\textwidth,height=0.57\textheight,keepaspectratio]{fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png}
+\source{Eurostat HICP and HBS; authors' calculations. Units: price index, 2000=100.}
 \end{frame}
 
-% 10
-\begin{frame}{Direct and Indirect Exposure to an Oil and Gas Shock}
+% 8
+\begin{frame}{Q1--Q5 Inflation Gaps Across Euro-Area Countries in 2022}
+\noindent{\small\color{WarmGray}The euro-area average masks substantial cross-country differences in income-group inflation gaps.\par}
+\vspace{0.3em}
+\centering
+\includegraphics[width=0.98\textwidth,height=0.57\textheight,keepaspectratio]{fig/slide7_country_gaps_2022_nonnegative.pdf}
+\source{Eurostat HICP and HBS; authors' calculations. Countries with a negative Q1--Q5 gap in 2022 are excluded; the euro-area aggregate is shown as a benchmark.}
+\end{frame}
+
+% 9
+\begin{frame}{Household Energy Widened the Q1--Q5 Gap, While Service Items Partly Offset It}
+\noindent{\small\color{WarmGray}The distributional impact of inflation depends on which prices rise, as well as on the size of the aggregate shock.\par}
+\vspace{0.5em}
 \centering
 \scriptsize
-\begin{tabular}{lrrrrrr}
+\setlength{\tabcolsep}{7pt}
+\begin{tabular}{l*{3}{>{\centering\arraybackslash}p{1.8cm}}}
 \toprule
-Country & Total & Direct & Indirect & Gap & Gap direct & Gap indirect\\
+& \multicolumn{3}{c}{Q1--Q5 inequality contribution}\\
+\cmidrule(lr){2-4}
+Product group & 2021 & \cellcolor{LightGray}\textbf{2022} & 2023\\
 \midrule
-Austria & 11.8 & 3.9 & 7.9 & -1.4 & -0.7 & -0.7\\
-Belgium & 9.8 & 6.2 & 3.7 & -3.6 & -3.2 & -0.4\\
-Germany & 7.4 & 4.4 & 3.0 & -1.8 & -1.6 & -0.2\\
-Estonia & 12.2 & 6.6 & 5.6 & -4.8 & -3.8 & -1.0\\
-Spain & 7.4 & 4.5 & 3.0 & -1.9 & -1.6 & -0.3\\
-France & 9.3 & 4.5 & 4.7 & -2.8 & -1.9 & -0.9\\
-Italy & 9.2 & 4.9 & 4.3 & -1.9 & -1.3 & -0.6\\
-Latvia & 14.1 & 7.2 & 6.9 & -7.9 & -4.9 & -3.0\\
-Netherlands & 6.4 & 4.3 & 2.0 & -1.4 & -1.3 & 0.0\\
-Portugal & 8.8 & 3.7 & 5.2 & -4.3 & -2.1 & -2.2\\
-Slovakia & 12.5 & 6.3 & 6.2 & -0.5 & -0.4 & -0.1\\
+Food and non-alcoholic beverages & 0.1 & \cellcolor{LightGray}0.6 & 0.6\\
+Alcohol, tobacco and narcotics & 0.1 & \cellcolor{LightGray}0.1 & 0.2\\
+Clothing and footwear & 0.0 & \cellcolor{LightGray}0.0 & -0.1\\
+Housing (rentals and repairs) & 0.0 & \cellcolor{LightGray}-0.2 & -0.1\\
+Housing energy & 0.4 & \cellcolor{LightGray}\textbf{1.6} & 0.1\\
+Operation of personal transport equipment & -0.2 & \cellcolor{LightGray}-0.4 & 0.0\\
+Transport (excluding vehicle operation) & -0.1 & \cellcolor{LightGray}-0.3 & -0.2\\
+Other & -0.1 & \cellcolor{LightGray}-0.5 & -0.5\\
 \midrule
-\textbf{Euro area} & \textbf{8.4} & \textbf{4.6} & \textbf{3.8} & \textbf{-2.2} & \textbf{-1.7} & \textbf{-0.5}\\
+\textbf{Total} & \textbf{0.1} & \cellcolor{LightGray}\textbf{0.9} & \textbf{0.0}\\
 \bottomrule
 \end{tabular}
-\vspace{0.7em}
-\begin{itemize}
-  \item Uniform 40\% shock; price propagation is computed as $\Delta p=(I-A')^{-1}s$.
-\end{itemize}
-\source{Eurostat HICP, HBS and FIGARO; authors' calculations.}
+\vspace{0.5em}
+
+
+\source{Eurostat HICP and HBS; authors' calculations. Product rows are contributions to the Q1--Q5 annual inflation-rate gap, in percentage points.}
 \end{frame}
+
 
 % 11
-\begin{frame}{Unconventional Household Price Policies}
+\begin{frame}{Three Instruments Lowered Retail Energy Prices}
+\small
+The counterfactual covers \textbf{100 price-policy measures} (prices held below market levels or tax cuts) across all 20 euro-area countries, costing \textbf{EUR 268.9 billion}; \textbf{88\%} of the cost was untargeted.
+\par\vspace{0.5em}
 \begin{itemize}
-  \item Electricity and gas price caps or tariff shields limited the retail prices paid by households.
-  \item Temporary VAT and excise-tax reductions lowered consumer energy prices.
-  \item Cuts in regulated network charges reduced electricity and gas bills.
-  \item Fuel rebates and regulated discounts reduced prices at the pump.
-  \item The counterfactual removes these price-based interventions while retaining observed prices for unaffected products.
-  \item Direct income transfers and measures targeted only at firms are excluded from the price counterfactual.
-  \item Policy effects are measured as observed inflation minus estimated no-policy inflation.
+  \item \textbf{Price caps and tariff shields} limited household electricity and gas prices.\\
+  \textit{France: gas tariffs were frozen and the 2022 electricity increase was capped at 4\%.}
+  \item \textbf{Temporary VAT and excise-tax reductions} lowered consumer energy prices.
+  \item \textbf{Fuel rebates and regulated discounts} reduced prices at the pump.\\
+  \textit{France: the fuel rebate rose from EUR 0.18 to EUR 0.30 per litre in autumn 2022.}
 \end{itemize}
-\source{National policy sources, Sgaravatti et al.; authors' calculations.}
+\source{National policy sources; Sgaravatti et al.; authors' calculations.}
 \end{frame}
 
 % 12
-\begin{frame}{Household Price Policies and Average Inflation}
-\centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png}
-\source{Eurostat and national statistical institutes; authors' calculations.}
-\end{frame}
 
-% 12
-\begin{frame}{Household Price Policies and Inflation Inequality}
-\centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1_Q5.png}
-\source{Eurostat and national statistical institutes; authors' calculations.}
+
+
+% France: component-level reconstruction, matching the documented implementation.
+\begin{frame}{Defining the Price-Policy Counterfactual}
+\scriptsize\setlength{\abovedisplayskip}{1pt}\setlength{\belowdisplayskip}{1pt}\setlength{\abovedisplayshortskip}{2pt}\setlength{\belowdisplayshortskip}{2pt}
+\textcolor{WarmGray}{$CF$ = counterfactual; $O$ = observed; $TRV_{\mathrm{gas}}$: gas tariff (EUR/kWh); $TRV_e$: electricity tariff (EUR/kWh).}\par
+\par\vspace{0.5em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\textcolor{Teal}{\textbf{1. Gas \enspace|\enspace Nov. 2021--June 2023}}
+\[
+\boxed{\Delta P_{\mathrm{gas},t}^{CF}=\beta_{\mathrm{gas}}\,\Delta TRV_{\mathrm{gas},t}^{CF}}
+\]
+{\color{WarmGray}unit-free decimal rates.}\par
+
+$\beta_{\mathrm{gas}}=0.82$.
+\par\vspace{0.5em}
+\textcolor{Teal}{\textbf{3. Motor fuels \enspace|\enspace Apr.--Dec. 2022}}
+\[
+\boxed{p_{\mathrm{fuel},t}^{CF}=p_{\mathrm{fuel},t}^{O}+r_t}
+\qquad\text{(EUR/litre, incl. taxes)}
+\]
+Chained index:
+\[
+P_{\mathrm{fuel},t}^{CF}=P_{\mathrm{fuel},t-1}^{CF}
+\frac{p_{\mathrm{fuel},t}^{O}+r_t}{p_{\mathrm{fuel},t-1}^{O}+r_{t-1}}.
+\]
+Monthly rebates (EUR/litre):
+\par\smallskip
+\begin{tabular}{@{}lr@{\qquad}lr@{}}
+Apr.--Aug. & $r=0.18$ & Sept.--Oct. & $r=0.30$\\
+November & $r=0.22$ & December & $r=0.10$
+\end{tabular}
+\par\smallskip
+
+\end{column}
+\begin{column}{0.49\textwidth}
+\textcolor{Teal}{\textbf{2. Electricity \enspace|\enspace Feb. 2022--Feb. 2024}}
+\[
+\boxed{\Delta P_{e,t}^{CF}=\beta_e\,\Delta TRV_{e,t}^{CF}}
+\]
+{\color{WarmGray}unit-free decimal rates.}\par
+
+$\beta_e=1.02$.
+\par\smallskip
+\begin{tabular}{@{}lll@{}}
+\toprule
+Date & Observed reference & $\Delta TRV_{e,t}^{CF}$\\
+\midrule
+Feb. 2022 & Jan. 2022 & $33.24\%$\\
+Feb. 2023 & Jan. 2023 & $108.91\%$\\
+Feb. 2024 & Feb. 2024 & $0\%^{\dagger}$\\
+\bottomrule
+\end{tabular}
+\par\smallskip
+
+\par\smallskip
+
+\par\smallskip
+$^{\dagger}$Model closure, not a tariff estimate: $P_{e,t}^{CF}=P_{e,t}^{O}$.
+\end{column}
+\end{columns}
+
 \end{frame}
 
 % 13
-\begin{frame}{Fiscal Cost and No-Policy Inflation Across Countries}
+\begin{frame}{Price Policies Compressed the Inflation Peak}
+\centering
+\begin{tikzpicture}
+  \node[inner sep=0] (policyplot) {\includegraphics[width=0.86\textwidth,height=0.64\textheight,keepaspectratio,trim=0 70 0 0,clip]{fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png}};
+  % Plot coordinates aligned with June 2021 and June 2023 on the monthly x-axis.
+  \coordinate (policySW) at ($(policyplot.south west)!0.285!(policyplot.south east)$);
+  \coordinate (policyNE) at ($(policyplot.north west)!0.558!(policyplot.north east)$);
+  \fill[WarmOrange,opacity=0.09] (policySW) rectangle (policyNE);
+\end{tikzpicture}
+\vspace{-0.2em}
+
+{\small\textcolor{DeepNavy}{\rule[0.35ex]{1.3em}{1.1pt}} Observed
+\qquad
+\textcolor{red!70!black}{\rule[0.35ex]{1.3em}{1.1pt}} No policy}
+\source{Eurostat and national statistical institutes; authors' calculations. Units: year-on-year inflation, in percent; January 2021--July 2026.}
+\end{frame}
+
+% 12
+\begin{frame}{Policy Effects on the Q1--Q5 Gap}
+\noindent{\small\color{WarmGray}Price measures can narrow the Q1--Q5 gap without income targeting: electricity and gas support reduced the gap, while fuel support partly offset this effect in 2022.\par}
+\vspace{0.3em}
+\centering
+\includegraphics[width=0.98\textwidth,height=0.57\textheight,keepaspectratio]{fig/slide15_observed_no_policy_q1_q5_gap.pdf}
+\source{Eurostat and national statistical institutes; authors' calculations. Annual-average Q1--Q5 inflation-rate gaps, in percentage points.}
+\end{frame}
+
+% 8 -- formerly slide 24
+\begin{frame}{Most Inflation Dispersion Is Within Income Quintiles}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.64\textwidth}
+\centering
+\includegraphics[width=\textwidth,height=0.62\textheight,keepaspectratio]{fig/slide11_fr_household_inflation_q1_q5_2022.pdf}
+\end{column}
+\begin{column}{0.33\textwidth}
+\vspace{0.6em}
+{\small
+\[
+\operatorname{Var}(\pi_h)=\MicroTotalVariance
+\]
+}
+{\footnotesize
+\centering
+$\underbrace{\MicroBetweenVariance}_{\text{between quintiles}}$
+
+$+$
+
+$\underbrace{\MicroWithinVariance}_{\text{within quintiles}}$
+\par}
+\end{column}
+\end{columns}
+\source{French HBS and HICP, 2022. Total-income quintiles; rents excluded. Authors' calculations.}
+\end{frame}
+
+% 5
+\begin{frame}{Older Households Faced Higher Inflation}
+\centering
+\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
+\source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
+\end{frame}
+
+% 17
+\begin{frame}{Price Policies Reduced Average Inflation and Inflation Inequality}
+\begin{itemize}
+  \item The inflation shock affected households very differently, even at a given income level: most inflation dispersion occurs \textbf{within} income groups.
+  \item Q1--Q5 inflation inequality rose from \textbf{0.1 point in 2021} to \textbf{0.9 point in 2022}, then returned to zero in 2023; national experiences remained far more dispersed.
+  \item Inflation exposure varied substantially \textbf{across countries}.
+  \item Price policies reduced annual inflation by \textbf{1.3 points in 2022} and \textbf{0.3 point in 2023}; they reduced inequality by \textbf{0.4 point in both years}.
+  \item Administered household-energy prices generated most of the distributional cushioning; fuel support was mildly regressive in 2022.
+  \item Our policy counterfactuals quantify effects on consumer prices and inflation gaps, rather than a complete welfare assessment.
+\end{itemize}
+\end{frame}
+
+% Appendix begins here; the explicit transition and footline provide the visual marker.
+\setbeamertemplate{footline}{%
+  \hfill\raisebox{0.6em}{\scriptsize\color{WarmGray}Appendix \insertframenumber/\inserttotalframenumber}\hspace{1em}}
+
+\begin{frame}[plain]
+  \centering
+  \vfill
+  {\Huge\bfseries Appendix\par}
+  \vfill
+\end{frame}
+
+
+% Appendix: same data as the six French energy charts, indices only.
+\begin{frame}{Defining the Price-Policy Counterfactual}
+\begin{itemize}
+  \item The counterfactual removes these price-based interventions component by component while retaining observed prices for unaffected products.
+\end{itemize}
+\vspace{0.4em}
+\textbf{Example: reversing a temporary VAT cut}
+\[
+\widetilde p_{j,t}
+=
+p_{j,t}
+\frac{1+\tau^{0}_{j,t}}{1+\tau^{1}_{j,t}},
+\qquad
+\tau^{0}_{j,t}=\text{VAT rate},\quad
+\tau^{1}_{j,t}=\text{temporary VAT rate}.
+\]
+\centering
+\textit{Belgium: cutting VAT from \textbf{21\%} to \textbf{6\%} implies}
+\[
+\widetilde p_{j,t}=p_{j,t}\frac{1.21}{1.06}\simeq 1.142\,p_{j,t}.
+\]
+{\small
+$j=\text{electricity}$ and $t=$ March 2022--December 2023.
+}
+\source{National policy sources, Sgaravatti et al.; authors' calculations.}
+\end{frame}
+
+\begin{frame}{France: Observed and Counterfactual Energy Price Indices}
+\noindent{\small\color{WarmGray}January 2020 = 100; January 2020--June 2026. Vertical scales differ across panels.\par}
+\vspace{0.5em}
+\centering
+\includegraphics[width=\textwidth,height=0.69\textheight,keepaspectratio]{fig/slide_fr_energy_price_indices.pdf}
+\source{French observed and no-policy component price series; authors' calculations.}
+\end{frame}
+
+% Appendix -- household weighting method (formerly slide 14)
+\begin{frame}{Household Weights Combine HBS and HICP}
+\noindent{\small Fixed 2020 expenditures; annual official HICP weights; actual and imputed rents excluded.\par}
+\[
+\omega_{j,ic,y}
+=\frac{\omega^{\mathrm{HBS}}_{j,ic,2020}\,\omega^{\mathrm{HICP}}_{j,c,y}}
+{\sum_{k\in\mathcal J_{c,y}}\omega^{\mathrm{HBS}}_{k,ic,2020}\,\omega^{\mathrm{HICP}}_{k,c,y}}.
+\]
+\[
+P_{ic,y,m}=\sum_{j\in\mathcal J_{c,y}}\omega_{j,ic,y}
+\frac{p_{c,j,y,m}}{p_{c,j,y-1,12}}.
+\]
+\end{frame}
+
+% A1 -- formerly slide 16
+\begin{frame}{Policy Effects Differed Sharply Across Countries and Years}
 \centering
 \scriptsize
-\begin{tabular}{lrrrrrrr}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr|rrr}
 \toprule
-Country & Cost & No-policy & Avg. effect & Q1 & Q5 & Gap & Gap effect\\
+& \multicolumn{3}{c}{Average-inflation effect} & \multicolumn{3}{c}{Q1--Q5 inequality effect}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Country & 2021 & 2022 & 2023 & 2021 & 2022 & 2023\\
 \midrule
-Austria & 3.8 & 17.7 & -0.5 & 19.3 & 18.2 & 1.1 & -0.7\\
-Estonia & 0.2 & 33.1 & -0.1 & 39.0 & 31.4 & 7.6 & -0.1\\
-France & 80.5 & 14.0 & -1.8 & 19.4 & 16.6 & 2.8 & -2.6\\
-Germany & 60.2 & 16.0 & -0.4 & 18.4 & 16.2 & 2.2 & -0.9\\
-Ireland & 1.4 & 15.0 & -0.1 & 17.6 & 13.6 & 4.1 & -0.2\\
-Italy & 36.2 & 16.1 & -0.3 & 18.2 & 15.8 & 2.4 & -0.3\\
-Latvia & 0.7 & 29.2 & -0.2 & 37.2 & 27.0 & 10.2 & -0.6\\
-Netherlands & 34.8 & 17.6 & -0.7 & 20.3 & 18.0 & 2.3 & -1.1\\
-Portugal & 5.6 & 14.8 & -0.6 & 15.5 & 17.0 & -1.5 & -0.8\\
-Slovakia & 2.3 & 26.9 & -1.6 & 33.5 & 27.8 & 5.7 & -3.0\\
-Spain & 23.1 & 12.5 & -0.7 & 14.6 & 13.5 & 1.1 & -1.0\\
+Germany & 0.0 & -0.5 & -0.7 & 0.0 & -0.2 & -0.7\\
+France & -0.1 & -2.2 & -0.5 & 0.0 & -0.9 & -0.4\\
+Italy & -0.2 & -1.3 & 0.7 & -0.1 & -0.1 & -0.1\\
+Spain & -0.4 & -2.0 & -0.4 & -0.2 & -0.7 & -0.4\\
+Netherlands & 0.0 & -1.6 & -0.7 & 0.0 & -0.5 & -0.6\\
+Portugal & 0.0 & -0.8 & -1.4 & 0.0 & -0.3 & -0.9\\
+Slovakia & 0.0 & 0.0 & -3.0 & 0.0 & 0.0 & -1.9\\
 \midrule
-\textbf{Euro area} & \textbf{266.9} & \textbf{15.4} & \textbf{-0.7} & \textbf{18.2} & \textbf{16.2} & \textbf{2.0} & \textbf{-1.2}\\
+\textbf{Euro area} & \textbf{-0.1} & \textbf{-1.3} & \textbf{-0.3} & \textbf{-0.1} & \textbf{-0.4} & \textbf{-0.4}\\
+\bottomrule
+\end{tabular}
+\vspace{0.5em}
+\begin{itemize}
+  \item Negative effects indicate that unconventional fiscal policies reduced inflation or the Q1--Q5 gap.
+\end{itemize}
+\source{Eurostat and national statistical institutes; authors' calculations. Entries are observed minus no-policy annual-average inflation rates, in percentage points.}
+\end{frame}
+
+% A1
+\begin{frame}{Rural Households Faced Higher Inflation at the Peak}
+\centering
+\includegraphics[width=0.78\textwidth,height=0.62\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png}
+\source{Eurostat HICP and HBS; authors' calculations. Units: year-on-year inflation, in percent.}
+\end{frame}
+
+% A2
+\begin{frame}{Energy Import Prices Mainly Raise Average Inflation}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrr}
+\toprule
+Product group & Average inflation & Q1--Q5 gap & Direct Q1--Q5 gap & Indirect Q1--Q5 gap\\
+\midrule
+Food and non-alcoholic beverages & 0.5 & 0.1 & 0.0 & 0.1\\
+Alcohol, tobacco and narcotics & 0.1 & 0.1 & 0.0 & 0.1\\
+Clothing and footwear & 0.1 & 0.0 & 0.0 & 0.0\\
+Housing (rentals and repairs) & 0.2 & 0.0 & 0.0 & 0.0\\
+Housing energy & 1.6 & 0.7 & 0.2 & 0.5\\
+Vehicle operation & 1.7 & -0.6 & -0.1 & -0.6\\
+Transport (excluding vehicle operation) & 1.1 & -0.1 & 0.0 & -0.1\\
+Other & 0.7 & -0.2 & 0.0 & -0.1\\
+\midrule
+\textbf{Total} & \textbf{6.0} & \textbf{-0.1} & \textbf{0.0} & \textbf{-0.1}\\
+\bottomrule
+\end{tabular}
+\vspace{0.5em}
+\begin{itemize}
+  \item Housing energy widens the Q1--Q5 gap by \textbf{0.7 point}; other products offset this effect.
+\end{itemize}
+\source{Eurostat trade statistics, HBS and FIGARO; authors' calculations. Observed extra-EU energy import-price shock: 83.9\% in 2022. Effects in pp; components sum before rounding.}
+\end{frame}
+
+% A3 -- formerly slide 15
+\begin{frame}{Household-Energy Measures Account for the Inequality Reduction}
+\centering
+\scriptsize
+\begin{tabular}{lrrr|rrr}
+\toprule
+& \multicolumn{3}{c}{Average-inflation effect} & \multicolumn{3}{c}{Q1--Q5 inequality effect}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Product group & 2021 & 2022 & 2023 & 2021 & 2022 & 2023\\
+\midrule
+Food and non-alcoholic beverages & 0.0 & 0.0 & -0.1 & 0.0 & 0.0 & 0.0\\
+Housing energy & -0.1 & -1.0 & -0.5 & -0.1 & -0.5 & -0.3\\
+Fuel & 0.0 & -0.3 & 0.3 & 0.0 & 0.1 & 0.0\\
+All other products & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0\\
+\midrule
+\textbf{Total} & \textbf{-0.1} & \textbf{-1.3} & \textbf{-0.3} & \textbf{-0.1} & \textbf{-0.4} & \textbf{-0.4}\\
 \bottomrule
 \end{tabular}
 \vspace{0.7em}
 \begin{itemize}
-  \item Negative effects indicate that price policies reduced inflation or the Q1--Q5 gap.
+  \item Household energy lowers the Q1--Q5 gap by \textbf{0.5 point in 2022} and \textbf{0.3 point in 2023}; the 2022 fuel effect offsets 0.1 point.
 \end{itemize}
-\source{Eurostat and national statistical institutes; authors' calculations.}
+\source{Eurostat and national statistical institutes; authors' calculations. Product contributions to annual policy effects, in percentage points.}
 \end{frame}
 
-% 14
-\begin{frame}{Product-Level Effects of Household Price Policies}
+% A2 -- formerly slide 16
+\begin{frame}{RAS-Calibrated Inflation Tracks the Published HICP}
 \centering
-\small
-\begin{tabular}{lrrrrr}
-\toprule
-Product group & No-policy & Q1 & Q5 & Gap & Policy effect\\
-\midrule
-Food and non-alcoholic beverages & 4.5 & 5.4 & 4.6 & 0.8 & -0.1\\
-Alcohol, tobacco and narcotics & 0.5 & 0.7 & 0.4 & 0.2 & 0.0\\
-Clothing and footwear & 0.3 & 0.3 & 0.4 & -0.2 & 0.0\\
-Housing, rentals and repairs & 0.5 & 0.4 & 0.6 & -0.2 & 0.0\\
-Water, electricity, gas and fuels & 6.9 & 9.4 & 6.5 & 2.9 & -1.4\\
-Transport & 2.4 & 1.8 & 3.2 & -1.4 & 0.2\\
-Other & 0.3 & 0.2 & 0.4 & -0.2 & 0.0\\
-\midrule
-\textbf{Total} & \textbf{15.4} & \textbf{18.2} & \textbf{16.2} & \textbf{2.0} & \textbf{-1.2}\\
-\bottomrule
-\end{tabular}
-\vspace{1em}
-\begin{itemize}
-  \item Energy accounts for almost all of the reduction in inflation inequality.
-\end{itemize}
-\source{Eurostat and national statistical institutes; authors' calculations.}
+\includegraphics[width=0.96\textwidth,height=0.72\textheight,keepaspectratio]{fig/fig_FR_2010_2026_hicp_inflation_validation_level2_recode_mean_vs_published.png}
+\source{INSEE, Eurostat; authors' calculations. Units: year-on-year inflation, in percent.}
 \end{frame}
 
-% 15
-\begin{frame}{Household-Level Inflation Burden}
+% A3
+\begin{frame}{Inflation Burden Is Larger for Low-Income Households}
 \centering
 \includegraphics[width=0.70\textwidth,height=0.58\textheight,keepaspectratio]{fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png}
 \begin{itemize}
-  \item Low-income households face a larger inflation burden relative to net income.
-  \item Price policies reduced both average inflation and the income inflation gap.
+  \item The Q1 burden reached \textbf{3.5\%, 12.3\%, and 6.6\%} of net income in 2021--2023, versus \textbf{2.0\%, 6.1\%, and 3.8\%} for Q5.
 \end{itemize}
-\source{Eurostat HICP and HBS microdata; authors' calculations.}
+\source{Eurostat HICP and HBS microdata; authors' calculations. Units: annual inflation burden, in percent of household net income.}
 \end{frame}
 
-% 16
-\begin{frame}{Conclusion}
-\begin{itemize}
-  \item Inflation differences between income groups are moderate for the euro area as a whole, but vary substantially across countries.
-  \item Age and residence-area gaps were larger than the aggregate Q1--Q5 gap during the 2021--2023 inflation episode.
-  \item Food and household energy increased inflation exposure for low-income households, while transport partly offset the income gap.
-  \item Production networks transmitted energy shocks indirectly across sectors and countries.
-  \item Household price policies lowered cumulative average inflation and reduced the Q1--Q5 inflation gap.
-  \item Inflation remained more burdensome for low-income households because consumption represents a larger share of their net income.
-\end{itemize}
+% A4
+\begin{frame}{What Our Inflation Indices Capture}
+\centering
+\small
+\renewcommand{\arraystretch}{1.7}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}>{\RaggedRight\arraybackslash}p{0.23\textwidth}>{\RaggedRight\arraybackslash}p{0.53\textwidth}>{\centering\arraybackslash}p{0.15\textwidth}@{}}
+\toprule
+\textbf{Channel} & \textbf{Mechanism} & \textbf{Covered here?}\\
+\midrule
+Consumption baskets & Different expenditure shares imply different inflation exposure & \textcolor{Teal}{\textbf{Yes}}\\
+Nominal income & Wages, pensions and transfers adjust to inflation & No\\
+Balance sheets & Inflation changes the real value of nominal assets and debt & No\\
+\bottomrule
+\end{tabular}
 \end{frame}
 
+% A6
+\begin{frame}{Inflation Inequality Was Highly Uneven Across Countries}
+\centering
+\tiny
+\renewcommand{\arraystretch}{0.88}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr@{\qquad}lrrr}
+\toprule
+Country & 2021 & 2022 & 2023 & Country & 2021 & 2022 & 2023\\
+\midrule
+Austria & -0.5 & -0.2 & 0.5 & Ireland & 0.4 & 2.8 & 1.1\\
+Belgium & 1.2 & 1.9 & -2.3 & Italy & 0.1 & 1.5 & 0.4\\
+Croatia & 0.0 & 0.3 & -0.3 & Latvia & -0.2 & 4.6 & 2.4\\
+Cyprus & 0.0 & 0.7 & 0.2 & Lithuania & 0.2 & 3.3 & 0.4\\
+Estonia & 0.5 & 4.3 & 1.5 & Luxembourg & 0.1 & 0.2 & -0.1\\
+Finland & -0.2 & -1.1 & 0.2 & Malta & -0.4 & 0.2 & 1.2\\
+France & 0.3 & 0.1 & 0.1 & Netherlands & -0.3 & 1.8 & -0.9\\
+Germany & -0.4 & 0.9 & 0.4 & Portugal & 0.7 & 0.1 & -0.9\\
+Greece & 0.3 & 1.2 & -0.5 & Slovakia & -0.9 & 1.1 & 1.3\\
+Spain & 0.8 & 0.9 & -0.7 & Slovenia & 0.1 & 0.5 & 1.4\\
+\midrule
+\multicolumn{4}{l}{\textbf{Euro area}} & \textbf{} & \textbf{0.1} & \textbf{0.9} & \textbf{0.0}\\
+\bottomrule
+\end{tabular}
+\source{Eurostat HICP and HBS; authors' calculations. Units: Q1 minus Q5 annual-average inflation rates, in percentage points.}
+\end{frame}
+
+% A7
+\begin{frame}{Administered Prices Drove the Distributional Effect}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+& Fiscal cost & \multicolumn{3}{c}{Average-inflation effect} & \multicolumn{3}{c}{Q1--Q5 inequality effect}\\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Policy category & EUR bn & 2021 & 2022 & 2023 & 2021 & 2022 & 2023\\
+\midrule
+VAT cuts & 63.3 & 0.0 & -0.1 & -0.1 & 0.0 & 0.0 & 0.0\\
+Administered prices & 163.8 & 0.0 & -0.5 & -0.8 & 0.0 & -0.3 & -0.5\\
+Fuel subsidies and rebates & 17.0 & 0.0 & -0.3 & 0.3 & 0.0 & 0.1 & -0.1\\
+Other calibrated layer & 16.3 & 0.0 & -0.3 & 0.1 & 0.0 & -0.2 & 0.0\\
+Unallocated costs & 8.5 & -- & -- & -- & -- & -- & --\\
+\textbf{Decomposition total} & \textbf{268.9} & \textbf{-0.1} & \textbf{-1.2} & \textbf{-0.5} & \textbf{-0.1} & \textbf{-0.4} & \textbf{-0.5}\\
+\midrule
+Untargeted measures & 236.2 & -0.1 & -0.8 & -0.1 & 0.0 & -0.2 & -0.3\\
+Targeted measures & 32.8 & 0.0 & -0.5 & -0.4 & 0.0 & -0.2 & -0.2\\
+\midrule
+Main-paper joint effect & 268.9 & -0.1 & -1.3 & -0.3 & -0.1 & -0.4 & -0.4\\
+\bottomrule
+\end{tabular}
+\vspace{0.3em}
+\par{\scriptsize\color{WarmOrange}The decomposition has not yet been reconciled with the main-paper joint effect.\par}
+\source{Bruegel; national sources; authors' calculations. Annual policy effects are observed minus no-policy rates, in percentage points. Category effects need not sum because policies interact.}
+\end{frame}
+
+% Comparison of French energy-price shield evaluations
+\begin{frame}{French Energy Price Shields: Comparing Evaluations}
+\noindent{\small\color{WarmGray}Inflation estimates differ across models; distributional outcomes are not directly comparable.\par}
+\vspace{0.4em}
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.05}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.22\textwidth}*{4}{>{\centering\arraybackslash}p{0.12\textwidth}}@{}}
+\toprule
+\textbf{Institute} & \textbf{Model} & \multicolumn{2}{c}{\textbf{Aggregate inflation effect}} & \multicolumn{2}{c}{\textbf{Inflation-gap effect}}\\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+ & & \textbf{2022} & \textbf{2023} & \textbf{2022} & \textbf{2023}\\
+\midrule
+\textbf{This paper} & Price counterfactuals & \textbf{--2.2 pp} & \textbf{--0.5 pp} & \textbf{--0.9 pp} & \textbf{--0.4 pp}\\
+\addlinespace[0.15em]
+Banque de France & FR-BDF & --2.6 pp & +0.4 pp & NR & NR\\
+\addlinespace[0.15em]
+OFCE / CAE & ThreeME; general equilibrium & --0.73 pp & --0.68 pp & NR & NR\\
+\addlinespace[0.15em]
+CEPREMAP & CepreHANK & --1.1 pp & --1.8 pp & NR & NR\\
+\bottomrule
+\end{tabular}
+\par\vspace{0.5em}
+{\scriptsize\color{WarmGray}\RaggedRight NR: not reported in the cited study. Policy coverage and inflation conventions differ.\par}
+\source{This paper, France (slide 21); \href{https://www.banque-france.fr/system/files/2024-07/BDF253_4_Bouclier_tarifaire_web.pdf}{BdF (2024)}; \href{https://cae-eco.fr/static/pdf/focus97-bouclier-tarifaire-230711-web.pdf}{OFCE/CAE (2023)}; \href{https://www.cepremap.fr/2022/11/loi-de-finance-2023-quel-impact-a-eu-le-bouclier-tarifaire-sur-la-croissance-linflation-la-dette-publique-et-les-inegalites/}{CEPREMAP (2022)}.}
+\end{frame}
+% Selected references from references.bib
+\begin{frame}{Selected References}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\textbf{Ampudia, M., Ehrmann, M., and Strasser, G. (2024).}
+Shopping behavior and the effect of monetary policy on inflation heterogeneity along the income distribution.
+\textit{Journal of Monetary Economics}.
+\par\vspace{1em}
+\textbf{Cardoso, M., et al. (2022).}
+The heterogeneous impact of inflation on households' balance sheets.
+\textit{Banco de Espa\~na Working Paper}.
+\par\vspace{1em}
+\textbf{Pallotti, F., Paz-Pardo, G., Slacalek, J., Tristani, O., and Violante, G. L. (2024).}
+Who bears the costs of inflation? Euro area households and the 2021--2023 shock.
+\textit{Journal of Monetary Economics}.
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{Kaplan, G., and Schulhofer-Wohl, S. (2017).}
+Inflation at the household level.
+\textit{Journal of Monetary Economics}.
+\par\vspace{1em}
+\textbf{Jaravel, X. (2024).}
+Distributional Consumer Price Indices.
+\textit{CEPR Discussion Paper No. 19802}.
+\par\vspace{1em}
+\textbf{Amores, A. F., et al. (2025).}
+Inflation, Fiscal Policy, and Inequality: The Impact of the Post-Pandemic Price Surge and Fiscal Measures on European Households.
+\textit{Review of Income and Wealth}.
+\end{column}
+\end{columns}
+\end{frame}
 \end{document}

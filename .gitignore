@@ -1,0 +1,17 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.nav
+*.snm
+*.toc
+*.fls
+*.fdb_latexmk
+
+# R session state
+.Rhistory
+
+# Temporary review and rendering files
+tmp/
+
