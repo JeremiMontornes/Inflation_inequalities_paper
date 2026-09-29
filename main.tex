@@ -376,7 +376,7 @@ population grid. It classifies residence areas into cities (densely populated ar
 suburbs (intermediate density areas), and rural areas (thinly populated areas), using comparable
 thresholds across EU countries: urban centers of at least 50,000 inhabitants and 1,500 inhabitants
 per km$^2$, urban clusters of at least 5,000 inhabitants and 300 inhabitants per km$^2$, and all
-remaining areas.} Our microdata income groups rank households by total net household income, without adjustment for household size. This choice differs from ranking households by equivalised income; it describes income at the household level rather than living standards per consumption unit. Published fallback tabulations retain their source classifications, and the Italian income groups are estimated as described below. Our baseline excludes actual and imputed rents and the corresponding
+remaining areas.} Our microdata income groups rank households by total net household income, without adjustment for household size. This choice differs from ranking households by equivalised income; it describes income at the household level rather than living standards per consumption unit. Appendix~\ref{sec:app-income-definition} compares the two income definitions while holding household inflation rates, the sample, and weights fixed. The effect on the measured Q1--Q5 inflation gap varies across countries: equivalisation narrows the gap in some countries and widens it in others. Published fallback tabulations retain their source classifications, and the Italian income groups are estimated as described below. Our baseline excludes actual and imputed rents and the corresponding
 HICP rent components before matching, reaggregating parent categories and normalizing weights.
 The remaining HBS baskets and HICP product shares are normalized over the matched non-rent
 products. This common coverage applies to household- and group-level indices and policy counterfactuals.
@@ -695,6 +695,8 @@ This section evaluates the distributional effects of unconventional fiscal polic
 that directly changed consumer prices faced by households, including electricity and gas price caps and shields,
 VAT and energy-tax reductions and fuel rebates.
 
+When a supply shock such as that of 2021--2023 threatens to make inflation persistent, central banks tighten monetary policy to keep inflation expectations anchored and prevent second-round effects. A conventional fiscal response would reinforce this adjustment by tightening the budget to cool aggregate demand and, ultimately, inflation, at the cost of lower output in the short run. Unconventional fiscal measures, such as energy subsidies and tax reductions, can instead support households and businesses while directly lowering the prices they pay and temporarily reducing measured inflation \citep{dao2023unconventional}. Targeting support at low-income households can also cushion the unequal burden of the shock, but these interventions entail a fiscal cost and increase public debt unless offset by other budgetary measures. Price-based support can affect measured inflation immediately upon implementation, whereas monetary policy works through longer and variable transmission lags: ECB model estimates place the peak effect on inflation in the second year, making roughly 18 months an indicative horizon rather than a fixed delay \citep{lane2022transmission}. These differences in timing and distributional incidence motivate our analysis of household price policies.
+
 \subsection{Constructing Counterfactual Price Indices}
 \label{sec:no-policy-construction}
 
@@ -873,7 +875,7 @@ crisis. We isolate their direct effect
 on consumer prices. Observed minus counterfactual euro-area annual inflation is $-0.1$ percentage point in 2021, $-1.5$ points in 2022, and $-0.6$ point in 2023 (Table~\ref{tab:country-heterogeneity-counterfactual-gap}). The 2022 estimate is
 consistent in magnitude with \citet{dao2023unconventional}, who find that unconventional fiscal
 policy measures reduced euro-area inflation by 1--2 percentage points in 2022 under different
-modeling assumptions. Figure~\ref{fig:ea_policy_total_cpi_counterfactual} retains an earlier aggregate counterfactual series that has not yet been reconciled with the annual estimates in Table~\ref{tab:country-heterogeneity-counterfactual-gap}. Its underlying annual-average indices imply policy effects of $-1.4$ points in 2022 and $+0.1$ point in 2023, compared with $-1.5$ and $-0.6$ points in the table. The following monthly description refers to the plotted series.
+modeling assumptions. Figure~\ref{fig:ea_policy_total_cpi_counterfactual} is constructed from the same observed and counterfactual product indices as Table~\ref{tab:country-heterogeneity-counterfactual-gap}; annual averaging of the plotted indices therefore reproduces the table estimates.
 Counterfactual inflation lies above observed inflation during the main phase of the energy shock, with the
 largest difference around the inflation peak in late 2022. VAT and excise reductions, fuel rebates,
 price shields, and regulated-price caps therefore compressed the peak.
@@ -886,7 +888,7 @@ A reduction in the price level need not lower inflation in every subsequent year
 \includegraphics[width=0.86\textwidth,height=0.42\textheight,keepaspectratio]{fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png}
 \label{fig:ea_policy_total_cpi_counterfactual}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: The counterfactual series removes fiscal interventions that directly affected consumer prices. The figure reports year-on-year inflation for all 20 euro-area countries, aggregated with annual HICP country weights, from January 2021 to July 2026. Policy effects are defined as observed minus counterfactual inflation. This earlier graphical series is not numerically reconciled with the current annual policy-effect tables: its underlying indices imply annual effects of $-1.4$ points in 2022 and $+0.1$ point in 2023.\\
+\caption*{Notes: The counterfactual series removes fiscal interventions that directly affected consumer prices. The figure reports year-on-year inflation for all 20 euro-area countries, aggregated with annual HICP country weights, from January 2021 to December 2023. Policy effects are defined as observed minus counterfactual inflation. The plotted indices are the same product-to-country-to-euro-area indices used for the annual estimates in Table~\ref{tab:country-heterogeneity-counterfactual-gap}.\\
 Sources: Eurostat HICP; Bruegel energy-policy dataset; authors' calculations.}
 \end{figure}
 
@@ -926,7 +928,7 @@ in the ``Other'' category rather than allocated mechanically.
 
 Administered-price measures reduce the Q1--Q5 inflation gap by 0.4 point in both 2022 and 2023.
 Targeted measures reduce it by 0.3 point in 2022 and 0.1 point in 2023; untargeted measures reduce
-it by 0.3 and 0.5 points, respectively.
+it by 0.3 and 0.5 point, respectively.
 
 The VAT and excise category includes transport-fuel excise reductions and other tax and charge relief. The other calibrated layer mainly comprises Italian social energy
 bonuses and electricity-system charge relief. Fiscal costs and annual inflation effects
@@ -935,6 +937,18 @@ price assumptions, and are not calibrated to the fiscal amounts.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tables/tab_EA20_policy_category_contributions_2021_06_2023_06}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Table~\ref{tab:ea20-policy-method-sensitivity} separates the role of the three construction methods.
+Keeping only direct statutory or published-price reconstructions gives average-inflation effects of
+$0.0$, $-0.8$, and $0.0$ points in 2021--2023, compared with $-0.1$, $-1.5$, and $-0.6$ points in the full specification.
+The corresponding Q1--Q5 effects are $0.0$, $-0.3$, and $-0.1$ points, so the conclusion that the policies narrowed the gap survives without the less directly observed layers.
+Removing only the conditional bill and tariff benchmarks changes the 2023 average-inflation effect from $-0.6$ to $-0.2$ point and the gap effect from $-0.5$ to $-0.3$ point.
+Scaling those conditional wedges to 50 or 150 percent yields 2023 effects between $-0.4$ and $-0.8$ point for average inflation and between $-0.4$ and $-0.7$ point for the gap.
+These differences measure dependence on counterfactual assumptions; they are not confidence intervals.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tables/tab_EA20_policy_method_sensitivity_2021_2023}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -952,15 +966,14 @@ Table~\ref{tab:country-heterogeneity-counterfactual-gap} reports country-by-coun
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The distributional effects are heterogeneous across countries. In 2022, the largest
-reductions in the Q1--Q5 gap occur in the Netherlands (1.2 points), France (1.1), Belgium (1.0),
-and Croatia and Latvia (0.9 each). In 2023, Slovakia records the largest reduction (1.7 points),
-followed by Germany (1.2) and Portugal (1.1). France and Spain record reductions of 0.5 and
-0.3 point. Policies increase the gap by 0.4 point in Croatia, 0.3 in Estonia, and 0.2 in Cyprus
-in 2023. Italy's gap effects are $-0.1$, $-0.2$, and $-0.1$ points in 2021--2023, while its
-effect on average inflation turns positive, at 0.7 point, in 2023.
+reductions in the Q1--Q5 gap occur in Latvia (1.3 points), the Netherlands (1.2), France (1.1),
+Belgium (1.0), and Croatia (0.9). In 2023, Slovakia records the largest reduction (1.7 points),
+followed by Germany (1.2), Portugal (1.1), and France (0.5). Policies increase the gap by 0.4 point in Croatia,
+0.3 in Estonia, and 0.2 in Cyprus in 2023. Italy's gap effects are $-0.1$, $-0.2$, and $-0.1$ points in
+2021--2023, while its effect on average inflation turns positive, at 0.7 point, in 2023.
 
-For Germany, the reduction in annual-average inflation rises from 0.7 point in 2022 to 1.5 points
-in 2023, while the reduction in the Q1--Q5 gap rises from 0.3 to 1.2 points. This direct effect
+For Germany, annual-average inflation is reduced by 0.7 point in 2022 and 1.5 points
+in 2023, while the Q1--Q5 gap is reduced by 0.3 and 1.2 points. This accounting effect
 aligns with \citet{krebs2024pricecontrols}, who emphasize lower measured inflation and protection
 of household purchasing power. \citet{dertwinkelkalt2025energy} examine suppliers' pricing and
 energy-saving incentives. Our accounting counterfactual does not estimate these endogenous responses.
@@ -996,14 +1009,14 @@ $-0.6$, and $-0.5$ points.
 
 Housing energy is the main contribution to the reduction in the inflation gap:
 $-0.1$ point in 2021, $-0.6$ point in 2022, and $-0.5$ point in 2023. Vehicle-operation expenditure
-partly offsets this effect in 2022, contributing 0.1 point to the gap. Within this group, the policy
+contributes 0.1 point to the gap in 2022 and rounds to zero in 2023. Within this group, the policy
 wedge is applied only to fuels and lubricants. Its effect on average inflation reverses from
-$-0.4$ point in 2022 to 0.3 point in 2023, partly offsetting the 0.8-point reduction from household
+$-0.3$ point in 2022 to 0.3 point in 2023, partly offsetting the 0.8-point reduction from household
 energy. Food policies contribute a further 0.1-point reduction in average inflation in 2023.
 The total annual effects on the Q1--Q5 gap are $-0.1$, $-0.6$, and $-0.5$ points. Product contributions
 are rounded separately, so displayed rows need not sum exactly to the displayed total.
 
-In 2022, relief on household energy and motor fuels has offsetting effects on the annual inflation gap. Electricity and gas receive larger budget weights among lower-income households, so relief on these prices narrows the Q1--Q5 gap. Fuel relief works in the opposite direction because higher-income households devote a larger expenditure share to vehicle operation. This comparison depends on policy timing: in 2023, the vehicle-operation contribution to the annual gap rounds to zero, while its contribution to average inflation turns positive as earlier relief unwinds. Thus, the distributional effect depends on both the affected product and the change in support relative to the previous year; a policy's effect on average inflation alone does not determine its effect on inflation inequality.
+In 2022, relief on household energy dominates the annual inflation-gap effect. Electricity and gas receive larger budget weights among lower-income households, so relief on these prices narrows the Q1--Q5 gap. The vehicle-operation contribution partly offsets this reduction in 2022 and rounds to zero in 2023, while its contribution to average inflation turns positive in 2023 as earlier relief unwinds. Thus, the distributional effect depends on both the affected product and the change in support relative to the previous year; a policy's effect on average inflation alone does not determine its effect on inflation inequality.
 
 
 
@@ -1739,6 +1752,10 @@ points.
 \end{table}
 
 
+
+
+\clearpage
+\input{appendices/income_definition_robustness_appendix}
 
 
 \clearpage
