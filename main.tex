@@ -567,6 +567,20 @@ Sources: Eurostat HICP, HBS 2020 microdata, authors' calculations.}
 \end{figure}
 
 
+Figure~\ref{fig:hbs-monthly-variance-decomposition} decomposes household inflation dispersion using separate monthly regressions for each country. We regress household year-on-year inflation on national income quintile, the age and education of the household reference person, household size, and degree of urbanization, using HBS survey weights. These country-specific regressions contain no country fixed effects. We then average their $R^2$ values using annual Eurostat HICP country weights. The resulting explained share averages 6.6\% and ranges from 2.8\% to 11.8\% across months. The darker band represents explained dispersion, while the lighter remainder represents residual dispersion within the total one-standard-deviation band. Both components widen during the 2022 inflation surge, but residual dispersion remains much larger. Observable household characteristics therefore capture systematic differences in exposure, while most within-country variation reflects differences in consumption baskets within these broad groups.
+
+\begin{figure}[H]
+\centering
+\caption{Household inflation: explained and residual dispersion, 2021--2025}
+\label{fig:hbs-monthly-variance-decomposition}
+\includegraphics[width=0.9\textwidth]{fig/fig_HBS_monthly_inflation_variance_decomposition_2021_2025.pdf}
+\vspace{6pt}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Notes: We estimate a separate survey-weighted least-squares regression for each country and month. Household year-on-year inflation is regressed on national income quintile, age and education of the household reference person, household size, and degree of urbanization. The regressions contain no country fixed effects. The sample contains 149,211 households in 18 countries. Education is available in 17 countries; the Netherlands is retained but education is omitted from its regressions because all Dutch education values are missing. Italy and Portugal are excluded because the required household-level baskets are unavailable. We average the national $R^2$ values using annual Eurostat HICP country weights. The solid line is country-weighted mean household inflation. The darker band is the mean plus or minus the square root of the country-weighted explained share multiplied by country-weighted total within-country variance. The full outer band spans the mean plus or minus one standard deviation of that total variance; its lighter remainder represents residual dispersion. Because standard deviations are not additive, the band widths should not be read as additive variance shares. The bands are descriptive and are not confidence intervals.\\
+Sources: Eurostat HICP, HBS 2020 microdata, authors' calculations.}
+\end{figure}
+
+
 
 
 Large differences across individual households can coexist with small differences between income quintiles, because quintile averages conceal variation in consumption baskets within each group.
