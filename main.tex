@@ -97,7 +97,7 @@
 
 \begin{abstract}
 This article documents inflation inequality across household categories in the euro area using
-harmonized HICP prices and household budget surveys. We construct  household and category-level inflation indicators and assess recent fiscal
+harmonized HICP prices and household budget surveys. We construct household and category-level inflation indicators and assess recent fiscal
 interventions using counterfactual price indices. During the 2021--2023 inflation episode, the
 annual inflation gap between the first and fifth income quintiles peaks at 1.2 percentage points in
 2022 and is close to zero in 2021 and 2023.
@@ -146,15 +146,11 @@ price indices that remove the main price-based fiscal interventions of 2021--202
 Our main results are the following. Inflation inequality varies substantially across euro-area
 countries and years. In 2022, the annual Quintile 1--Quintile 5 gap exceeds 3 points in Estonia,
 Latvia, Lithuania, and the Netherlands and reaches 2.9 points in Ireland. In the euro area, the annual income gap is
-0.1 point in 2021, 1.2 points in 2022, and 0.0 point in 2023 after rounding. In regressions pooling 2021--2023, the
-average annual age and rural--city gaps are about 0.6 and 0.4 points. The inflation burden is 2.5,
+0.1 point in 2021, 1.2 points in 2022, and 0.0 point in 2023 after rounding. Household-level dispersion also rises sharply during the shock, but income, age, household size, education, and residence explain only a limited share of the within-country variation. The inflation burden is 2.5,
 8.7, and 4.8 percent of net income for the
 first quintile in 2021, 2022, and 2023, compared with 1.5, 4.7, and 3.0 percent for the fifth
 quintile. Older and rural households experience higher inflation during the rise in energy prices.
-In household-level regressions, income, age, and residence are associated with exposure during the energy
-shock. The rural--urban gap is large in 2021--2022, whereas the age
-gradient remains visible in 2022--2023; the association with income varies over time. Finally, household price
-policies lower annual inflation by about 0.7 percentage point on average over 2021--2023 and reduce the
+Household price policies lower annual inflation by about 0.7 percentage point on average over 2021--2023 and reduce the
 annual income-quintile gap by about 0.4 percentage point on average. A complementary input--output simulation shows
 that the observed extra-EU energy import-price shock generates 6.5 points of inflation exposure
 and widens the Q1--Q5 gap by 1.1 points. Household energy contributes 1.7 points to this gap,
@@ -472,7 +468,7 @@ Native 3-digit expenditure is preferred; finer codes are aggregated where
 available. Distributional analyses retain households with positive
 retained expenditure, and finite inflation rates; they require no income filter. Income quintiles
 are defined within each country using total net household income, without equivalisation.
-Income-based baskets retain households with finite income. The regression and burden samples additionally require a positive reported equivalence scale, without equivalising income.
+Income-based baskets retain households with finite income. The monthly variance decomposition uses all households in its 17-country sample with observed regression covariates; HBS survey weights do not determine inclusion. The burden sample additionally requires a positive reported equivalence scale, without equivalising income.
 
 For Figure~\ref{fig:hbs_monthly_inflation_percentiles}, source price series must be complete
 over the full calculation period before recoding to ECOICOP v1 at digit 3. This keeps the
@@ -520,7 +516,7 @@ s_{y,m}=\sum_c \omega_{c,y}s_{c,y,m}, \qquad
 \]
 where $W_{c,y}$ is the published all-items HICP country weight and $\mathcal C$ is the fixed country sample. The bands therefore average national percentile endpoints; they are not percentiles of a pooled euro-area distribution. These weights are not additionally adjusted for rents. Averaging these statistics is distinct from constructing aggregate HICP inflation.
 
-TLet $q_{c,y}$ be the annual HICP country expenditure weight, adjusted to exclude rents. We aggregate weights before chaining:
+Let $q_{c,y}$ be the annual HICP country expenditure weight, adjusted to exclude rents. We aggregate weights before chaining:
 \begin{align}
 L_{c,y,m}&=\frac{\sum_i a_{ic}E_{ic}L_{ic,y,m}}{\sum_i a_{ic}E_{ic}},\\
 L_{y,m}&=\sum_c q_{c,y}L_{c,y,m},
@@ -538,13 +534,13 @@ exercises retain their stated comparison coverage.
 
 This section presents our main results. We focus on inflation inequality in the wake of the 2021--2023
 energy crisis. We further document 
-cross-country and cross product heterogeneity in inflation inequality.
+cross-country and cross-product heterogeneity in inflation inequality.
 
 \subsection{Inflation Inequality in the Euro Area}
 
 %We first describe patterns of inflation inequality over the short run since 2020.
 
-\subsubsection{Short-Run Inflation Inequality}
+\subsubsection{Household-level inflation dispersion}
 
 %Euro area results indicate small or large differences across categories. We also examine product contributions to inflation inequalities.
 
@@ -567,33 +563,27 @@ Sources: Eurostat HICP, HBS 2020 microdata, authors' calculations.}
 \end{figure}
 
 
-Figure~\ref{fig:hbs-monthly-variance-decomposition} decomposes household inflation dispersion using separate monthly regressions for each country. We regress household year-on-year inflation on national income quintile, the age and education of the household reference person, household size, and degree of urbanization, using HBS survey weights. These country-specific regressions contain no country fixed effects. We then average their $R^2$ values using annual Eurostat HICP country weights. The resulting explained share averages 6.6\% and ranges from 2.8\% to 11.8\% across months. The darker band represents explained dispersion, while the lighter remainder represents residual dispersion within the total one-standard-deviation band. Both components widen during the 2022 inflation surge, but residual dispersion remains much larger. Observable household characteristics therefore capture systematic differences in exposure, while most within-country variation reflects differences in consumption baskets within these broad groups.
+Figure~\ref{fig:hbs-monthly-variance-decomposition} shows the square roots of total and explained household inflation variance using separate OLS regressions for each country and month. We regress household year-on-year inflation on national income quintile, the age and education of the household reference person, household size, and degree of urbanization. We then average their $R^2$ values using annual Eurostat HICP country weights. The explained share averages 6.2\% and ranges from 2.4\% to 10.6\% across months. The outer band extends one total standard deviation, $\sqrt{V}$, above and below mean inflation, while the darker band has half-width $\sqrt{R^2V}$. Under a Gaussian distribution, the outer band spans approximately the 16th to 84th percentiles and is therefore broadly comparable, though slightly wider, than the P20--P80 band in Figure~\ref{fig:hbs_monthly_inflation_percentiles}. Both bands widen during the 2021--2023 inflation surge, but the component associated with observable characteristics remains modest. Most within-country variation therefore reflects differences in consumption baskets associated with unobserved characteristics.
 
 \begin{figure}[H]
 \centering
-\caption{Household inflation: explained and residual dispersion, 2021--2025}
+\caption{Household inflation: square roots of explained and total variance, 2021--2025}
 \label{fig:hbs-monthly-variance-decomposition}
 \includegraphics[width=0.9\textwidth]{fig/fig_HBS_monthly_inflation_variance_decomposition_2021_2025.pdf}
 \vspace{6pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: We estimate a separate survey-weighted least-squares regression for each country and month. Household year-on-year inflation is regressed on national income quintile, age and education of the household reference person, household size, and degree of urbanization. The regressions contain no country fixed effects. The sample contains 149,211 households in 18 countries. Education is available in 17 countries; the Netherlands is retained but education is omitted from its regressions because all Dutch education values are missing. Italy and Portugal are excluded because the required household-level baskets are unavailable. We average the national $R^2$ values using annual Eurostat HICP country weights. The solid line is country-weighted mean household inflation. The darker band is the mean plus or minus the square root of the country-weighted explained share multiplied by country-weighted total within-country variance. The full outer band spans the mean plus or minus one standard deviation of that total variance; its lighter remainder represents residual dispersion. Because standard deviations are not additive, the band widths should not be read as additive variance shares. The bands are descriptive and are not confidence intervals.\\
+\caption*{Notes: Separate unweighted OLS regressions are estimated for each country and month using all 138,798 households in the 17-country sample. Covariates are national income quintile, age and education of the household reference person, household size, and degree of urbanization; no country fixed effects are included. National $R^2$ values and within-country variances are aggregated using annual HICP country weights normalized over the sample. The solid line is mean inflation. The darker band has half-width $\sqrt{R^2V}$, and the full outer band has half-width $\sqrt{V}$. The bands are descriptive, not confidence intervals.\\
 Sources: Eurostat HICP, HBS 2020 microdata, authors' calculations.}
 \end{figure}
 
 
+\subsubsection{Inflation Inequality by Household Groups}
 
 
-Large differences across individual households can coexist with small differences between income quintiles, because quintile averages conceal variation in consumption baskets within each group.
-Figure~\ref{fig:ea20_short_run_income} shows moderate income-based inflation inequality at the
-euro-area level during the post-COVID inflation surge. This pattern is broadly consistent with recent evidence from \citet{bobasu2023impact} and
-\citet{claeys2022inflation}, although small differences remain because of our weighting scheme or
-exclusion of actual and imputed rents. This aggregate result masks substantial
-cross-country heterogeneity, including reversals in the sign of the Quintile 1--Quintile 5 gap
-across countries and years. Inflation rates for the first and fifth income quintiles remain close
-in the EA20 aggregate throughout 2021--2023 because national consumption structures and
-country-level price dynamics partly offset one another. The small aggregate gap should therefore
-not be interpreted as evidence that distributional exposure was uniformly moderate within member
-countries. Appendix~\ref{sec:app-long-run-inflation} complements these short-run comparisons with evidence on long-run inflation inequality across income quintiles in the euro area.
+Because income quintiles explain only a small share of household-level inflation dispersion, comparisons of quintile averages capture only one dimension of household heterogeneity.
+Figure~\ref{fig:ea20_short_run_income} shows greater inflation inequality at the
+euro-area level during the post-COVID inflation surge but small differences otherwise. This pattern is broadly consistent with recent evidence from \citet{bobasu2023impact}, although the remaining differences may reflect our weighting scheme or country coverage.
+Appendix~\ref{sec:app-long-run-inflation} complements these short-run comparisons with evidence on long-run inflation inequality across income quintiles in the euro area.
 
 
 
@@ -606,22 +596,19 @@ countries. Appendix~\ref{sec:app-long-run-inflation} complements these short-run
 \vspace{6pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: This figure reports year-on-year inflation rates for the first and fifth income quintiles in the euro area from January 2021 to July 2026. Group baskets are constructed from fixed 2020 HBS microdata, using total net household income without equivalisation, with the Italian approximation and Portuguese tabulation fallback described in Section~\ref{sec:data-methodology}. The country series are aggregated using annual HICP country weights.\\
-Sources: Eurostat HICP, HBS, authors' calculations}
+Sources: Eurostat HICP, HBS, authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 
-\subsubsection{Inflation Inequality by Age and Residence Area}
 
 %Papers on inflation inequality focus on inequality according to household income brackets. However, in the case of most countries, it was inflation differentials between age groups or residence areas that were much more pronounced during the 2021-2023 period.
 
 Figure~\ref{fig:age_rural} presents inflation rates by household category in the euro area,
-segmented by age and residence area. In the household-level regressions pooling 2021--2023, average
-annual inflation is 0.6 point higher for households whose reference person is aged 60 or over than
-for those under 30, and 0.4 point higher in rural areas than in cities. The monthly year-on-year inflation rates in the figure show that both gradients vary over time and temporarily narrow or reverse as
-energy inflation recedes. \citet{gautier2024effects} obtain similar age-related results under
-slightly different assumptions.
+segmented by age and residence area. The monthly year-on-year inflation rates show that older and rural households face higher inflation during the rise in energy prices, but both gradients vary over time and temporarily narrow or reverse as
+energy inflation recedes. \citet{gautier2024effects} obtain similar age-related results for the
+four largest euro-area countries under slightly different assumptions.
 
 The residence-area differentials reflect differences in the structure of
 energy demand. Rural households tend to spend a larger share of their budget on transport fuels and
@@ -649,12 +636,19 @@ their measured inflation fall faster when those price pressures unwind.
 %\label{fig:5}
 \vspace{4pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Year-on-year inflation from fixed 2020 HBS group baskets and annual HICP country weights, excluding rents. National exceptions are documented in Section~\ref{sec:data-methodology}. The conditional annual gaps discussed in the text come from Table~\ref{tab:hbs-inflation-regressions}.\\
+\caption*{Notes: Year-on-year inflation from fixed 2020 HBS group baskets and annual HICP country weights, excluding rents. National exceptions are documented in Section~\ref{sec:data-methodology}.\\
 Sources: Eurostat HICP and HBS, authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
+This aggregate result also masks substantial
+cross-country heterogeneity, including reversals in the sign of the Quintile 1--Quintile 5 gap
+across countries. Inflation rates for the first and fifth income quintiles remain close
+in the EA20 aggregate throughout 2021--2023 because national consumption structures and
+country-level price dynamics partly offset one another. The small aggregate gap should therefore
+not be interpreted as evidence that distributional exposure was uniformly moderate within member
+countries.
 
 \subsection{Heterogeneous Effects of the 2022--2023 Energy Shock Across Countries}
 
@@ -675,7 +669,7 @@ pressures recede, while the euro-area gap falls from 1.2 points in 2022 to zero 
 cross-country pattern is qualitatively similar to \citet{claeys2022inflation}, who also find larger
 inflation gaps between low- and high-income households in countries with higher inflation.
 
-The interaction between country-specific exposures, and fiscal policies and
+The interaction between country-specific exposures, fiscal policies, and
 group-specific expenditure shares explains these differences. A price increase in a product category generates inflation inequality only to
 the extent that the affected category has different expenditure weights across household groups.
 Hence, similar income-quintile consumption profiles can still produce different inflation gaps when
@@ -719,7 +713,7 @@ mitigate household exposure to rising energy costs
 \citep{arregui2022targeted,dao2023unconventional,garciaMiralles2023support}.
 We compare observed policy-inclusive retail prices with counterfactual price paths that remove the covered energy and food price measures. This is a direct consumer-price accounting exercise: expenditure weights are fixed between scenarios, and we do not model changes in consumption, firms' pricing responses outside the covered components, or feedback through demand. The resulting differences measure the direct contribution of these measures to inflation and inflation inequality, rather than their welfare effects.
 
-We combine the Bruegel's energy measures dataset\footnote{https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices} with national sources to identify price measures, including Spanish and Portuguese food-product VAT cuts. Table~\ref{tab:ea20-price-counterfactual-measures} in the appendix reports the inventory and identifies the simulated measures. The fiscal accounting assigns a documented cost to each of the 191 measures active in the counterfactual during 2021--2023 and counts shared envelopes once. Some envelopes cannot be split by instrument or targeting status, and some include business beneficiaries, so these costs do not isolate amounts received by households.
+We combine the Bruegel energy-measures dataset\footnote{https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices} with national sources to identify price measures, including Spanish and Portuguese food-product VAT cuts. Table~\ref{tab:ea20-price-counterfactual-measures} in the appendix reports the inventory and identifies the simulated measures. The fiscal accounting assigns a documented cost to each of the 191 measures active in the counterfactual during 2021--2023 and counts shared envelopes once. Some envelopes cannot be split by instrument or targeting status, and some include business beneficiaries, so these costs do not isolate amounts received by households.
 
 The available information determines how we construct each price path. First, direct reconstructions use published reference tariffs, statutory tax rates, or statutory unit rebates, with coverage and pass-through specified. Second, calibrations choose a measure-specific intensity parameter so that the geometric mean of monthly counterfactual-to-observed price ratios over the active policy months matches the assumed component-level ratio in the measure-level assumptions file. These targets summarize coverage and pass-through using the policy inventory and its cited national sources; they are assumptions rather than observed counterfactual prices. Third, conditional tariff or bill benchmarks apply statutory rules to a reference contract or representative bill when household contract shares or consumption quantities are unavailable. Their results depend on the stated contract, quantity, and exposure assumptions. The following country examples illustrate these differences before we set out the price adjustments by instrument.
 
@@ -855,7 +849,7 @@ not provide the monthly counterfactual tariff schedule, the distribution of hous
 across tariff blocks, or the eligible-household weights needed for a direct statutory reconstruction.
 We therefore add these cases as separate
 calibrated layers, identified from \citet{sgaravatti2021national} and \citet{arregui2022targeted},
-rather than merging them with the VAT or unit-subsidy calculations. This applies to Cyprus's electricity-bill subsidy, Ireland's electricity credits and Public Service Obligation levy reduction, Italy's system-charge reductions and social energy bonuses, and to
+rather than merging them with the VAT or unit-subsidy calculations. This applies to Cyprus's electricity-bill subsidy, Ireland's electricity credits and Public Service Obligation levy reduction, Italy's system-charge reductions and social energy bonuses, and
 Belgium's extension of the social energy tariff and basic energy package. The calibrated ratios are
 applied only to the relevant COICOP energy components and policy months, and the corresponding
 assumption tables are reported with the counterfactual outputs.
@@ -1021,7 +1015,7 @@ $-0.6$, and $-0.5$ points.
 \input{tables/tab_EA20_counterfactual_income_gap_product_contributions_2021_06_2023_06}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Housing energy is the main contribution to the reduction in the inflation gap:
+Housing energy is the main contributor to the reduction in the inflation gap:
 $-0.1$ point in 2021, $-0.6$ point in 2022, and $-0.5$ point in 2023. Vehicle-operation expenditure
 contributes 0.1 point to the gap in 2022 and rounds to zero in 2023. Within this group, the policy
 wedge is applied only to fuels and lubricants. Its effect on average inflation reverses from
@@ -1034,88 +1028,10 @@ In 2022, relief on household energy dominates the annual inflation-gap effect. E
 
 
 
-\section{Household Inflation Exposure: Determinants and Burden}
+\section{Household Inflation Exposure: Shocks and Burden}
 \label{sec:household-level}
 
-In this section, we examine the distribution of household policy effects and the association between inflation and observable household characteristics.
-We then assess direct and indirect exposure to extra-EU import-price shocks and measure the inflation burden relative to household income.
-
-\subsection{Household Characteristics and Inflation Exposure}
-
-
-Figure~\ref{fig:ea20-household-policy-effect-distribution} reports the distribution of the
-household-level difference between observed and counterfactual annual inflation.
-Each difference pairs the same household in the same year. Negative values indicate
-lower inflation under the observed policies. Both rates receive the same observed-scenario
-expenditure weight when constructing this distribution. The weighted mean effects are $-0.1$,
-$-1.5$, and $-0.8$ point in 2021--2023; the corresponding medians are 0.0, $-1.0$, and
-$-0.6$ point. These household-sample estimates differ from the EA20 group aggregates in coverage
-and aggregation weights.
-
-\begin{figure}[H]
-\centering
-\caption{Distribution of household inflation differences: observed minus counterfactual, 2021--2023}
-\includegraphics[width=0.86\textwidth,height=0.48\textheight,keepaspectratio]{fig/fig_EA20_household_policy_effect_distribution_2021_2023.pdf}
-\label{fig:ea20-household-policy-effect-distribution}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Each observation is a household's observed annual inflation rate minus its no-policy counterfactual, in percentage points. The sample contains the same 152,613 households in each year, covering 18 countries excluding Italy and Portugal. Both scenarios use fixed 2020 HBS microdata baskets, RAS calibration at COICOP digit 3, identical annual HICP product margins, and the same exclusion of actual and imputed rents. Counterfactual product prices remove the household price measures described in Section~\ref{sec:fiscal-policies}. Bar heights are shares of revalued expenditure, using the observed scenario's survey weight times retained expenditure times previous-year annual-average household index. Bins have width one quarter of a percentage point. The pooled outer 0.1 percent tails are omitted from display without renormalizing bin shares. Differences smaller than $10^{-10}$ point in absolute value are treated as numerical zero. Positive inflation differences can reflect base effects and do not imply higher price levels under the policies.\\
-Sources: Eurostat HICP and HBS microdata; authors' calculations.}
-\end{figure}
-
-We pool individual household records from the euro area to examine whether
-differences in consumption baskets translate into systematic differences in inflation exposure.
-We examine how income quintile, age, household size, education, and degree of urbanization are associated with
-household-specific inflation.
-
-The regression tables use the household indices underlying the distributions, with the income and complete-case restrictions described here. Table~\ref{tab:hbs-inflation-regressions} reports unweighted ordinary least squares estimates, with the pooled model first and separate estimates for 2021, 2022, and 2023 thereafter. All columns include country fixed effects; the pooled model also includes year fixed effects. The dependent variable is annual inflation from the RAS-calibrated household indices, using expenditure margins and excluding rents. Survey weights remain part of index calibration and national income-quintile construction, but do not weight the regressions. Standard errors are clustered by country. The coefficients are descriptive conditional associations, not causal effects. The complete-case sample contains 138,798 households in 17 countries, observed in each of the three years, for 416,394 household-year observations in the pooled model. Education refers to the household reference person. 
-
-\begin{table}[H]
-\centering
-\caption{Household-level inflation regressions: pooled and by year, euro-area sample}
-\label{tab:hbs-inflation-regressions}
-\renewcommand{\baselinestretch}{1}\small
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.0}
-\input{tables/tab_AT_BE_CY_DE_EE_EL_ES_FI_FR_HR_IE_IT_LT_LU_LV_MT_NL_PT_SI_SK_hbs_inflation_regressions}
-\vspace{4pt}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{\emph{Notes:} Unweighted OLS; fixed 2020 HBS baskets and RAS-calibrated annual inflation excluding rents. Reference groups: quintile 1, age 60 or over, rural areas, ISCED 0--2. Upper secondary and tertiary denote ISCED 3--4 and 5--8. Coefficients are in percentage points; country-clustered standard errors are in parentheses. Fixed effects and sample sizes are reported in the table. The Netherlands is excluded because education is entirely unreported in the available file. Italy is excluded because usable household income is unavailable; Portugal lacks sufficient expenditure detail to isolate rents. Without regression weights, countries contribute in proportion to their sample sizes rather than their represented populations.\\ \emph{Sources:} HBS microdata, Eurostat HICP, authors' calculations.}
-\end{table}
-Table~\ref{tab:hbs-policy-effect-regressions} retains the sample and specification of
-Table~\ref{tab:hbs-inflation-regressions}, replacing observed inflation with the same
-household's observed minus counterfactual annual inflation rate. A positive coefficient
-indicates a more positive, or less negative, inflation difference relative to the reference
-category, conditional on the other covariates and fixed effects. These coefficients describe conditional differences in the modelled price-policy effect.
-
-\begin{table}[H]
-\centering
-\caption{Household inflation differences: observed minus counterfactual, pooled and by year}
-\label{tab:hbs-policy-effect-regressions}
-\renewcommand{\baselinestretch}{1}\small
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.0}
-\input{tables/tab_AT_BE_CY_DE_EE_EL_ES_FI_FR_HR_IE_IT_LT_LU_LV_MT_NL_PT_SI_SK_hbs_policy_effect_regressions}
-\vspace{4pt}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{\emph{Notes:} Same observations and specification as Table~\ref{tab:hbs-inflation-regressions}. Outcome: the household's observed minus counterfactual annual inflation, in percentage points. Both scenarios use identical baskets and product coverage; the regressions are unweighted. Standard errors are re-estimated for the paired difference and clustered by country.\\ \emph{Sources:} HBS microdata, Eurostat HICP, authors' calculations.}
-\end{table}
-
-Table~\ref{tab:hbs-inflation-regressions} shows that the inflation surge did not affect all household baskets equally. Over 2021--2023, the conditional estimates associate lower income, older reference persons, lower education, and rural residence with higher inflation. In the pooled model, annual inflation is 0.5 percentage point lower in the fifth income quintile than in the first, 0.6 point lower for households with a reference person below 30 than for those aged 60 or over, and 0.4 point lower in densely populated areas than in rural areas. These differences are all significant at 1 percent. The annual estimates, however, show that this average pattern is concentrated around the 2022 shock rather than equally apparent throughout the period.
-
-In 2021, the clearest differences concern residence and education: inflation is 0.5 point lower in densely populated areas than in rural areas and 0.2 point lower among tertiary-educated reference persons than among those with lower secondary education or less. The income and age coefficients are not significant at 10 percent. By 2022, a broader pattern emerges. The income coefficients decline monotonically across quintiles, reaching $-1.3$ points for the fifth quintile, while the under-30 and densely populated-area coefficients reach $-1.3$ and $-1.1$ points. Tertiary education is associated with 0.4 point lower inflation even after conditioning on income and the other characteristics. All four 2022 estimates are significant at 1 percent. This alignment is consistent with the unequal basket exposure during the energy-price surge documented above, although these regressions do not separately identify the contribution of energy.
-
-The easing of inflation in 2023 does not simply restore the earlier pattern. Income and education coefficients are no longer statistically significant at 10 percent, but the age gradient remains: inflation is 0.5 percentage point lower for households with reference persons below 30 than for those aged 60 or over, significant at 1 percent. Meanwhile, the urban--rural difference changes sign, with inflation 0.3 point higher in densely populated areas, also significant at 1 percent. Larger households now face higher inflation, by 0.1 point per additional member, significant at 5 percent. Thus, the composition of exposure changes as the inflation episode unfolds: some conditional gaps become less precisely estimated, others persist, and the residence gap reverses sign. These comparisons describe the annual estimates; differences in statistical significance alone do not establish statistically significant changes in coefficients across years.
-
-The regression results are consistent with scanner-data evidence, while also clarifying what the present
-estimates capture. Using US household scanner data, \citet{kaplan2017inflation} find that
-lower-income households experience higher inflation on average, but that observable characteristics
-explain only a small share of the substantial cross-sectional dispersion. For the euro area,
-\citet{strasser2023inflation} likewise document small and time-varying differences between income
-groups, including reversals across countries, and find that product choices and shopping behavior
-account for considerably more household-level variation than socioeconomic characteristics. Our
-time-varying income and household-size coefficients indicate that
-demographic gradients depend on the composition of each year's price shock. Our basket-based indices do not capture the differences in prices paid within product categories,
-including variation across brands, retailers, and promotions, that scanner data reveal.
+This section assesses direct and indirect exposure to extra-EU import-price shocks and measures the inflation burden relative to household income.
 
 \subsection{Direct and Indirect Exposure to Extra-EU Import-Price Shocks}
 
@@ -1454,7 +1370,7 @@ Sources: Eurostat HBS 2015; authors' calculations.}
 \label{fig:national-household-inflation-ras-d3}
 \includegraphics[width=\textwidth,height=0.76\textheight,keepaspectratio]{fig/fig_national_household_inflation_RAS_D3_expenditure_2022.pdf}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Annual-average inflation; 2020 HBS baskets, excluding rents (041 and 042). Weights equal survey weights times retained expenditure times the 2021 annual-average household index. Orange lines mark the corresponding weighted means. Bins are 0.5 percentage point wide; the displayed range is $-5$ to 55 percent, without renormalization. The expenditure share outside this range is below 0.1 percent in every country. The sample comprises 152,613 households in 18 countries, excluding Italy and Portugal.\\
+\caption*{Notes: Annual-average inflation; 2020 HBS baskets, excluding rents (041 and 042). Weights equal survey weights times retained expenditure times the 2021 annual-average household index. Orange lines mark the corresponding weighted means. Bins are 0.5 percentage points wide; the displayed range is $-5$ to 55 percent, without renormalization. The expenditure share outside this range is below 0.1 percent in every country. The sample comprises 152,613 households in 18 countries, excluding Italy and Portugal.\\
 Sources: HBS microdata, Eurostat HICP; authors' calculations.}
 \end{figure}
 
@@ -1626,7 +1542,7 @@ inputs described in Appendix~\ref{sec:app-italy-hbs}.
 Let $\mathcal{J}_y$ be the set of matched COICOP categories available in the HICP weighting
 structure in year $y$. Let $E^{\mathrm{HBS}}_{j,g,y'}$ denote expenditure on item $j$ by group $g$ in the
 matched HBS wave $y'$, and let $E^{\mathrm{HBS}}_{j,\mathrm{all},y'}$ denote expenditure on that item by all
-households. Consistently with the implementation, the HBS correction factor used in the RAS seed is
+households. Consistent with the implementation, the HBS correction factor used in the RAS seed is
 the share of aggregate expenditure on item $j$ accounted for by group $g$:
 \begin{equation}
 c^{\mathrm{HBS}}_{j,g,y'}
@@ -1729,7 +1645,7 @@ w^{\mathrm{code}}_{j,g,y}
 =
 \frac{M^{\mathrm{pct}}_{j,g,y}}{s_{g,y}}
 =
-100\omega_{j,g,y},
+100\omega_{j,g,y}.
 \end{equation}
 This quantity therefore sums to 100 within every household group. Thus division by $s_{g,y}$ in the code is the
 percentage-scale counterpart of dividing $M_{j,g,y}$ by its group-row sum in the normalized
@@ -1848,12 +1764,12 @@ in the series since 2000.
 \vspace{3pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: This figure shows monthly price indices for the first and fifth income quintiles in the euro area, January 2000 to July 2026. Indices are rebased to 2000 = 100.\\
-Sources: Eurostat HICP, HBS, authors' calculations}
+Sources: Eurostat HICP, HBS, authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This pattern contrasts with the larger long-run gaps documented for the United States in
-\cite{jaravel2024distributional}. Several methodological differences may account for the contrasting results. First, the
+This pattern contrasts with the larger long-run gaps documented for the United States by
+\citet{jaravel2024distributional}. Several methodological differences may account for the contrasting results. First, the
 euro-area indices reported here aggregate national indices and therefore average across countries
 whose price dynamics and fiscal responses can offset one another. Second, the euro-area calculation
 uses harmonized COICOP categories, whereas the U.S. evidence exploits much finer product-level
