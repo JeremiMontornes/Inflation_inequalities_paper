@@ -116,9 +116,9 @@ stopifnot(all(is.finite(heights)),all(heights>=0),length(aggregate_rate)==1L,
 draw <- function() {
   par(mar=c(5.2,4,8.1,1),mgp=c(2.6,.7,0),las=1,family='sans',bty='l',cex=1.1)
   bp <- barplot(heights,col=palette,border=NA,space=.35,
-       names.arg=c('Poorest','2','3','4','Richest'),ylim=c(0,16),axes=FALSE,
+       names.arg=c('Poorest','2','3','4','Richest'),ylim=c(0,12),axes=FALSE,
        xlab='Income quintile',ylab='Percent / percentage points')
-  axis(2,at=seq(0,16,2),lwd=.6,col='#777777',tck=-.012)
+  axis(2,at=seq(0,12,2),lwd=.6,col='#777777',tck=-.012)
   abline(h=0,col='#777777',lwd=.6)
   segments(bp[1]-.42,aggregate_rate,bp[5]+.42,aggregate_rate,
            col='#FF0000',lty=2,lwd=1.8)
