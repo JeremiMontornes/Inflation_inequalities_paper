@@ -82,13 +82,15 @@
 % Evidence: main.tex, introduction
 \begin{frame}{Household Inflation Exposure in the Euro Area}
 \begin{itemize}
-\item Our question: How do supply shocks affect households with different consumption baskets in the euro area?
+\item Our question: How have recent energy shocks and the fiscal response shaped household- and group-level inflation
+ across the euro area?
+
 \item We construct:
 \begin{itemize}
 \item Monthly household-level price indices for approximately 150,000 households.
 \item Monthly group-level price indices by income, age, and residence area.
 \end{itemize}
-\item Counterfactual price paths quantify how fiscal measures changed average inflation and inflation inequality during the energy crisis.
+\item Counterfactual price indices to quantify how fiscal measures changed average inflation during the energy crisis.
 
 \end{itemize}
 \end{frame}
@@ -107,8 +109,8 @@
 \textbf{Channel} & \textbf{Mechanism} & \textbf{Covered here?}\\
 \midrule
 Nominal income & A retiree whose pension is indexed to inflation is better protected than a worker whose wage remains unchanged. & No\\
-Balance sheets & Wealth is transferred from creditors (lenders and savers) to debtors (borrowers) as the real value of debt declines & No\\
-Consumption baskets & Different expenditure shares imply different inflation exposure & \textcolor{Teal}{\textbf{Yes}}\\
+Balance sheets & Wealth is transferred from creditors (lenders and savers) to debtors (borrowers) as the real value of debt declines. & No\\
+Consumption baskets & Different expenditure shares imply different inflation exposure. & \textcolor{Teal}{\textbf{Yes}}\\
 \bottomrule
 \end{tabular}
 \end{frame}
@@ -157,7 +159,7 @@ Within an identical product & The same bread from different retailers (bakery ve
 \begin{frame}{Main Findings}
 \begin{itemize}
 \item The annual Q1--Q5 inflation gap reached \textbf{1.2 percentage points in 2022}, with large cross-country differences.
-\item Price policies lowered inflation by \textbf{1.5 percentage points in 2022} and reduced the income gap by \textbf{0.6 percentage point}.
+\item Price policies lowered inflation by \textbf{1.5 percentage points in 2022} and reduced the Q1--Q5 inflation gap by \textbf{0.6 percentage points}.
 \item Household-level inflation displays substantial dispersion within income quintiles.
 \end{itemize}
 
@@ -241,13 +243,13 @@ October 2022: mean \textbf{11.9\%}; weighted national D1--D9 cutoffs: \textbf{8.
 \source{Eurostat HICP, HBS. National survey-weighted statistics, then annual HICP country weights (18 countries). Bands average national Q1--Q5 and D1--D9 ranges.}
 \end{frame}
 
-% Evidence: current main.tex monthly household variance decomposition.
+% Evidence: current main.tex saturated monthly household variance decomposition.
 \begin{frame}{Observable Characteristics Explain Little of Household Dispersion}
 \centering
-\includegraphics[width=.83\textwidth,height=.56\textheight,keepaspectratio]{fig/fig_HBS_monthly_inflation_variance_decomposition_2021_2025_slide.pdf}
+\includegraphics[width=.83\textwidth,height=.51\textheight,keepaspectratio]{fig/fig_HBS_monthly_inflation_variance_decomposition_saturated_2021_2025.pdf}
 \par\smallskip\raggedright\small
-Income, age, education, household size, and urbanization jointly explain \textbf{6.2\%} of within-country variance on average across months (range: \textbf{2.4--10.6\%}).
-\source{Eurostat HICP and HBS; authors' calculations. Separate country-month OLS regressions; annual HICP country weights (17 countries).}
+A model saturated with all interactions among income, age, education, household size, and urbanization explains \textbf{12.4\%} of within-country variance on average across months (range: \textbf{8.6--17.4\%}).
+\source{Eurostat HICP and HBS; authors' calculations. Saturated country-month models; annual HICP country weights (17 countries).}
 \end{frame}
 
 % Evidence: main.tex, short-run income figure
@@ -300,7 +302,7 @@ Euro-area Q1--Q5 gap = \textbf{1.2 pp in 2022}.
 \begin{itemize}
 \item Faster food-price increases weigh more on poorer households because food absorbs a larger share of their spending.
 \end{itemize}
-\source{\href{https://www.imf.org/en/-/media/files/publications/fiscal-monitor/2023/april/english/ch2.pdf}{IMF, Fiscal Monitor, 2023, }.}
+\source{\href{https://www.imf.org/en/-/media/files/publications/fiscal-monitor/2023/april/english/ch2.pdf}{IMF, Fiscal Monitor, 2023.}}
 \end{frame}
 
 % Evidence: same IMF source; euro-area benchmark from main.tex.
@@ -386,7 +388,7 @@ Observed Q1--Q5 gap & 0.1 & 1.2 & 0.0\\
 \bottomrule
 \end{tabular}
 \par\vspace{1em}\raggedright
-Price measures narrowed the gap by \textbf{0.6 point in 2022} and \textbf{0.5 point in 2023}.
+Price measures narrowed the gap by \textbf{0.6 percentage points in 2022} and \textbf{0.5 percentage points in 2023}.
 \par\medskip
 Electricity and gas support account for most of this reduction; fuel support partly offsets it in 2022.
 \source{Eurostat HICP and HBS; policy effect = observed minus counterfactual gap.}
@@ -410,7 +412,7 @@ Other products & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0\\
 \bottomrule
 \end{tabular}
 \par\vspace{.8em}\raggedright
-Household energy lowers the gap by \textbf{0.6 point in 2022} and \textbf{0.5 point in 2023}; vehicle operation offsets \textbf{0.1 point} in 2022.
+Household energy lowers the gap by \textbf{0.6 percentage points in 2022} and \textbf{0.5 percentage points in 2023}; vehicle operation offsets \textbf{0.1 percentage points} in 2022.
 \end{frame}
 
 % Evidence: current main.tex conclusion.
@@ -651,7 +653,7 @@ Other & 0.8 & -0.1 & 0.0 & -0.1\\
 \bottomrule
 \end{tabular}
 \par\medskip\raggedright\small
-The energy shock adds \textbf{6.5 points} of inflation exposure and \textbf{1.1 points} to the gap; housing energy contributes \textbf{1.7 points} to the gap.
+The energy shock adds \textbf{6.5 percentage points} of inflation exposure and \textbf{1.1 percentage points} to the gap; housing energy contributes \textbf{1.7 percentage points} to the gap.
 \end{frame}
 
 % Appendix block: Measurement limits and new data
@@ -812,7 +814,7 @@ Inflation Inequality Across the Euro Area.
 \item[A.] Monetary policy should never respond because inflation originates from a supply shock.
 \item[B.] Monetary policy should prevent second-round effects and a de-anchoring of inflation expectations.
 \item[C.] Conventional fiscal policy can support the policy mix by tightening aggregate demand.
-\item[D.] Temporary, targeted unconventional fiscal measures can support monetary policy, but cannot replace it.
+\item[D.] Temporary, targeted unconventional fiscal measures can support monetary policy but cannot replace it.
 \end{enumerate}
 \end{frame}
 
@@ -827,7 +829,7 @@ Our indicators capture expenditure-share differences across COICOP categories, b
 
 \par\vspace{1em}
 \textcolor{Teal}{\textbf{Question 3 --- B, C and D}}\par
-Monetary policy must prevent second-round effects, while conventional fiscal tightening and temporary targeted price support can complement that response.
+Monetary policy must prevent second-round effects, while conventional fiscal tightening and temporary, targeted price support can complement that response.
 \end{frame}
 
 \end{document}

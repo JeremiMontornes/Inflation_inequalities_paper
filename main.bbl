@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{28}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -102,12 +102,6 @@
   degree of targeting,} \emph{Economic Bulletin - Banco de Espa{\~n}a},
   2023/Q1.
 
-\bibitem[\protect\citeauthoryear{Gautier and Lalliard}{Gautier and
-  Lalliard}{2013}]{gautier2013vat}
-\textsc{Gautier, E. and A.~Lalliard} (2013): \enquote{How do VAT changes affect
-  inflation in France?} \emph{Quarterly selection of articles-Bulletin de la
-  Banque de France}, 5--27.
-
 \bibitem[\protect\citeauthoryear{Gautier and Montornes}{Gautier and
   Montornes}{2024}]{gautier2024effects}
 \textsc{Gautier, E. and J.~Montornes} (2024): \enquote{The Heterogeneous
@@ -145,9 +139,11 @@
   The Economics of the Energy Shock in {Germany},} IZA Discussion Paper 17043,
   IZA Institute of Labor Economics.
 
-\bibitem[\protect\citeauthoryear{Lane}{Lane}{2022}]{lane2022transmission}
-\textsc{Lane, P.~R.} (2022): \enquote{The transmission of monetary policy,}
-  Speech, European Central Bank, 11 October.
+\bibitem[\protect\citeauthoryear{Langot, Malmberg, Tripier, and
+  Hairault}{Langot et~al.}{2026}]{langot2026tariffshield}
+\textsc{Langot, F., S.~Malmberg, F.~Tripier, and J.-O. Hairault} (2026):
+  \enquote{The Macroeconomic and Redistributive Effects of the French Tariff
+  Shield,} \emph{Journal of Political Economy Macroeconomics}, forthcoming.
 
 \bibitem[\protect\citeauthoryear{Levell, O'Connell, and Smith}{Levell
   et~al.}{2026}]{levell2026welfare}
@@ -171,17 +167,5 @@
 \textsc{Sgaravatti, G., S.~Tagliapietra, C.~Trasi, and G.~Zachmann} (2021):
   \enquote{National policies to shield consumers from rising energy prices,}
   Bruegel Datasets.
-
-\bibitem[\protect\citeauthoryear{{Statistics Netherlands (CBS)}}{{Statistics
-  Netherlands (CBS)}}{2023}]{cbs2023variable}
-\textsc{{Statistics Netherlands (CBS)}} (2023): \enquote{Average Energy Prices
-  Regarding Variable Contracts,} Statistical data and methodological
-  documentation.
-
-\bibitem[\protect\citeauthoryear{Strasser, Messner, Rumler, and
-  Ampudia}{Strasser et~al.}{2023}]{strasser2023inflation}
-\textsc{Strasser, G., T.~Messner, F.~Rumler, and M.~Ampudia} (2023):
-  \enquote{Inflation Heterogeneity at the Household Level,} ECB Occasional
-  Paper Series 325, European Central Bank.
 
 \end{thebibliography}
