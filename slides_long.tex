@@ -29,7 +29,7 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{headline}{}
 \setbeamertemplate{footline}{%
-  \hfill\raisebox{0.6em}{\scriptsize\color{WarmGray}\insertframenumber/24}\hspace{1em}}
+  \hfill\raisebox{0.6em}{\scriptsize\color{WarmGray}\insertframenumber/26}\hspace{1em}}
 \setbeamertemplate{frametitle}{\vspace{.3em}\insertframetitle\par\vspace{.2em}}
 \setbeamercolor{normal text}{fg=DeepNavy,bg=white}
 \setbeamercolor{background canvas}{bg=white}
@@ -161,6 +161,7 @@ Within an identical product & The same bread from different retailers (bakery ve
 \item The annual Q1--Q5 inflation gap reached \textbf{1.2 percentage points in 2022}, with large cross-country differences.
 \item Price policies lowered inflation by \textbf{1.5 percentage points in 2022} and reduced the Q1--Q5 inflation gap by \textbf{0.6 percentage points}.
 \item Household-level inflation displays substantial dispersion within income quintiles.
+\item Results are based on the Harmonised Index of Consumer Prices (HICP) and Household Budget Surveys (HBS).
 \end{itemize}
 
 \end{frame}
@@ -252,6 +253,18 @@ A model saturated with all interactions among income, age, education, household 
 \source{Eurostat HICP and HBS; authors' calculations. Saturated country-month models; annual HICP country weights (17 countries).}
 \end{frame}
 
+% Evidence: Promoted from appendix; main.tex age figure.
+\begin{frame}{Older Households Faced Higher Inflation}
+\centering
+\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
+\end{frame}
+
+% Evidence: Promoted from appendix; main.tex residence figure.
+\begin{frame}{Rural Households Faced Higher Inflation at the Peak}
+\centering
+\includegraphics[width=0.78\textwidth,height=0.62\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png}
+\end{frame}
+
 % Evidence: main.tex, short-run income figure
 \begin{frame}{The Income Inflation Gap Peaked During the Energy Shock}
 \centering
@@ -323,15 +336,27 @@ Euro-area Q1--Q5 gap = \textbf{1.2 pp in 2022}.
 \end{frame}
 
 % Fiscal-policy definitions; introduction to the policy section.
-\begin{frame}{Is There a Role for Fiscal Policy in Fighting Inflation?}
+\begin{frame}{Policy Implications of Inflation Inequality: Is There a Role for Fiscal Policy in Fighting Inflation?}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.36\textwidth}
 \small
 \begin{itemize}
- \item \textbf{Monetary policy:} In response to a supply shock such as that of 2021--2023, central banks tighten policy to keep inflation expectations anchored and prevent second-round effects.
+ \item \textbf{Monetary policy}\par
+ Anchor expectations; prevent second-round effects.
 
- \item \textbf{Conventional fiscal policy:} The government should tighten the budget to cool demand and, ultimately, inflation.
+ \item \textbf{Conventional fiscal policy}\par
+ Cool aggregate demand.
 
- \item \textbf{Unconventional fiscal policy:} The government can support households by reducing inflation directly and can limit its heterogeneous effects through measures targeted at low-income groups.
+ \item \textbf{Unconventional fiscal policy}\par
+ Lower measured inflation; target support to limit inequality.
 \end{itemize}
+\end{column}
+\begin{column}{0.61\textwidth}
+\centering
+\vspace{0.25em}
+\includegraphics[width=\linewidth,height=0.57\textheight,keepaspectratio]{fig/fiscal_policy_distributional_channels.pdf}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Unconventional Fiscal Policies (Cost, \% of GDP)}
@@ -421,7 +446,7 @@ Household energy lowers the gap by \textbf{0.6 percentage points in 2022} and \t
 \begin{itemize}
 \setlength{\itemsep}{.5em}
 \item \textbf{Disaggregated inflation indicators.} HICP prices and household baskets reveal heterogeneous inflation exposure across and within groups.
-\item \textbf{Unconventional fiscal policy.} UFP reduced euro-area inflation and compressed inflation inequality. The counterfactual identifies direct consumer-price effects; production-network effects are analyzed separately for import-price shocks (in Gautier and Montorn\`es, 2026).
+\item \textbf{Unconventional fiscal policy.} UFP reduced euro-area inflation and compressed inflation inequality. The counterfactual identifies direct consumer-price effects; production-network effects are analyzed separately for import-price shocks (Gautier and Montorn\`es, 2026; working paper forthcoming).
 \item \textbf{Effectiveness was state-dependent.} UFP was effective, but monetary policy and favorable circumstances also played a role: the energy-price shock was temporary, and the euro-area economy was not especially overheated, unlike the U.S. economy.
 \item \textbf{Any questions?}
 \end{itemize}
@@ -429,7 +454,7 @@ Household energy lowers the gap by \textbf{0.6 percentage points in 2022} and \t
 
 \appendix
 \setcounter{framenumber}{0}
-\setbeamertemplate{footline}{\hfill\raisebox{.6em}{\scriptsize\color{WarmGray}Appendix \insertframenumber/24}\hspace{1em}}
+\setbeamertemplate{footline}{\hfill\raisebox{.6em}{\scriptsize\color{WarmGray}Appendix \insertframenumber/22}\hspace{1em}}
 
 % Unnumbered white divider, following the conclusion.
 \begin{frame}[plain,noframenumbering]
@@ -594,18 +619,6 @@ Spain & 0.8 & 0.9 & -0.7 & Slovenia & 0.0 & 0.4 & 1.5\\
 \multicolumn{4}{l}{\textbf{Euro area}} & & \textbf{0.1} & \textbf{1.2} & \textbf{0.0}\\
 \bottomrule
 \end{tabular}
-\end{frame}
-
-% Evidence: main.tex, age figure
-\begin{frame}{Older Households Faced Higher Inflation}
-\centering
-\includegraphics[width=0.82\textwidth,height=0.70\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png}
-\end{frame}
-
-% Evidence: Promoted from appendix; main.tex residence figure
-\begin{frame}{Rural Households Faced Higher Inflation at the Peak}
-\centering
-\includegraphics[width=0.78\textwidth,height=0.62\textheight,keepaspectratio]{fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png}
 \end{frame}
 
 % Evidence: current main.tex long-run figure and comparison with Jaravel (2024).
