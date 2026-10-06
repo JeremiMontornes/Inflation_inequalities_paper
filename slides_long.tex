@@ -1,4 +1,4 @@
-% Long academic seminar; results synchronized with main.tex on 29 September 2026.
+% Long academic seminar; results synchronized with main.tex on 6 October 2026.
 % Narrative follows IBFI 2025; paper results come from current main.tex and its inputs; the Kenya/Senegal and Mexico/Colombia slides retain IMF evidence.
 % Baseline updated 24 September 2026: excludes COICOP 041 and 042; reference comparisons retain stated coverage.
 \pdfminorversion=7
@@ -365,7 +365,7 @@ Euro-area Q1--Q5 gap = \textbf{1.2 pp in 2022}.
 \includegraphics[width=0.94\linewidth,height=0.63\textheight,keepaspectratio]{fig/fig_fiscal_cost_instrument.png}
 \par\vspace{0.15em}
 \raggedright
-{\scriptsize\color{WarmGray}VAT includes excises; ``Other'' includes envelopes without an instrument split; * indicates an unidentified split.\par}
+{\scriptsize\color{WarmGray}VAT denotes value-added-tax cuts; fuel excise cuts and rebates are grouped as ``Fuel rebates''; ``Other'' includes envelopes without an instrument split; * indicates an unidentified split.\par}
 \source{Bruegel, national sources, Eurostat; authors' calculations.}
 \end{frame}
 
@@ -556,16 +556,17 @@ For household $i$ in country $c$, the raw exposure measure is
 \end{itemize}
 \end{frame}
 
-% Evidence: main.tex, counterfactual construction
-\begin{frame}{Reconstructing Prices Without the Measures}
+% Evidence: main.tex and Table D.1, counterfactual construction and effect identification.
+\begin{frame}{Counterfactual Effects Use Two Identification Methods}
+\small
 For product $j$ and month $t$, multiply the observed HICP index by its counterfactual-to-observed retail-price ratio:
 \[
 \widetilde p_{j,t}=p_{j,t}\frac{\widetilde r_{j,t}}{r_{j,t}}.
 \]
 \begin{itemize}
-\item \textbf{Direct reconstruction:} statutory taxes, rebates, or observed reference tariffs, with specified coverage and pass-through.
-\item \textbf{Aggregate-equivalent effects:} fit one parameter so the geometric mean of monthly ratios over the policy period matches the assumed component-level ratio.
-\item \textbf{Conditional benchmarks:} representative bills or contracts when national counterfactual tariffs are unobserved.
+\item \textbf{Source-determined effects (102 entries):} statutory schedules, regulated tariffs, or official administrative price and bill series determine the effect.
+\item \textbf{Model-imputed effects (90 entries):} an aggregate-equivalent wedge, representative bill or contract, pass-through assumption, or model proxy determines the effect.
+\item Table D.1 covers \textbf{192 measure--product entries} from \textbf{86 distinct policies}; its euro-area row sums the 20 country rows.
 \end{itemize}
 \end{frame}
 
