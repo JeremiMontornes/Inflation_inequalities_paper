@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{31}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -113,6 +113,12 @@
   de m\'enages : quelques probl\`emes m\'ethodologiques,} Working Paper
   hal-05555599, HAL Open Science.
 
+\bibitem[\protect\citeauthoryear{G{\"u}rer and Weichenrieder}{G{\"u}rer and
+  Weichenrieder}{2018}]{gurer2018prorich}
+\textsc{G{\"u}rer, E. and A.~J. Weichenrieder} (2018): \enquote{Pro-rich
+  Inflation in Europe: Implications for the Measurement of Inequality,} SAFE
+  Working Paper 209, Research Center SAFE, Goethe University Frankfurt.
+
 \bibitem[\protect\citeauthoryear{Haan and Schinkel}{Haan and
   Schinkel}{2023}]{haan2023energy}
 \textsc{Haan, M. and M.~P. Schinkel} (2023): \enquote{Energy Price Ceilings
@@ -133,6 +139,12 @@
 \textsc{Kaplan, G. and S.~Schulhofer-Wohl} (2017): \enquote{Inflation at the
   household level,} \emph{Journal of Monetary Economics}, 91, 19--38.
 
+\bibitem[\protect\citeauthoryear{Klick and Stockburger}{Klick and
+  Stockburger}{2024}]{klick2024equivalized}
+\textsc{Klick, J. and A.~Stockburger} (2024): \enquote{Examining {U.S.}
+  Inflation across Households Grouped by Equivalized Income,} \emph{Monthly
+  Labor Review}.
+
 \bibitem[\protect\citeauthoryear{Krebs and Weber}{Krebs and
   Weber}{2024}]{krebs2024pricecontrols}
 \textsc{Krebs, T. and I.~Weber} (2024): \enquote{Can Price Controls Be Optimal?
@@ -150,6 +162,11 @@
 \textsc{Levell, P., M.~O'Connell, and K.~Smith} (2026): \enquote{The Welfare
   Effects of Price Shocks and Household Relief Packages: Evidence from an
   Energy Crisis,} Working paper, March.
+
+\bibitem[\protect\citeauthoryear{O'Flaherty}{O'Flaherty}{2026}]{oflaherty2026lookwithin}
+\textsc{O'Flaherty, K.} (2026): \enquote{Look Within: Demographic Grouping
+  Masks Inflation Inequality,} \emph{AEA Papers and Proceedings}, 116,
+  562--567.
 
 \bibitem[\protect\citeauthoryear{Pallotti, Paz-Pardo, Slacalek, Tristani, and
   Violante}{Pallotti et~al.}{2024}]{pallotti2024bears}

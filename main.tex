@@ -160,15 +160,24 @@ The literature measures household inflation by combining price changes with diff
 expenditure patterns. For the United States, \citet{hobijn2005inflation} reweight aggregate price indices for demographic groups. More recently, \citet{jaravel2024distributional} constructs long-run distributional
 consumer price indices for the United States, closely following the BLS methodology. Using household-level expenditure or scanner data,
 \citet{kaplan2017inflation,argente2021cost} document household-level dispersion within broad income and demographic groups.
+Using barcode-level grocery purchases in the United States, \citet{oflaherty2026lookwithin} constructs
+household-specific price indices that reflect the products households buy and their substitution between
+them. She shows that demographic group averages mask most household-level inflation dispersion and
+nearly all of its increase when aggregate inflation rises.
+For Europe, \citet{gurer2018prorich} combine Household Budget Survey expenditure shares with HICP prices for 25 EU countries and show that household-specific inflation increases measured consumption inequality over 2001--2015.
 In the euro area, \citet{ampudia2024shopping} show how household
 shopping behavior shapes the effect of monetary policy on inflation heterogeneity along the income distribution.
 \citet{pallotti2024bears} combine consumption, income, and balance-sheet data to
 measure welfare losses across euro-area households. Building on \citet{charalampakis2022impact},
-we construct monthly indices by income, age, and residence area for all 20
-euro-area countries. Unlike existing cross-country indicators, our RAS-calibrated baskets aggregate
-to official HICP item weights. Because we assign a common price index to all households within each
-COICOP category, our measures capture expenditure-share heterogeneity but not differences in prices
-paid, product quality, or within-category substitution \citep{sangani2026cheapflation}.
+we take a complementary approach to \citet{oflaherty2026lookwithin}. Depending on the exercise, we
+cover 17 to 20 euro-area countries and the full consumption basket, assigning a common country-product
+HICP series at the finest harmonized COICOP level supported by each exercise. The household-distribution
+analysis uses three-digit ECOICOP1 to retain France and Germany in the broad cross-country sample,
+whereas the policy counterfactuals use four-digit COICOP. This broader scope permits harmonized cross-country
+comparisons and monthly counterfactuals for price-based fiscal policies. Our RAS-calibrated baskets
+also aggregate to official HICP item weights. The trade-off is that our measures capture heterogeneity
+in expenditure shares, but not differences in prices paid, product quality, or substitution within
+COICOP categories \citep{sangani2026cheapflation}.
 
 A related literature evaluates the fiscal response to the recent inflation surge. Using household microsimulation models,
  \citet{pallotti2024bears} and \citet{amores2025inflation} show that fiscal interventions reduced welfare losses and inequality,
@@ -284,15 +293,18 @@ consumption patterns change (Appendix~\ref{sec:app-additional-hbs-figures}).
 
 \subsubsection*{Product Coverage and Treatment of Rents}
 
-The baseline matches HICP prices and HBS expenditure at the three-digit COICOP level in each country.
-Three-digit HBS expenditure is used when available, and finer expenditure codes are aggregated
-to that level. Three exceptions concern price or classification coverage. First, group indices use
-the nearest common parent-category price when a three-digit HICP series is unavailable. Second, the
-household-distribution series require complete source prices over the full calculation period before
-recoding to three-digit ECOICOP v1; this keeps the detailed product set within each aggregate fixed
-over time. Third, historical and validation exercises retain their explicitly stated matching levels.
+The empirical exercises use the finest harmonized product detail supported by their source data.
+The household-distribution analysis underlying Figures~\ref{fig:hbs_monthly_inflation_percentiles}
+and~\ref{fig:hbs-monthly-variance-decomposition} matches HICP prices and HBS expenditure at the
+three-digit ECOICOP1 level. This is the finest common household-level detail that retains France and
+Germany in the broad cross-country sample; countries with finer HBS expenditure codes are aggregated
+to this level. Source price series must be complete over the full calculation period before this
+aggregation, which keeps the product composition within each three-digit category fixed over time.
+Group-level exercises and policy counterfactuals retain four-digit detail where their inputs support
+it, using the nearest common parent-category price when a four-digit HICP series is unavailable.
+Historical and validation exercises retain their explicitly stated matching levels.
 Appendix~\ref{app:aggregation-bias} compares the measured Q1--Q5 inflation gap across two- to
-five-digit COICOP levels, using three digits as the benchmark.
+five-digit COICOP levels and reports the matching level used in each specification.
 
 The baseline excludes actual and imputed rents and removes the corresponding HICP components before
 matching. Parent categories are then rebuilt, and the remaining HBS expenditure and HICP product
@@ -314,8 +326,15 @@ and 300 inhabitants per km$^2$; the remaining areas are rural.}
 
 We use HBS survey weights throughout the construction of nationally representative group baskets.
 Income groups rank households by total net household income without adjustment for household size.
-They therefore describe household income rather than living standards per consumption unit. National
-income-quintile thresholds are defined separately within each national HBS sample and survey wave. Missing income excludes a household from income
+They therefore describe household income rather than living standards per consumption unit. Evidence
+from the United States shows why this distinction matters. Using Consumer Expenditure Survey data,
+\citet{klick2024equivalized} find that equivalising income substantially changes the demographic
+composition of income quintiles: the lowest quintile contains fewer one-person households and more
+households with children. Yet the resulting changes in income-group inflation rates are small over
+their 2006--2023 comparison period. Equivalisation therefore makes households within income groups
+more comparable in terms of living standards without necessarily changing the qualitative inflation
+gradient.
+National income-quintile thresholds are defined separately within each national HBS sample and survey wave. Missing income excludes a household from income
 baskets but not from age, residence, or unconditional analyses when the required variables are
 available. Appendix~\ref{sec:app-income-definition} compares this definition with equivalised income
 while holding household inflation rates, the sample, and weights fixed.
@@ -495,7 +514,7 @@ The band widths summarize within-country basket differences, averaged using annu
 \includegraphics[width=0.9\textwidth]{fig/fig_HBS_monthly_inflation_mean_percentiles_2021_2025.pdf}
 \vspace{6pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Monthly year-on-year inflation for 152,613 households in 18 euro-area countries, using fixed 2020 HBS microdata baskets. Italy and Portugal are excluded because household baskets or the detail needed to remove rents are unavailable. Actual and imputed rents (041 and 042) are excluded. Household indices use annual RAS calibration with expenditure margins at the three-digit COICOP level. National means and distributional cutoffs first use HBS survey weights, without an income filter. Each national statistic is then averaged using annual Eurostat HICP country weights normalized over these 18 countries. The solid line shows the mean; the darker and lighter bands show averages of national Q1--Q5 and D1--D9 ranges. These are neither pooled euro-area ranges nor confidence intervals.\\
+\caption*{Notes: Monthly year-on-year inflation for 152,613 households in 18 euro-area countries, using fixed 2020 HBS microdata baskets. Italy and Portugal are excluded because household baskets or the detail needed to remove rents are unavailable. Actual and imputed rents (041 and 042) are excluded. Household inflation is constructed at the three-digit ECOICOP1 level. Household indices use annual RAS calibration with expenditure margins at that level. National means and distributional cutoffs first use HBS survey weights, without an income filter. Each national statistic is then averaged using annual Eurostat HICP country weights normalized over these 18 countries. The solid line shows the mean; the darker and lighter bands show averages of national Q1--Q5 and D1--D9 ranges. These are neither pooled euro-area ranges nor confidence intervals.\\
 Sources: Eurostat HICP, HBS 2020 microdata, authors' calculations.}
 \end{figure}
 
@@ -519,9 +538,64 @@ groups.
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \includegraphics[width=0.92\textwidth]{fig/fig_HBS_monthly_inflation_variance_decomposition_saturated_2021_2025.pdf}
 \vspace{6pt}
-\caption*{Notes: Separate unweighted saturated models are estimated for each country and month using 138,798 households in 17 countries. Relative to the 18-country sample in Figure~\ref{fig:hbs_monthly_inflation_percentiles}, the Netherlands is excluded because education is unavailable. Cells are defined by the full interaction of national income quintile, age and education of the household reference person, household size, and degree of urbanization. No product variables enter the model. National $R^2$ values and within-country variances are aggregated using annual HICP country weights normalized over the sample. The solid line is mean inflation. The darker band has half-width $\sqrt{R^2V}$, and the full outer band has half-width $\sqrt{V}$. The bands are descriptive, not confidence intervals.\\
+\caption*{Notes: Separate unweighted saturated models are estimated for each country and month using 138,798 households in 17 countries. Household inflation is constructed at the three-digit ECOICOP1 level. Relative to the 18-country sample in Figure~\ref{fig:hbs_monthly_inflation_percentiles}, the Netherlands is excluded because education is unavailable. Cells are defined by the full interaction of national income quintile, age and education of the household reference person, household size, and degree of urbanization. No product variables enter the model. National $R^2$ values and within-country variances are aggregated using annual HICP country weights normalized over the sample. The solid line is mean inflation. The darker band has half-width $\sqrt{R^2V}$, and the full outer band has half-width $\sqrt{V}$. The bands are descriptive, not confidence intervals.\\
 Sources: Eurostat HICP, HBS 2020 microdata, authors' calculations.}
 \end{figure}
+
+Household inflation dispersion moves closely with mean inflation. Following
+\citet{oflaherty2026lookwithin}, we ask whether this co-movement comes from widening inflation
+differences between observable demographic cells or from greater dispersion within those cells.
+Define the share of the correlation accounted for by between-cell differences as
+\[
+\mathcal{S}
+=
+100\left[
+1-
+\frac{\operatorname{Corr}\!\left(\bar{\pi}_t,V_t^{\,W}\right)}
+{\operatorname{Corr}\!\left(\bar{\pi}_t,V_t\right)}
+\right],
+\]
+where $V_t$ is total household inflation variance and $V_t^{W}$ is the residual variance within
+demographic cells. From 2021 to 2025, the correlation between mean inflation and total variance is
+0.945. When the between-cell component is removed and only within-cell variance is retained, the
+correlation is 0.940. Thus, 99.5\% of the original correlation remains
+($0.940/0.945=0.995$), and between-cell differences account for only $\mathcal S=0.5\%$ under this
+diagnostic. Over 2021--2023, 99.2\% remains ($0.914/0.922$), giving $\mathcal S=0.8\%$. This result
+is distinct from the variance decomposition above: 87.6\% is the average share of variance located
+within demographic cells, whereas 99.5\% is the share of the time-series association between mean
+inflation and dispersion that remains after between-cell differences are removed. Together, the two
+results show that observed demographic characteristics explain little of the level of household
+inflation dispersion and almost none of its rise and fall over time.
+
+The peak-month gaps convey the same distinction. In October 2022, the Q1--Q5 range of the
+household-level inflation distribution reached 5.3 percentage points, more than twice the 2.0-point
+gap between the mean inflation rates of the first and fifth income quintiles. Income-group averages
+therefore identify a systematic exposure gradient, but capture only a limited part of the dispersion
+across households.
+
+Table~\ref{tab:household-inflation-explained-characteristics} compares separate one-way
+classifications with the fully interacted demographic cells. Income has the highest stand-alone
+explanatory power, accounting for 2.5\% of household inflation variance on average, while no other
+single characteristic accounts for more than 1.8\%. These estimates are not additive: each column
+defines a separate partition of households, whereas the last column also captures the explanatory
+power of combinations of characteristics. None of the individual classifications accounts for more
+than 0.4\% of the association between mean inflation and cross-sectional variance, and their full
+interaction accounts for only 0.5\%.
+
+The 12.4\% share is close to the 11.6\% reported by \citet{oflaherty2026lookwithin} for US grocery
+inflation. The two estimates are conceptually aligned because both compare total variance with the
+variance remaining within fully crossed demographic cells. O'Flaherty's calculation is a cell-mean
+decomposition, mathematically equivalent to a saturated regression with categorical indicators,
+rather than a structural or causal model. The levels are not directly comparable, however, because
+the studies differ in their demographic variables, cell definitions, periods, consumption coverage,
+product granularity, price measurement, and weighting. In O'Flaherty, the within-cell component also
+captures barcode-level differences in products purchased and substitution. In our setting, all
+households in a country face common COICOP price changes, so the within-cell component reflects
+differences in expenditure shares across product categories. It is therefore economically meaningful
+exposure heterogeneity not summarized by the observed characteristics, rather than measurement error
+or economically unexplained variation.
+
+\input{tables/tab_household_inflation_explained_by_characteristics.tex}
 
 
 \subsubsection{Inflation Inequality by Household Groups}
@@ -612,15 +686,17 @@ Sources: Eurostat HICP and HBS, authors' calculations.}
 %\subsection*{Four different Patterns of Inflation Inequality}
 
 EA20 averages also show heterogeneity across products and countries.
-Table~\ref{tab:ea20-income-gap-product-contributions} decomposes euro-area inflation and the
-$Q1$--$Q5$ gap by product group. In 2022, household energy accounts for 3.1 points of average
+The Q1--Q5 inflation gap can be interpreted as a weighted covariance between relative differences
+in expenditure shares and product-level inflation. A product contributes positively to the gap when
+it is relatively more important in the Q1 basket and its price increases. Conversely, a negative
+contribution means that the product raises Q5 inflation more than Q1 inflation; it does not necessarily
+indicate a decline in its price. Table~\ref{tab:ea20-income-gap-product-contributions} reports the
+product-level terms of this decomposition. In 2022, household energy accounts for 3.1 points of average
 inflation and contributes 1.9 points to the 1.2-point gap; food adds 1.9 points to average inflation
 and 0.7 point to the gap. These positive distributional contributions are partly offset by personal
 transport, other transport, and other products, which contribute $-0.4$, $-0.3$, and $-0.5$ percentage points
-to the gap. These negative contributions do not indicate falling prices. Their sign arises because
-higher-income households devote larger expenditure shares to these product groups: when their prices
-increase, they add more to Q5 inflation than to Q1 inflation. This expenditure-share channel applies
-to personal transport, other transport, and the broad ``other'' category. Because prices in other
+to the gap. Higher-income households devote larger expenditure shares to personal transport, other
+transport, and the broad ``other'' category. Because prices in other
 transport and other products rise more slowly than those of energy and food, however, their negative
 contributions offset only part of the energy- and food-driven Q1 disadvantage. In 2023, the positive
 food contribution is again offset by other product groups, leaving a zero aggregate gap after
@@ -689,7 +765,7 @@ We combine the Bruegel energy-measures dataset\footnote{https://www.bruegel.org/
 
 The available information determines how we construct each price path. First, direct reconstructions use published reference tariffs, statutory tax rates, or statutory unit rebates, with coverage and pass-through specified. Second, calibrations choose a measure-specific intensity parameter so that the geometric mean of monthly counterfactual-to-observed price ratios over the active policy months matches the assumed component-level ratio in the measure-level assumptions file. These targets summarize coverage and pass-through using the policy inventory and its cited national sources; they are assumptions rather than observed counterfactual prices. Third, conditional tariff or bill benchmarks apply statutory rules to a reference contract or representative bill when household contract shares or consumption quantities are unavailable. Their results depend on the chosen reference contract and consumption quantity. They also depend on assumed policy exposure. These three procedures classify the information used to construct each counterfactual price path; the subsections below instead organize measures by policy instrument. Each instrument subsection combines the general price adjustment with representative country implementations and their limitations.
 
-Counterfactual price indices are constructed at the three-digit COICOP level by replacing each observed
+Counterfactual price indices are constructed at the four-digit COICOP level by replacing each observed
 HICP component index with its counterfactual counterpart. Let $p_{j,t}$
 denote the observed HICP component index for product $j$ in month $t$, and let $\widetilde p_{j,t}$
 denote the corresponding counterfactual index. Here $t$ indexes calendar months, corresponding to
@@ -704,7 +780,7 @@ p_{j,t}
 \frac{\widetilde r_{j,t}}{r_{j,t}} .
 \end{equation}
 
-\paragraph{VAT and Excise-Tax Reductions.}
+\paragraph{VAT and Non-Fuel Excise-Tax Reductions.}
 For VAT reductions, the observed retail price includes the temporary tax rate. We recover the counterfactual price by removing that rate and applying the standard rate:
 \begin{equation}
 \widetilde r_{j,t}
@@ -712,7 +788,7 @@ For VAT reductions, the observed retail price includes the temporary tax rate. W
 r_{j,t}
 \frac{1+\tau^{0}_{j,t}}{1+\tau^{1}_{j,t}},
 \end{equation}
-where $\tau^{0}_{j,t}$ is the standard VAT rate and $\tau^{1}_{j,t}$ is the temporary rate. Ad valorem excises follow the same ratio logic; specific excise cuts require a unit-price adjustment, as described below. Coverage and pass-through are calibrated where the statutory information is incomplete.
+where $\tau^{0}_{j,t}$ is the standard VAT rate and $\tau^{1}_{j,t}$ is the temporary rate. Non-fuel ad valorem excises follow the same ratio logic. Road-fuel excise reductions are classified with other fuel-price reductions and use the unit-price adjustment described below. Coverage and pass-through are calibrated where the statutory information is incomplete.
 France's electricity-tax cuts and Spain's energy-tax reductions are reconstructed from the
 corresponding statutory rates. Spanish fuel rebates are treated as unit rebates, as described below.
 
@@ -767,7 +843,7 @@ shares and household consumption distributions are unavailable \citep{haan2023en
 %$\theta_k$ to the same target. The information basis and calibration method used for each measure
 %are recorded in the policy inventory.
 
-\paragraph{Subsidies and Rebates.}
+\paragraph{Subsidies, Rebates, and Other Fuel-Price Reductions.}
 For unit subsidies and fuel rebates, we add the statutory absolute price wedge to the observed
 monthly price path or, without a retail unit-price series, calibrate it in HICP component-index
 units. Evidence from
@@ -859,7 +935,7 @@ consistent in magnitude with \citet{dao2023unconventional}, who find that unconv
 policy measures reduced euro-area inflation by 1--2 percentage points in 2022 under different
 modeling assumptions. Figure~\ref{fig:ea_policy_total_cpi_counterfactual} is constructed from the same observed and counterfactual product indices as Table~\ref{tab:country-heterogeneity-counterfactual-gap}; annual averaging of the plotted indices therefore reproduces the table estimates.
 Counterfactual inflation lies above observed inflation during the main phase of the energy shock, with the
-largest difference around the inflation peak in late 2022. VAT and excise reductions, fuel rebates,
+largest difference around the inflation peak in late 2022. VAT and non-fuel excise reductions, fuel-price reductions,
 price shields, and regulated-price caps therefore compressed the peak.
 
 A reduction in the price level need not lower inflation in every subsequent year. When a temporary measure expires or its price discount shrinks, observed prices rise relative to the lower comparison base created by the measure. Observed annual inflation can then exceed counterfactual inflation even if the observed price level remains no higher than its no-policy counterpart. Positive annual policy effects therefore can reflect the withdrawal of earlier support and base effects, rather than a higher price level caused by the policy. The same timing mechanism can reverse a policy's annual effect on the Q1--Q5 inflation gap.
@@ -911,7 +987,7 @@ Administered-price measures reduce the Q1--Q5 inflation gap by 0.4 point in both
 Targeted measures reduce it by 0.3 point in 2022 and 0.1 point in 2023; untargeted measures reduce
 it by 0.3 and 0.5 points, respectively.
 
-The VAT and excise category includes transport-fuel excise reductions and other tax and charge relief. The other calibrated layer mainly comprises Italian social energy
+The fuel-price-reduction category includes all road-fuel (CP0722) measures, including excise-duty reductions, regulated-price support, and direct subsidies. The VAT and non-fuel excise category therefore excludes road-fuel measures and covers VAT reductions and other non-fuel tax and charge relief. The other calibrated layer mainly comprises Italian social energy
 bonuses and electricity-system charge relief. Fiscal costs and annual inflation effects
 are different objects: the latter depend on the affected products, policy timing and
 price assumptions, and are not calibrated to the fiscal amounts.
@@ -1377,7 +1453,7 @@ Sources: HBS microdata, Eurostat HICP; authors' calculations.}
 \includegraphics[width=\textwidth]{fig/fig_fiscal_cost_instrument.png}
 \vspace{8pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Bars sum documented costs of the measures active in the counterfactual during 2021--2023, counting each shared budget envelope once. Fuel rebates comprise all road-fuel (CP0722) relief, including excise-duty reductions, regulated-price support, and direct subsidies; VAT therefore excludes road-fuel excise cuts. Other comprises remaining instruments and shared envelopes with no identified instrument split. An asterisk indicates an unidentified instrument split. All active measures have a documented cost, but budget reference periods vary across schemes and do not uniformly cover 2021--2023; costs are not restricted to amounts received by households. EA20 divides summed costs by summed nominal 2022 GDP.\\
+\caption*{Notes: Bars sum documented costs of the measures active in the counterfactual during 2021--2023, counting each shared budget envelope once. Fuel price reductions comprise all road-fuel (CP0722) relief, including excise-duty reductions, regulated-price support, and direct subsidies; the VAT and non-fuel excise category therefore excludes road-fuel measures. Other comprises remaining instruments and shared envelopes with no identified instrument split. An asterisk indicates an unidentified instrument split. All active measures have a documented cost, but budget reference periods vary across schemes and do not uniformly cover 2021--2023; costs are not restricted to amounts received by households. EA20 divides summed costs by summed nominal 2022 GDP.\\
 Sources: Bruegel, national official sources, Eurostat; authors' calculations using the fiscal-cost registry underlying the policy tables.}
 \end{figure}
 }

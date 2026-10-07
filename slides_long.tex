@@ -139,7 +139,7 @@ Consumption baskets & Different expenditure shares imply different inflation exp
 
 % Evidence: main.tex, literature discussion; narrative from supplied PPTX, without legacy numerical results
 \begin{frame}{What Do Our Inflation Indices Capture?}
-\noindent{\small Our indices do not capture differences in product choices or prices paid within a COICOP category, which require more detailed purchase data.\par}
+\noindent{\small Our indices do not capture differences in product choices or prices paid within our broad categories (COICOP).\par}
 \vspace{0.8em}
 
 \begin{tabular}{@{}>{\RaggedRight\arraybackslash}p{.25\textwidth}>{\RaggedRight\arraybackslash}p{.49\textwidth}>{\RaggedRight\arraybackslash}p{.18\textwidth}@{}}
@@ -159,7 +159,7 @@ Within an identical product & The same bread from different retailers (bakery ve
 \begin{frame}{Main Findings}
 \begin{itemize}
 \item The annual Q1--Q5 inflation gap reached \textbf{1.2 percentage points in 2022}, with large cross-country differences.
-\item Price policies lowered inflation by \textbf{1.5 percentage points in 2022} and reduced the Q1--Q5 inflation gap by \textbf{0.6 percentage points}.
+\item Fiscal policies lowered inflation by \textbf{1.5 percentage points in 2022} and reduced the Q1--Q5 inflation gap by \textbf{0.6 percentage points}.
 \item Household-level inflation displays substantial dispersion within income quintiles.
 \item Results are based on the Harmonised Index of Consumer Prices (HICP) and Household Budget Surveys (HBS).
 \end{itemize}
@@ -188,7 +188,7 @@ Within an identical product & The same bread from different retailers (bakery ve
 \item \textbf{Prices:} monthly HICP components and annual official product weights.
 \item \textbf{Consumption Baskets:} fixed 2020 HBS household expenditure; group baskets are built from microdata where available.
 \item \textbf{Coverage:} group-level indices for 20 countries; household-level indices for 18 countries.
-\item \textbf{Matching:} remove actual and imputed rents, then calibrate matched three-digit COICOP products.
+\item \textbf{Matching:} remove actual and imputed rents, then calibrate matched four-digit COICOP categories, such as ``Bread and cereals'' and ``Meat.''
 \end{itemize}
 \end{frame}
 
@@ -274,23 +274,25 @@ A model saturated with all interactions among income, age, education, household 
 
 \end{frame}
 
-% Evidence: main.tex, observed product decomposition; promoted from appendix.
-\begin{frame}{Household Energy and Food Widened the Income Gap}
-\centering\small\setlength{\tabcolsep}{7pt}
-\begin{tabular}{lYYY}
+% Evidence: current main.tex country heterogeneity table; promoted from appendix A10.
+\begin{frame}{Inflation Inequality Was Highly Uneven Across Countries}
+\centering\small\renewcommand{\arraystretch}{1.0}\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lYYY@{\qquad}lYYY}
 \toprule
-Q1--Q5 contribution (pp) & 2021 & 2022 & 2023\\
+Country & 2021 & 2022 & 2023 & Country & 2021 & 2022 & 2023\\
 \midrule
-Food and non-alcoholic beverages & 0.1 & 0.7 & 0.7\\
-Alcohol, tobacco and narcotics & 0.1 & 0.1 & 0.2\\
-Clothing and footwear & 0.0 & 0.0 & -0.1\\
-Housing maintenance and furnishings & -0.1 & -0.3 & -0.2\\
-Housing energy & 0.4 & 1.9 & 0.1\\
-Vehicle operation & -0.3 & -0.4 & 0.0\\
-Transport (excluding vehicle operation) & -0.1 & -0.3 & -0.2\\
-Other & -0.1 & -0.5 & -0.6\\
+Austria & -0.5 & 0.0 & 0.5 & Ireland & 0.5 & 2.9 & 1.1\\
+Belgium & 1.3 & 2.3 & -2.7 & Italy & 0.1 & 1.6 & 0.5\\
+Croatia & 0.0 & 0.2 & -0.3 & Latvia & -0.2 & 4.5 & 2.5\\
+Cyprus & 0.0 & 0.8 & 0.2 & Lithuania & 0.2 & 3.3 & 0.4\\
+Estonia & 0.6 & 4.8 & 1.3 & Luxembourg & 0.1 & 0.2 & -0.1\\
+Finland & -0.2 & -0.9 & 0.4 & Malta & -0.2 & 0.3 & 0.6\\
+France & 0.4 & 0.2 & 0.2 & Netherlands & 0.0 & 3.1 & -1.2\\
+Germany & -0.4 & 1.4 & 0.5 & Portugal & 0.8 & 0.2 & -0.9\\
+Greece & 0.3 & 1.2 & -0.6 & Slovakia & -0.9 & 0.1 & 0.5\\
+Spain & 0.8 & 0.9 & -0.7 & Slovenia & 0.0 & 0.4 & 1.5\\
 \midrule
-\textbf{Total} & \textbf{0.1} & \textbf{1.2} & \textbf{0.0}\\
+\multicolumn{4}{l}{\textbf{Euro area}} & & \textbf{0.1} & \textbf{1.2} & \textbf{0.0}\\
 \bottomrule
 \end{tabular}
 \end{frame}
@@ -336,7 +338,7 @@ Euro-area Q1--Q5 gap = \textbf{1.2 pp in 2022}.
 \end{frame}
 
 % Fiscal-policy definitions; introduction to the policy section.
-\begin{frame}{Policy Implications of Inflation Inequality: Is There a Role for Fiscal Policy in Fighting Inflation?}
+\begin{frame}{Policy Responses to a Supply Shock: Can Fiscal Policy Help Fight Inflation?}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.36\textwidth}
 \small
@@ -600,24 +602,23 @@ Separate digit-depth sensitivity, not the updated baseline. Dutch matched covera
 
 % Appendix block: Additional results
 
-\begin{frame}{Inflation Inequality Was Highly Uneven Across Countries}
-\centering\small\renewcommand{\arraystretch}{1.0}\setlength{\tabcolsep}{4pt}
-\begin{tabular}{lYYY@{\qquad}lYYY}
+% Evidence: main.tex, observed product decomposition; moved from slide 16.
+\begin{frame}{Household Energy and Food Widened the Income Gap}
+\centering\small\setlength{\tabcolsep}{7pt}
+\begin{tabular}{lYYY}
 \toprule
-Country & 2021 & 2022 & 2023 & Country & 2021 & 2022 & 2023\\
+Q1--Q5 contribution (pp) & 2021 & 2022 & 2023\\
 \midrule
-Austria & -0.5 & 0.0 & 0.5 & Ireland & 0.5 & 2.9 & 1.1\\
-Belgium & 1.3 & 2.3 & -2.7 & Italy & 0.1 & 1.6 & 0.5\\
-Croatia & 0.0 & 0.2 & -0.3 & Latvia & -0.2 & 4.5 & 2.5\\
-Cyprus & 0.0 & 0.8 & 0.2 & Lithuania & 0.2 & 3.3 & 0.4\\
-Estonia & 0.6 & 4.8 & 1.3 & Luxembourg & 0.1 & 0.2 & -0.1\\
-Finland & -0.2 & -0.9 & 0.4 & Malta & -0.2 & 0.3 & 0.6\\
-France & 0.4 & 0.2 & 0.2 & Netherlands & 0.0 & 3.1 & -1.2\\
-Germany & -0.4 & 1.4 & 0.5 & Portugal & 0.8 & 0.2 & -0.9\\
-Greece & 0.3 & 1.2 & -0.6 & Slovakia & -0.9 & 0.1 & 0.5\\
-Spain & 0.8 & 0.9 & -0.7 & Slovenia & 0.0 & 0.4 & 1.5\\
+Food and non-alcoholic beverages & 0.1 & 0.7 & 0.7\\
+Alcohol, tobacco and narcotics & 0.1 & 0.1 & 0.2\\
+Clothing and footwear & 0.0 & 0.0 & -0.1\\
+Housing maintenance and furnishings & -0.1 & -0.3 & -0.2\\
+Housing energy & 0.4 & 1.9 & 0.1\\
+Vehicle operation & -0.3 & -0.4 & 0.0\\
+Transport (excluding vehicle operation) & -0.1 & -0.3 & -0.2\\
+Other & -0.1 & -0.5 & -0.6\\
 \midrule
-\multicolumn{4}{l}{\textbf{Euro area}} & & \textbf{0.1} & \textbf{1.2} & \textbf{0.0}\\
+\textbf{Total} & \textbf{0.1} & \textbf{1.2} & \textbf{0.0}\\
 \bottomrule
 \end{tabular}
 \end{frame}
