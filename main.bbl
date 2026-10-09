@@ -113,12 +113,6 @@
   de m\'enages : quelques probl\`emes m\'ethodologiques,} Working Paper
   hal-05555599, HAL Open Science.
 
-\bibitem[\protect\citeauthoryear{G{\"u}rer and Weichenrieder}{G{\"u}rer and
-  Weichenrieder}{2018}]{gurer2018prorich}
-\textsc{G{\"u}rer, E. and A.~J. Weichenrieder} (2018): \enquote{Pro-rich
-  Inflation in Europe: Implications for the Measurement of Inequality,} SAFE
-  Working Paper 209, Research Center SAFE, Goethe University Frankfurt.
-
 \bibitem[\protect\citeauthoryear{Haan and Schinkel}{Haan and
   Schinkel}{2023}]{haan2023energy}
 \textsc{Haan, M. and M.~P. Schinkel} (2023): \enquote{Energy Price Ceilings
@@ -163,10 +157,16 @@
   Effects of Price Shocks and Household Relief Packages: Evidence from an
   Energy Crisis,} Working paper, March.
 
-\bibitem[\protect\citeauthoryear{O'Flaherty}{O'Flaherty}{2026}]{oflaherty2026lookwithin}
-\textsc{O'Flaherty, K.} (2026): \enquote{Look Within: Demographic Grouping
-  Masks Inflation Inequality,} \emph{AEA Papers and Proceedings}, 116,
+\bibitem[\protect\citeauthoryear{O'Flaherty}{O'Flaherty}{2026{\natexlab{a}}}]{oflaherty2026lookwithin}
+\textsc{O'Flaherty, K.} (2026{\natexlab{a}}): \enquote{Look Within: Demographic
+  Grouping Masks Inflation Inequality,} \emph{AEA Papers and Proceedings}, 116,
   562--567.
+
+\bibitem[\protect\citeauthoryear{O'Flaherty}{O'Flaherty}{2026{\natexlab{b}}}]{oflaherty2026grocery}
+---\hspace{-.1pt}---\hspace{-.1pt}--- (2026{\natexlab{b}}): \enquote{A New
+  Reason to Hate Grocery Inflation: Measuring and Interpreting Inflation
+  Heterogeneity,} Finance and Economics Discussion Series 2026-001, Board of
+  Governors of the Federal Reserve System.
 
 \bibitem[\protect\citeauthoryear{Pallotti, Paz-Pardo, Slacalek, Tristani, and
   Violante}{Pallotti et~al.}{2024}]{pallotti2024bears}
