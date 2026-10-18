@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -118,6 +118,14 @@
 \textsc{Haan, M. and M.~P. Schinkel} (2023): \enquote{Energy Price Ceilings
   with Partial Cover: A {Dutch} Master?} \emph{Journal of the European Court of
   Auditors}, 101--109.
+
+\bibitem[\protect\citeauthoryear{Hemmerl{\'e}, Sunel, D'Arcangelo, Kruse,
+  Haugh, Pina, Pisu, Castle, and Sarcina}{Hemmerl{\'e}
+  et~al.}{2023}]{hemmerle2023aiming}
+\textsc{Hemmerl{\'e}, Y., E.~Sunel, F.~M. D'Arcangelo, T.~Kruse, D.~Haugh,
+  {\'A}.~Pina, M.~Pisu, C.~Castle, and G.~Sarcina} (2023): \enquote{Aiming
+  Better: Government Support for Households and Firms During the Energy
+  Crisis,} OECD Economic Policy Papers~32, OECD Publishing, Paris.
 
 \bibitem[\protect\citeauthoryear{Hobijn and Lagakos}{Hobijn and
   Lagakos}{2005}]{hobijn2005inflation}

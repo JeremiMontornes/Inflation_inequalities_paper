@@ -1,0 +1,71 @@
+\noindent\begin{minipage}{\linewidth}
+\centering
+\fontsize{7.6}{8.5}\selectfont
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.10}
+\captionof{table}{Official energy-price-support rules and their counterfactual implementation}
+\label{tab:tariff-shield-formula-comparison}
+\begin{tabularx}{\linewidth}{@{}p{1.7cm}p{4.25cm}Xp{4.0cm}@{}}
+\toprule
+Country and policy & Official rule & Implementation & Main difference \tabularnewline
+\midrule
+Austria: electricity price brake
+& $S=\min(Q,2{,}900)\min\{\max(p-0.10,0),0.30\}$; $B^{1}=B^{0}-S$.
+& E-Control bill: $Q=3{,}500$, $p=\text{EUR }0.24$/kWh; official non-energy
+components and VAT. $\widehat{\rho}=B^{0}/B^{1}=1.433$.
+& Statutory rule on a representative bill; no contract-price, consumption, or billing-date distribution. \tabularnewline
+\addlinespace
+Germany: electricity and gas price brakes
+& Relief: $S=\alpha Q^{0}\max(p-c,0)$; bill: $B^{1}=F+pQ-S$.
+$\alpha=0.8$; caps: EUR 0.40/kWh (electricity), EUR 0.12/kWh (gas).
+& Same bill rule; representative contract. $p$: BNetzA April 2023 price,
+monthly HICP path. Baseline: $Q/Q^{0}=1$, $F=0$;
+$\widehat{\rho}=B^{0}/B^{1}$.
+& Contract-level rule versus representative contract; no distribution of
+prices, fixed charges, or consumption. \tabularnewline
+\addlinespace
+Netherlands: 2023 electricity and gas price cap
+& Relief: $S=\min(Q,\bar Q)\max(p-c,0)$. Caps: EUR 0.40/kWh up to 2,900 kWh;
+EUR 1.45/m$^{3}$ up to 1,200 m$^{3}$.
+& CBS monthly contract and capped tariffs. $B^{0}=B^{1}+Q(p-p^{\mathrm{cap}})$;
+$\widehat{\rho}=B^{0}/B^{1}$. Representative quantities: 2,063 kWh and 1,136 m$^{3}$.
+& Average bills and quantities versus household billing dates, consumption,
+and contract tariffs. \tabularnewline
+\addlinespace
+Italy: electricity and gas social bonuses
+& Bill credit: $S_{iq}(d)=CCI_{iq}d/D_q$, plus ordinary bonus. $CCI_{iq}$:
+quarter- and beneficiary-specific.
+& ARERA aggregate funding:
+$\widehat{\rho}_{jq}=E^{0}_{jq}/(E^{0}_{jq}-S_{jq})$;
+$E^{0}_{jq}$: domestic volume $\times$ average final price.
+& Means-tested bill credit versus aggregate HICP wedge; no eligibility,
+family-size, heating-use, or take-up incidence. \tabularnewline
+\addlinespace
+Spain: Iberian electricity-market adjustment
+& Generator adjustment: $Y_d=\max\{(P^{\mathrm{gas}}_d-P^{\mathrm{ref}}_d)/0.55,0\}$
+per MWh; cost allocated to non-exempt demand.
+& OMIE hourly settlements: $P^{1}_h=P^{\mathrm{OMIE}}_h+A^{C}_h$;
+$P^{0}_h=P^{\mathrm{OMIE}}_h+A^{P}_h$; $\rho_h=P^{0}_h/P^{1}_h$.
+& Published wholesale wedge; no recomputation of $Y_d$ or retail exemptions;
+proportional HICP transmission. \tabularnewline
+\addlinespace
+France: gas and electricity tariff shields
+& No reconstructed formula: CRE and Insee publish observed and no-shield
+regulated-tariff paths.
+& Published tariff-path ratio applied to HICP; documented Insee pass-through
+parameters where required.
+& Public counterfactual tariff; only HICP mapping requires chaining and
+pass-through assumptions. \tabularnewline
+\bottomrule
+\end{tabularx}
+\begin{flushleft}
+\fontsize{7.0}{7.9}\selectfont Notes: $F$: fixed charge; $p$: contract price;
+$Q$: current consumption; $Q^{0}$: reference consumption; $c$: statutory cap;
+$A^{C}$ and $A^{P}$: OMIE consumer and producer adjustments. $\widehat{\rho}$ denotes a
+counterfactual-to-observed ratio reconstructed from representative or aggregate inputs; $\rho_h$
+is the corresponding directly observed hourly ratio. The table contrasts
+official rules with the HICP counterfactual transformation. Sources: Austrian Parliament and
+E-Control; Bundesnetzagentur and BMWK; Dutch Government and CBS; ARERA; Spain's Royal Decree-law 10/2022 and
+OMIE; CRE and Insee; authors' calculations.
+\end{flushleft}
+\end{minipage}
