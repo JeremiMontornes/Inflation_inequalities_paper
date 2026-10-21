@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{28}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -71,11 +71,6 @@
   (2023): \emph{Unconventional fiscal policy in times of high inflation},
   International Monetary Fund WP/23/178.
 
-\bibitem[\protect\citeauthoryear{de~Bondt, Mangnus, and van
-  Middelkoop}{de~Bondt et~al.}{2024}]{debondt2024energy}
-\textsc{de~Bondt, H., M.~Mangnus, and M.~van Middelkoop} (2024): \enquote{De
-  energierekening januari 2024,} Tech. rep., Statistics Netherlands (CBS).
-
 \bibitem[\protect\citeauthoryear{Dertwinkel-Kalt and Wey}{Dertwinkel-Kalt and
   Wey}{2025}]{dertwinkelkalt2025energy}
 \textsc{Dertwinkel-Kalt, M. and C.~Wey} (2025): \enquote{Why {``Energy Price
@@ -107,17 +102,6 @@
 \textsc{Gautier, E. and J.~Montornes} (2024): \enquote{The Heterogeneous
   Effects of Inflation in France and in the Eurozone,} \emph{Revue
   d'{\'E}conomie Financi{\`e}re}, 153, 193--211.
-
-\bibitem[\protect\citeauthoryear{Geerolf}{Geerolf}{2023}]{geerolf2023inflation}
-\textsc{Geerolf, F.} (2023): \enquote{L'analyse de l'inflation par cat\'egories
-  de m\'enages : quelques probl\`emes m\'ethodologiques,} Working Paper
-  hal-05555599, HAL Open Science.
-
-\bibitem[\protect\citeauthoryear{Haan and Schinkel}{Haan and
-  Schinkel}{2023}]{haan2023energy}
-\textsc{Haan, M. and M.~P. Schinkel} (2023): \enquote{Energy Price Ceilings
-  with Partial Cover: A {Dutch} Master?} \emph{Journal of the European Court of
-  Auditors}, 101--109.
 
 \bibitem[\protect\citeauthoryear{Hemmerl{\'e}, Sunel, D'Arcangelo, Kruse,
   Haugh, Pina, Pisu, Castle, and Sarcina}{Hemmerl{\'e}
@@ -152,12 +136,6 @@
 \textsc{Krebs, T. and I.~Weber} (2024): \enquote{Can Price Controls Be Optimal?
   The Economics of the Energy Shock in {Germany},} IZA Discussion Paper 17043,
   IZA Institute of Labor Economics.
-
-\bibitem[\protect\citeauthoryear{Langot, Malmberg, Tripier, and
-  Hairault}{Langot et~al.}{2026}]{langot2026tariffshield}
-\textsc{Langot, F., S.~Malmberg, F.~Tripier, and J.-O. Hairault} (2026):
-  \enquote{The Macroeconomic and Redistributive Effects of the French Tariff
-  Shield,} \emph{Journal of Political Economy Macroeconomics}, forthcoming.
 
 \bibitem[\protect\citeauthoryear{Levell, O'Connell, and Smith}{Levell
   et~al.}{2026}]{levell2026welfare}

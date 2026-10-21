@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 5 items.
 The style file: ecta.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
-You've used 32 entries,
+You've used 28 entries,
             2849 wiz_defined-function locations,
-            774 strings with 10930 characters,
-and the built_in function-call counts, 20021 in all, are:
-= -- 1587
-> -- 1109
-< -- 36
-+ -- 368
-- -- 321
-* -- 1735
-:= -- 3133
-add.period$ -- 63
-call.type$ -- 32
-change.case$ -- 240
-chr.to.int$ -- 31
-cite$ -- 32
-duplicate$ -- 1482
-empty$ -- 1298
-format.name$ -- 467
-if$ -- 3920
+            754 strings with 10222 characters,
+and the built_in function-call counts, 17665 in all, are:
+= -- 1388
+> -- 1001
+< -- 31
++ -- 332
+- -- 291
+* -- 1544
+:= -- 2770
+add.period$ -- 55
+call.type$ -- 28
+change.case$ -- 212
+chr.to.int$ -- 27
+cite$ -- 28
+duplicate$ -- 1300
+empty$ -- 1140
+format.name$ -- 419
+if$ -- 3451
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 276
-newline$ -- 101
-num.names$ -- 160
-pop$ -- 564
+missing$ -- 244
+newline$ -- 89
+num.names$ -- 140
+pop$ -- 494
 preamble$ -- 1
-purify$ -- 235
+purify$ -- 209
 quote$ -- 0
-skip$ -- 522
+skip$ -- 450
 stack$ -- 0
-substring$ -- 676
-swap$ -- 748
-text.length$ -- 6
+substring$ -- 592
+swap$ -- 657
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 380
+type$ -- 332
 warning$ -- 0
-while$ -- 116
+while$ -- 101
 width$ -- 0
-write$ -- 379
+write$ -- 331
