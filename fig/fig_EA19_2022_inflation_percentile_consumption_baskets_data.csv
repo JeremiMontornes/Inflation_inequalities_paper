@@ -1,0 +1,26 @@
+quintile,product_group,share,countries
+P0-P20,Services,45.3575397311917,19
+P0-P20,Non-energy industrial goods,28.6585303249442,19
+P0-P20,Motor fuels and vehicle operation,4.78556117846729,19
+P0-P20,Housing energy,3.45096456316295,19
+P0-P20,Food products,17.7474042146543,19
+P20-P40,Services,36.0876901935264,19
+P20-P40,Non-energy industrial goods,29.4948663891344,19
+P20-P40,Motor fuels and vehicle operation,7.90843599289587,19
+P20-P40,Housing energy,4.99026728833925,19
+P20-P40,Food products,21.5187401294672,19
+P40-P60,Services,33.8599175382786,19
+P40-P60,Non-energy industrial goods,24.8219151637688,19
+P40-P60,Motor fuels and vehicle operation,10.5558567335415,19
+P40-P60,Housing energy,6.79703718270491,19
+P40-P60,Food products,23.9652733769486,19
+P60-P80,Services,31.7950696015344,19
+P60-P80,Non-energy industrial goods,19.4084062305264,19
+P60-P80,Motor fuels and vehicle operation,13.0455427226908,19
+P60-P80,Housing energy,9.50235484016103,19
+P60-P80,Food products,26.2486266031537,19
+P80-P100,Services,28.1590222569682,19
+P80-P100,Non-energy industrial goods,13.5484068438883,19
+P80-P100,Motor fuels and vehicle operation,14.4053856443607,19
+P80-P100,Housing energy,17.1085726422888,19
+P80-P100,Food products,26.778612610843,19

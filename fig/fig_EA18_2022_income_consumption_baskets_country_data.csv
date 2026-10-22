@@ -1,0 +1,451 @@
+country,country_weight,income_quintile,product_group,share
+AT,0.0399444976546575,First quintile,Food products,22.6447148066816
+AT,0.0399444976546575,First quintile,Non-energy industrial goods,23.9117868999759
+AT,0.0399444976546575,First quintile,Services,39.7736869359828
+AT,0.0399444976546575,First quintile,Housing energy,7.26851731591306
+AT,0.0399444976546575,First quintile,Motor fuels and vehicle operation,6.40129403851126
+AT,0.0399444976546575,Second quintile,Food products,20.1683951099436
+AT,0.0399444976546575,Second quintile,Non-energy industrial goods,24.5292749761942
+AT,0.0399444976546575,Second quintile,Services,40.233108444564
+AT,0.0399444976546575,Second quintile,Housing energy,6.60751586301001
+AT,0.0399444976546575,Second quintile,Motor fuels and vehicle operation,8.461705604801
+AT,0.0399444976546575,Third quintile,Food products,19.9390660697947
+AT,0.0399444976546575,Third quintile,Non-energy industrial goods,26.8693412343137
+AT,0.0399444976546575,Third quintile,Services,38.8110848273804
+AT,0.0399444976546575,Third quintile,Housing energy,5.63373361511848
+AT,0.0399444976546575,Third quintile,Motor fuels and vehicle operation,8.74677425164536
+AT,0.0399444976546575,Fourth quintile,Food products,17.6335633612607
+AT,0.0399444976546575,Fourth quintile,Non-energy industrial goods,29.4225694737207
+AT,0.0399444976546575,Fourth quintile,Services,38.3085361598233
+AT,0.0399444976546575,Fourth quintile,Housing energy,5.03234739377105
+AT,0.0399444976546575,Fourth quintile,Motor fuels and vehicle operation,9.60298361041779
+AT,0.0399444976546575,Fifth quintile,Food products,15.7644276326685
+AT,0.0399444976546575,Fifth quintile,Non-energy industrial goods,30.2827486836348
+AT,0.0399444976546575,Fifth quintile,Services,40.4172395345278
+AT,0.0399444976546575,Fifth quintile,Housing energy,4.36425836792036
+AT,0.0399444976546575,Fifth quintile,Motor fuels and vehicle operation,9.17132578457304
+BE,0.0496574080895896,First quintile,Food products,26.4599088220472
+BE,0.0496574080895896,First quintile,Non-energy industrial goods,19.4247006221721
+BE,0.0496574080895896,First quintile,Services,37.5089359494233
+BE,0.0496574080895896,First quintile,Housing energy,10.8014982153373
+BE,0.0496574080895896,First quintile,Motor fuels and vehicle operation,5.80495639252948
+BE,0.0496574080895896,Second quintile,Food products,26.2849296134252
+BE,0.0496574080895896,Second quintile,Non-energy industrial goods,22.3203101453801
+BE,0.0496574080895896,Second quintile,Services,33.5835548912273
+BE,0.0496574080895896,Second quintile,Housing energy,9.98445214176071
+BE,0.0496574080895896,Second quintile,Motor fuels and vehicle operation,7.82675320785215
+BE,0.0496574080895896,Third quintile,Food products,24.9248969348713
+BE,0.0496574080895896,Third quintile,Non-energy industrial goods,24.2252331128871
+BE,0.0496574080895896,Third quintile,Services,34.8317694358402
+BE,0.0496574080895896,Third quintile,Housing energy,9.08758485392966
+BE,0.0496574080895896,Third quintile,Motor fuels and vehicle operation,6.9305156630845
+BE,0.0496574080895896,Fourth quintile,Food products,23.5132719156886
+BE,0.0496574080895896,Fourth quintile,Non-energy industrial goods,28.4748419147598
+BE,0.0496574080895896,Fourth quintile,Services,32.7373231442112
+BE,0.0496574080895896,Fourth quintile,Housing energy,7.60121049521125
+BE,0.0496574080895896,Fourth quintile,Motor fuels and vehicle operation,7.67335252971385
+BE,0.0496574080895896,Fifth quintile,Food products,22.1623018964775
+BE,0.0496574080895896,Fifth quintile,Non-energy industrial goods,28.855630946276
+BE,0.0496574080895896,Fifth quintile,Services,36.1978247983063
+BE,0.0496574080895896,Fifth quintile,Housing energy,6.3577550195185
+BE,0.0496574080895896,Fifth quintile,Motor fuels and vehicle operation,6.42648733901748
+CY,0.00271372086740834,First quintile,Food products,36.998752956572
+CY,0.00271372086740834,First quintile,Non-energy industrial goods,14.6998435258054
+CY,0.00271372086740834,First quintile,Services,33.1463835642355
+CY,0.00271372086740834,First quintile,Housing energy,5.95346673076841
+CY,0.00271372086740834,First quintile,Motor fuels and vehicle operation,9.20155322259509
+CY,0.00271372086740834,Second quintile,Food products,31.0859421907091
+CY,0.00271372086740834,Second quintile,Non-energy industrial goods,17.0043617648163
+CY,0.00271372086740834,Second quintile,Services,36.964964749049
+CY,0.00271372086740834,Second quintile,Housing energy,5.29921417177844
+CY,0.00271372086740834,Second quintile,Motor fuels and vehicle operation,9.64551712335881
+CY,0.00271372086740834,Third quintile,Food products,24.5666411288678
+CY,0.00271372086740834,Third quintile,Non-energy industrial goods,19.706994886636
+CY,0.00271372086740834,Third quintile,Services,41.7187315083797
+CY,0.00271372086740834,Third quintile,Housing energy,4.49912373972622
+CY,0.00271372086740834,Third quintile,Motor fuels and vehicle operation,9.50850873649462
+CY,0.00271372086740834,Fourth quintile,Food products,19.9993361505618
+CY,0.00271372086740834,Fourth quintile,Non-energy industrial goods,21.3321871995319
+CY,0.00271372086740834,Fourth quintile,Services,46.2259399216277
+CY,0.00271372086740834,Fourth quintile,Housing energy,3.9569547119252
+CY,0.00271372086740834,Fourth quintile,Motor fuels and vehicle operation,8.48558201635225
+CY,0.00271372086740834,Fifth quintile,Food products,14.5910443888717
+CY,0.00271372086740834,Fifth quintile,Non-energy industrial goods,22.0409093293183
+CY,0.00271372086740834,Fifth quintile,Services,53.0799439270585
+CY,0.00271372086740834,Fifth quintile,Housing energy,3.54519396237678
+CY,0.00271372086740834,Fifth quintile,Motor fuels and vehicle operation,6.74290839242477
+DE,0.344888135759719,First quintile,Food products,25.4177379279101
+DE,0.344888135759719,First quintile,Non-energy industrial goods,19.7738458079913
+DE,0.344888135759719,First quintile,Services,35.0791081021131
+DE,0.344888135759719,First quintile,Housing energy,13.5509092907968
+DE,0.344888135759719,First quintile,Motor fuels and vehicle operation,6.17839887302843
+DE,0.344888135759719,Second quintile,Food products,22.3349398412615
+DE,0.344888135759719,Second quintile,Non-energy industrial goods,22.2175802437228
+DE,0.344888135759719,Second quintile,Services,35.3433748352767
+DE,0.344888135759719,Second quintile,Housing energy,11.4196938933908
+DE,0.344888135759719,Second quintile,Motor fuels and vehicle operation,8.68441118791897
+DE,0.344888135759719,Third quintile,Food products,20.7146824400736
+DE,0.344888135759719,Third quintile,Non-energy industrial goods,25.0426295102569
+DE,0.344888135759719,Third quintile,Services,34.6399208999283
+DE,0.344888135759719,Third quintile,Housing energy,10.116033280352
+DE,0.344888135759719,Third quintile,Motor fuels and vehicle operation,9.48673386897213
+DE,0.344888135759719,Fourth quintile,Food products,19.588983183984
+DE,0.344888135759719,Fourth quintile,Non-energy industrial goods,25.9147553614233
+DE,0.344888135759719,Fourth quintile,Services,35.6089148181341
+DE,0.344888135759719,Fourth quintile,Housing energy,8.8560976638974
+DE,0.344888135759719,Fourth quintile,Motor fuels and vehicle operation,10.0312489739503
+DE,0.344888135759719,Fifth quintile,Food products,16.409778540767
+DE,0.344888135759719,Fifth quintile,Non-energy industrial goods,30.1988251938787
+DE,0.344888135759719,Fifth quintile,Services,35.9787833400433
+DE,0.344888135759719,Fifth quintile,Housing energy,6.81940151532267
+DE,0.344888135759719,Fifth quintile,Motor fuels and vehicle operation,10.5932114082819
+EE,0.00306981998575604,First quintile,Food products,33.0688434962408
+EE,0.00306981998575604,First quintile,Non-energy industrial goods,20.2849704241668
+EE,0.00306981998575604,First quintile,Services,24.2659751079324
+EE,0.00306981998575604,First quintile,Housing energy,16.9180323738483
+EE,0.00306981998575604,First quintile,Motor fuels and vehicle operation,5.46217859842321
+EE,0.00306981998575604,Second quintile,Food products,30.307153002273
+EE,0.00306981998575604,Second quintile,Non-energy industrial goods,23.5799926500552
+EE,0.00306981998575604,Second quintile,Services,25.6696834206331
+EE,0.00306981998575604,Second quintile,Housing energy,12.7632419103053
+EE,0.00306981998575604,Second quintile,Motor fuels and vehicle operation,7.67992901715734
+EE,0.00306981998575604,Third quintile,Food products,29.7220904030412
+EE,0.00306981998575604,Third quintile,Non-energy industrial goods,23.4140148938202
+EE,0.00306981998575604,Third quintile,Services,27.8234557075896
+EE,0.00306981998575604,Third quintile,Housing energy,10.5281926482029
+EE,0.00306981998575604,Third quintile,Motor fuels and vehicle operation,8.51224634740386
+EE,0.00306981998575604,Fourth quintile,Food products,27.4263060741403
+EE,0.00306981998575604,Fourth quintile,Non-energy industrial goods,24.4930630797854
+EE,0.00306981998575604,Fourth quintile,Services,29.119667875414
+EE,0.00306981998575604,Fourth quintile,Housing energy,9.92141208527862
+EE,0.00306981998575604,Fourth quintile,Motor fuels and vehicle operation,9.03955088557217
+EE,0.00306981998575604,Fifth quintile,Food products,22.8744635095897
+EE,0.00306981998575604,Fifth quintile,Non-energy industrial goods,28.8551323091041
+EE,0.00306981998575604,Fifth quintile,Services,32.5063977238977
+EE,0.00306981998575604,Fifth quintile,Housing energy,8.01423754737035
+EE,0.00306981998575604,Fifth quintile,Motor fuels and vehicle operation,7.74976890955016
+EL,0.0265355239568752,First quintile,Food products,31.962368364855
+EL,0.0265355239568752,First quintile,Non-energy industrial goods,15.3520258777553
+EL,0.0265355239568752,First quintile,Services,38.7404749571725
+EL,0.0265355239568752,First quintile,Housing energy,10.8097519097769
+EL,0.0265355239568752,First quintile,Motor fuels and vehicle operation,3.13537888757843
+EL,0.0265355239568752,Second quintile,Food products,32.1271156245576
+EL,0.0265355239568752,Second quintile,Non-energy industrial goods,15.2625210681889
+EL,0.0265355239568752,Second quintile,Services,38.0966982403634
+EL,0.0265355239568752,Second quintile,Housing energy,9.81816906515181
+EL,0.0265355239568752,Second quintile,Motor fuels and vehicle operation,4.69549599936606
+EL,0.0265355239568752,Third quintile,Food products,28.4087252562351
+EL,0.0265355239568752,Third quintile,Non-energy industrial goods,17.1047048468158
+EL,0.0265355239568752,Third quintile,Services,40.3256033594344
+EL,0.0265355239568752,Third quintile,Housing energy,8.42365719451343
+EL,0.0265355239568752,Third quintile,Motor fuels and vehicle operation,5.73730934188054
+EL,0.0265355239568752,Fourth quintile,Food products,26.6369794660342
+EL,0.0265355239568752,Fourth quintile,Non-energy industrial goods,18.7712900194165
+EL,0.0265355239568752,Fourth quintile,Services,41.0515858117711
+EL,0.0265355239568752,Fourth quintile,Housing energy,6.91751066785468
+EL,0.0265355239568752,Fourth quintile,Motor fuels and vehicle operation,6.6226340353244
+EL,0.0265355239568752,Fifth quintile,Food products,22.0514127088412
+EL,0.0265355239568752,Fifth quintile,Non-energy industrial goods,19.907893024376
+EL,0.0265355239568752,Fifth quintile,Services,46.6348879113031
+EL,0.0265355239568752,Fifth quintile,Housing energy,5.27489714322693
+EL,0.0265355239568752,Fifth quintile,Motor fuels and vehicle operation,6.1309092144169
+ES,0.135489574891328,First quintile,Food products,33.4539493819466
+ES,0.135489574891328,First quintile,Non-energy industrial goods,15.5421248270954
+ES,0.135489574891328,First quintile,Services,33.8814783815909
+ES,0.135489574891328,First quintile,Housing energy,8.91137803110359
+ES,0.135489574891328,First quintile,Motor fuels and vehicle operation,8.21106937892106
+ES,0.135489574891328,Second quintile,Food products,29.4475644035209
+ES,0.135489574891328,Second quintile,Non-energy industrial goods,17.8084842179588
+ES,0.135489574891328,Second quintile,Services,35.5508528888357
+ES,0.135489574891328,Second quintile,Housing energy,7.37180182773992
+ES,0.135489574891328,Second quintile,Motor fuels and vehicle operation,9.82129666322143
+ES,0.135489574891328,Third quintile,Food products,27.3232333684423
+ES,0.135489574891328,Third quintile,Non-energy industrial goods,19.1164174248906
+ES,0.135489574891328,Third quintile,Services,36.763042496541
+ES,0.135489574891328,Third quintile,Housing energy,6.74321708770682
+ES,0.135489574891328,Third quintile,Motor fuels and vehicle operation,10.0540896218909
+ES,0.135489574891328,Fourth quintile,Food products,25.7627615780056
+ES,0.135489574891328,Fourth quintile,Non-energy industrial goods,19.8751872335708
+ES,0.135489574891328,Fourth quintile,Services,39.2104300354098
+ES,0.135489574891328,Fourth quintile,Housing energy,6.21760641882837
+ES,0.135489574891328,Fourth quintile,Motor fuels and vehicle operation,8.93401473355395
+ES,0.135489574891328,Fifth quintile,Food products,21.9425210122704
+ES,0.135489574891328,Fifth quintile,Non-energy industrial goods,19.2131330917374
+ES,0.135489574891328,Fifth quintile,Services,45.0304894125636
+ES,0.135489574891328,Fifth quintile,Housing energy,5.3260148336878
+ES,0.135489574891328,Fifth quintile,Motor fuels and vehicle operation,8.48784164971664
+FI,0.0238586409292959,First quintile,Food products,31.5867512156969
+FI,0.0238586409292959,First quintile,Non-energy industrial goods,23.2455753002353
+FI,0.0238586409292959,First quintile,Services,34.2166305497288
+FI,0.0238586409292959,First quintile,Housing energy,4.49202249814353
+FI,0.0238586409292959,First quintile,Motor fuels and vehicle operation,6.4590204355933
+FI,0.0238586409292959,Second quintile,Food products,23.6523660721923
+FI,0.0238586409292959,Second quintile,Non-energy industrial goods,25.8659539396261
+FI,0.0238586409292959,Second quintile,Services,36.1258648115208
+FI,0.0238586409292959,Second quintile,Housing energy,6.24806129177871
+FI,0.0238586409292959,Second quintile,Motor fuels and vehicle operation,8.10775388528539
+FI,0.0238586409292959,Third quintile,Food products,24.92989257935
+FI,0.0238586409292959,Third quintile,Non-energy industrial goods,25.3986336449869
+FI,0.0238586409292959,Third quintile,Services,33.9847854965305
+FI,0.0238586409292959,Third quintile,Housing energy,6.32318457626442
+FI,0.0238586409292959,Third quintile,Motor fuels and vehicle operation,9.36350370207607
+FI,0.0238586409292959,Fourth quintile,Food products,23.5129062913557
+FI,0.0238586409292959,Fourth quintile,Non-energy industrial goods,26.577857765921
+FI,0.0238586409292959,Fourth quintile,Services,35.3201326728286
+FI,0.0238586409292959,Fourth quintile,Housing energy,5.89320296305774
+FI,0.0238586409292959,Fourth quintile,Motor fuels and vehicle operation,8.69590030691019
+FI,0.0238586409292959,Fifth quintile,Food products,20.2722997007338
+FI,0.0238586409292959,Fifth quintile,Non-energy industrial goods,28.5217479474656
+FI,0.0238586409292959,Fifth quintile,Services,35.2972703557916
+FI,0.0238586409292959,Fifth quintile,Housing energy,5.99265362807627
+FI,0.0238586409292959,Fifth quintile,Motor fuels and vehicle operation,9.91602836825957
+FR,0.250042977479801,First quintile,Food products,26.3043507008174
+FR,0.250042977479801,First quintile,Non-energy industrial goods,21.3642587990669
+FR,0.250042977479801,First quintile,Services,33.120930042899
+FR,0.250042977479801,First quintile,Housing energy,9.14834030056489
+FR,0.250042977479801,First quintile,Motor fuels and vehicle operation,10.0621201561679
+FR,0.250042977479801,Second quintile,Food products,25.4170242228398
+FR,0.250042977479801,Second quintile,Non-energy industrial goods,21.4463756264181
+FR,0.250042977479801,Second quintile,Services,33.5313446449696
+FR,0.250042977479801,Second quintile,Housing energy,8.53458201079241
+FR,0.250042977479801,Second quintile,Motor fuels and vehicle operation,11.0706734945007
+FR,0.250042977479801,Third quintile,Food products,24.8363356396803
+FR,0.250042977479801,Third quintile,Non-energy industrial goods,21.9631414194061
+FR,0.250042977479801,Third quintile,Services,33.609356594366
+FR,0.250042977479801,Third quintile,Housing energy,7.3798372317594
+FR,0.250042977479801,Third quintile,Motor fuels and vehicle operation,12.2113291145612
+FR,0.250042977479801,Fourth quintile,Food products,23.1007566740472
+FR,0.250042977479801,Fourth quintile,Non-energy industrial goods,24.5085550997944
+FR,0.250042977479801,Fourth quintile,Services,34.4154760967757
+FR,0.250042977479801,Fourth quintile,Housing energy,6.45110170920626
+FR,0.250042977479801,Fourth quintile,Motor fuels and vehicle operation,11.5241104203512
+FR,0.250042977479801,Fifth quintile,Food products,19.3834320659777
+FR,0.250042977479801,Fifth quintile,Non-energy industrial goods,26.0864023842198
+FR,0.250042977479801,Fifth quintile,Services,38.5063438477274
+FR,0.250042977479801,Fifth quintile,Housing energy,5.55260467547204
+FR,0.250042977479801,Fifth quintile,Motor fuels and vehicle operation,10.4712170269193
+HR,0.0082885139615413,First quintile,Food products,43.4607969690489
+HR,0.0082885139615413,First quintile,Non-energy industrial goods,13.857880226667
+HR,0.0082885139615413,First quintile,Services,23.8479204061749
+HR,0.0082885139615413,First quintile,Housing energy,15.3683889453948
+HR,0.0082885139615413,First quintile,Motor fuels and vehicle operation,3.46501345241233
+HR,0.0082885139615413,Second quintile,Food products,35.985813326936
+HR,0.0082885139615413,Second quintile,Non-energy industrial goods,17.3043021790694
+HR,0.0082885139615413,Second quintile,Services,28.6578553520112
+HR,0.0082885139615413,Second quintile,Housing energy,11.4014538248969
+HR,0.0082885139615413,Second quintile,Motor fuels and vehicle operation,6.65057531690287
+HR,0.0082885139615413,Third quintile,Food products,29.9295063157121
+HR,0.0082885139615413,Third quintile,Non-energy industrial goods,20.5250001741244
+HR,0.0082885139615413,Third quintile,Services,33.2059781625967
+HR,0.0082885139615413,Third quintile,Housing energy,8.8140574822683
+HR,0.0082885139615413,Third quintile,Motor fuels and vehicle operation,7.52545786509475
+HR,0.0082885139615413,Fourth quintile,Food products,26.7432107233056
+HR,0.0082885139615413,Fourth quintile,Non-energy industrial goods,20.1666729775522
+HR,0.0082885139615413,Fourth quintile,Services,36.9322425827451
+HR,0.0082885139615413,Fourth quintile,Housing energy,7.50664454940849
+HR,0.0082885139615413,Fourth quintile,Motor fuels and vehicle operation,8.65122916727515
+HR,0.0082885139615413,Fifth quintile,Food products,23.8878966950719
+HR,0.0082885139615413,Fifth quintile,Non-energy industrial goods,23.1405978068889
+HR,0.0082885139615413,Fifth quintile,Services,37.7545456988423
+HR,0.0082885139615413,Fifth quintile,Housing energy,6.62301416690274
+HR,0.0082885139615413,Fifth quintile,Motor fuels and vehicle operation,8.59394563235281
+IE,0.0181487757557897,First quintile,Food products,27.2421048663943
+IE,0.0181487757557897,First quintile,Non-energy industrial goods,17.6694421425428
+IE,0.0181487757557897,First quintile,Services,38.5540384163444
+IE,0.0181487757557897,First quintile,Housing energy,9.57029686332583
+IE,0.0181487757557897,First quintile,Motor fuels and vehicle operation,6.96411771098509
+IE,0.0181487757557897,Second quintile,Food products,26.1533338187276
+IE,0.0181487757557897,Second quintile,Non-energy industrial goods,21.3299372514824
+IE,0.0181487757557897,Second quintile,Services,38.3897092440881
+IE,0.0181487757557897,Second quintile,Housing energy,7.37112002880298
+IE,0.0181487757557897,Second quintile,Motor fuels and vehicle operation,6.75589965635363
+IE,0.0181487757557897,Third quintile,Food products,21.1009360592441
+IE,0.0181487757557897,Third quintile,Non-energy industrial goods,19.8671607983111
+IE,0.0181487757557897,Third quintile,Services,45.8294762567
+IE,0.0181487757557897,Third quintile,Housing energy,5.75134802960935
+IE,0.0181487757557897,Third quintile,Motor fuels and vehicle operation,7.45107885632353
+IE,0.0181487757557897,Fourth quintile,Food products,17.6160472256811
+IE,0.0181487757557897,Fourth quintile,Non-energy industrial goods,22.5384324668293
+IE,0.0181487757557897,Fourth quintile,Services,47.6615086746861
+IE,0.0181487757557897,Fourth quintile,Housing energy,4.99476710846768
+IE,0.0181487757557897,Fourth quintile,Motor fuels and vehicle operation,7.18924452433776
+IE,0.0181487757557897,Fifth quintile,Food products,15.7655987634768
+IE,0.0181487757557897,Fifth quintile,Non-energy industrial goods,20.6949446330797
+IE,0.0181487757557897,Fifth quintile,Services,54.0321345120642
+IE,0.0181487757557897,Fifth quintile,Housing energy,3.5086729728575
+IE,0.0181487757557897,Fifth quintile,Motor fuels and vehicle operation,5.99864911876162
+LT,0.00726933372627029,First quintile,Food products,35.8576317574225
+LT,0.00726933372627029,First quintile,Non-energy industrial goods,24.2612130858773
+LT,0.00726933372627029,First quintile,Services,21.7960167822867
+LT,0.00726933372627029,First quintile,Housing energy,10.2362882238933
+LT,0.00726933372627029,First quintile,Motor fuels and vehicle operation,7.84885014931232
+LT,0.00726933372627029,Second quintile,Food products,29.8082038573328
+LT,0.00726933372627029,Second quintile,Non-energy industrial goods,27.6053806488175
+LT,0.00726933372627029,Second quintile,Services,25.0339077752648
+LT,0.00726933372627029,Second quintile,Housing energy,8.21804810098895
+LT,0.00726933372627029,Second quintile,Motor fuels and vehicle operation,9.33445961679514
+LT,0.00726933372627029,Third quintile,Food products,28.6814567801
+LT,0.00726933372627029,Third quintile,Non-energy industrial goods,26.3916500426602
+LT,0.00726933372627029,Third quintile,Services,26.8582099312119
+LT,0.00726933372627029,Third quintile,Housing energy,6.62609065156093
+LT,0.00726933372627029,Third quintile,Motor fuels and vehicle operation,11.4425925945102
+LT,0.00726933372627029,Fourth quintile,Food products,28.5533628899683
+LT,0.00726933372627029,Fourth quintile,Non-energy industrial goods,23.9372242447431
+LT,0.00726933372627029,Fourth quintile,Services,29.2178093071265
+LT,0.00726933372627029,Fourth quintile,Housing energy,6.457255324856
+LT,0.00726933372627029,Fourth quintile,Motor fuels and vehicle operation,11.8343482330938
+LT,0.00726933372627029,Fifth quintile,Food products,23.4912654501921
+LT,0.00726933372627029,Fifth quintile,Non-energy industrial goods,28.5299239047107
+LT,0.00726933372627029,Fifth quintile,Services,32.6258452840472
+LT,0.00726933372627029,Fifth quintile,Housing energy,4.28035307380993
+LT,0.00726933372627029,Fifth quintile,Motor fuels and vehicle operation,11.0726122879983
+LU,0.0042240723004003,First quintile,Food products,36.1342874414415
+LU,0.0042240723004003,First quintile,Non-energy industrial goods,18.7449948042891
+LU,0.0042240723004003,First quintile,Services,26.8699765552134
+LU,0.0042240723004003,First quintile,Housing energy,5.36290721978357
+LU,0.0042240723004003,First quintile,Motor fuels and vehicle operation,12.8878339813045
+LU,0.0042240723004003,Second quintile,Food products,27.9158648711153
+LU,0.0042240723004003,Second quintile,Non-energy industrial goods,26.2303549055915
+LU,0.0042240723004003,Second quintile,Services,26.9636362373914
+LU,0.0042240723004003,Second quintile,Housing energy,4.12418869310986
+LU,0.0042240723004003,Second quintile,Motor fuels and vehicle operation,14.7659552934305
+LU,0.0042240723004003,Third quintile,Food products,26.5880453974933
+LU,0.0042240723004003,Third quintile,Non-energy industrial goods,23.6291109468137
+LU,0.0042240723004003,Third quintile,Services,31.7651097170691
+LU,0.0042240723004003,Third quintile,Housing energy,4.06613672414203
+LU,0.0042240723004003,Third quintile,Motor fuels and vehicle operation,13.9515972147469
+LU,0.0042240723004003,Fourth quintile,Food products,22.4823566476101
+LU,0.0042240723004003,Fourth quintile,Non-energy industrial goods,24.8355244011474
+LU,0.0042240723004003,Fourth quintile,Services,34.9546144473904
+LU,0.0042240723004003,Fourth quintile,Housing energy,4.12825229842283
+LU,0.0042240723004003,Fourth quintile,Motor fuels and vehicle operation,13.5992522048335
+LU,0.0042240723004003,Fifth quintile,Food products,19.7938490482666
+LU,0.0042240723004003,Fifth quintile,Non-energy industrial goods,25.2407910238658
+LU,0.0042240723004003,Fifth quintile,Services,38.8356479653425
+LU,0.0042240723004003,Fifth quintile,Housing energy,2.94411719574055
+LU,0.0042240723004003,Fifth quintile,Motor fuels and vehicle operation,13.1855947661155
+LV,0.00352415334364793,First quintile,Food products,45.7444035869829
+LV,0.00352415334364793,First quintile,Non-energy industrial goods,11.4781148287545
+LV,0.00352415334364793,First quintile,Services,19.367169377723
+LV,0.00352415334364793,First quintile,Housing energy,20.2242924821727
+LV,0.00352415334364793,First quintile,Motor fuels and vehicle operation,3.18601972646106
+LV,0.00352415334364793,Second quintile,Food products,44.2265390070167
+LV,0.00352415334364793,Second quintile,Non-energy industrial goods,11.037653093837
+LV,0.00352415334364793,Second quintile,Services,22.9985432248062
+LV,0.00352415334364793,Second quintile,Housing energy,14.5656171051993
+LV,0.00352415334364793,Second quintile,Motor fuels and vehicle operation,7.17164757141822
+LV,0.00352415334364793,Third quintile,Food products,39.341543390162
+LV,0.00352415334364793,Third quintile,Non-energy industrial goods,11.2206310934204
+LV,0.00352415334364793,Third quintile,Services,27.0127296309686
+LV,0.00352415334364793,Third quintile,Housing energy,11.9995412217017
+LV,0.00352415334364793,Third quintile,Motor fuels and vehicle operation,10.4255546641457
+LV,0.00352415334364793,Fourth quintile,Food products,39.4063218317354
+LV,0.00352415334364793,Fourth quintile,Non-energy industrial goods,12.1883690156385
+LV,0.00352415334364793,Fourth quintile,Services,25.9609857817111
+LV,0.00352415334364793,Fourth quintile,Housing energy,10.2692515145549
+LV,0.00352415334364793,Fourth quintile,Motor fuels and vehicle operation,12.175071856549
+LV,0.00352415334364793,Fifth quintile,Food products,32.7422069369476
+LV,0.00352415334364793,Fifth quintile,Non-energy industrial goods,12.9425705094093
+LV,0.00352415334364793,Fifth quintile,Services,32.5387617019085
+LV,0.00352415334364793,Fifth quintile,Housing energy,8.30850245690197
+LV,0.00352415334364793,Fifth quintile,Motor fuels and vehicle operation,13.4679583934549
+MT,0.00126476583413149,First quintile,Food products,30.6334166366657
+MT,0.00126476583413149,First quintile,Non-energy industrial goods,18.4356277305468
+MT,0.00126476583413149,First quintile,Services,41.8462287932835
+MT,0.00126476583413149,First quintile,Housing energy,4.0007585884156
+MT,0.00126476583413149,First quintile,Motor fuels and vehicle operation,5.08396824918027
+MT,0.00126476583413149,Second quintile,Food products,28.9444387769991
+MT,0.00126476583413149,Second quintile,Non-energy industrial goods,19.9269537591516
+MT,0.00126476583413149,Second quintile,Services,41.0788235000915
+MT,0.00126476583413149,Second quintile,Housing energy,3.89620096372665
+MT,0.00126476583413149,Second quintile,Motor fuels and vehicle operation,6.15358299764928
+MT,0.00126476583413149,Third quintile,Food products,23.5950040554611
+MT,0.00126476583413149,Third quintile,Non-energy industrial goods,22.2294613781885
+MT,0.00126476583413149,Third quintile,Services,44.4805139613833
+MT,0.00126476583413149,Third quintile,Housing energy,2.95260070488457
+MT,0.00126476583413149,Third quintile,Motor fuels and vehicle operation,6.74241989968429
+MT,0.00126476583413149,Fourth quintile,Food products,20.4728453891506
+MT,0.00126476583413149,Fourth quintile,Non-energy industrial goods,24.4906083844696
+MT,0.00126476583413149,Fourth quintile,Services,45.9346412853436
+MT,0.00126476583413149,Fourth quintile,Housing energy,2.55050052947492
+MT,0.00126476583413149,Fourth quintile,Motor fuels and vehicle operation,6.55140441217731
+MT,0.00126476583413149,Fifth quintile,Food products,17.5507790295665
+MT,0.00126476583413149,Fifth quintile,Non-energy industrial goods,25.3963611913477
+MT,0.00126476583413149,Fifth quintile,Services,47.7887225828842
+MT,0.00126476583413149,Fifth quintile,Housing energy,2.13292235330612
+MT,0.00126476583413149,Fifth quintile,Motor fuels and vehicle operation,7.13121484429256
+NL,0.0657432648149513,First quintile,Food products,27.5683837169409
+NL,0.0657432648149513,First quintile,Non-energy industrial goods,24.749801377931
+NL,0.0657432648149513,First quintile,Services,32.4934040376692
+NL,0.0657432648149513,First quintile,Housing energy,11.0178387750161
+NL,0.0657432648149513,First quintile,Motor fuels and vehicle operation,4.17057209301875
+NL,0.0657432648149513,Second quintile,Food products,24.2642253474488
+NL,0.0657432648149513,Second quintile,Non-energy industrial goods,27.2549557638055
+NL,0.0657432648149513,Second quintile,Services,31.9878570259748
+NL,0.0657432648149513,Second quintile,Housing energy,9.73971991494581
+NL,0.0657432648149513,Second quintile,Motor fuels and vehicle operation,6.7532419482325
+NL,0.0657432648149513,Third quintile,Food products,22.3352151826965
+NL,0.0657432648149513,Third quintile,Non-energy industrial goods,27.1780532081645
+NL,0.0657432648149513,Third quintile,Services,33.5437590088744
+NL,0.0657432648149513,Third quintile,Housing energy,8.37430776045499
+NL,0.0657432648149513,Third quintile,Motor fuels and vehicle operation,8.56866483990229
+NL,0.0657432648149513,Fourth quintile,Food products,19.979732023304
+NL,0.0657432648149513,Fourth quintile,Non-energy industrial goods,30.7118775934183
+NL,0.0657432648149513,Fourth quintile,Services,33.2544397236878
+NL,0.0657432648149513,Fourth quintile,Housing energy,7.42263253222397
+NL,0.0657432648149513,Fourth quintile,Motor fuels and vehicle operation,8.63131812725406
+NL,0.0657432648149513,Fifth quintile,Food products,17.7261514551401
+NL,0.0657432648149513,Fifth quintile,Non-energy industrial goods,31.3879498053652
+NL,0.0657432648149513,Fifth quintile,Services,34.1622708402015
+NL,0.0657432648149513,Fifth quintile,Housing energy,6.02121248508449
+NL,0.0657432648149513,Fifth quintile,Motor fuels and vehicle operation,10.70241541389
+SI,0.00516957685601316,First quintile,Food products,32.9085164941333
+SI,0.00516957685601316,First quintile,Non-energy industrial goods,19.5295186054765
+SI,0.00516957685601316,First quintile,Services,29.3727860554888
+SI,0.00516957685601316,First quintile,Housing energy,11.4572799057009
+SI,0.00516957685601316,First quintile,Motor fuels and vehicle operation,6.73189893923313
+SI,0.00516957685601316,Second quintile,Food products,27.8507264282503
+SI,0.00516957685601316,Second quintile,Non-energy industrial goods,24.4105515574567
+SI,0.00516957685601316,Second quintile,Services,29.7045997753083
+SI,0.00516957685601316,Second quintile,Housing energy,9.28012962254452
+SI,0.00516957685601316,Second quintile,Motor fuels and vehicle operation,8.75399261617378
+SI,0.00516957685601316,Third quintile,Food products,23.9142123624224
+SI,0.00516957685601316,Third quintile,Non-energy industrial goods,26.8040360643659
+SI,0.00516957685601316,Third quintile,Services,30.9842644648236
+SI,0.00516957685601316,Third quintile,Housing energy,7.91552536488274
+SI,0.00516957685601316,Third quintile,Motor fuels and vehicle operation,10.3819617439085
+SI,0.00516957685601316,Fourth quintile,Food products,21.322383942199
+SI,0.00516957685601316,Fourth quintile,Non-energy industrial goods,28.3675187555195
+SI,0.00516957685601316,Fourth quintile,Services,32.9222123862903
+SI,0.00516957685601316,Fourth quintile,Housing energy,6.51541611785521
+SI,0.00516957685601316,Fourth quintile,Motor fuels and vehicle operation,10.8724687977871
+SI,0.00516957685601316,Fifth quintile,Food products,18.3762408869039
+SI,0.00516957685601316,Fifth quintile,Non-energy industrial goods,29.3396258711082
+SI,0.00516957685601316,Fifth quintile,Services,35.6989588747365
+SI,0.00516957685601316,Fifth quintile,Housing energy,5.62900529532294
+SI,0.00516957685601316,Fifth quintile,Motor fuels and vehicle operation,10.9561690720525
+SK,0.010167243792824,First quintile,Food products,32.7118757510094
+SK,0.010167243792824,First quintile,Non-energy industrial goods,19.8220087109342
+SK,0.010167243792824,First quintile,Services,28.1101578283769
+SK,0.010167243792824,First quintile,Housing energy,17.3745679332156
+SK,0.010167243792824,First quintile,Motor fuels and vehicle operation,1.9813897763854
+SK,0.010167243792824,Second quintile,Food products,30.5961177926379
+SK,0.010167243792824,Second quintile,Non-energy industrial goods,24.0016307382572
+SK,0.010167243792824,Second quintile,Services,28.3076630238416
+SK,0.010167243792824,Second quintile,Housing energy,13.6612615257159
+SK,0.010167243792824,Second quintile,Motor fuels and vehicle operation,3.43332691962807
+SK,0.010167243792824,Third quintile,Food products,29.7835342438332
+SK,0.010167243792824,Third quintile,Non-energy industrial goods,23.8423794469765
+SK,0.010167243792824,Third quintile,Services,29.794382279038
+SK,0.010167243792824,Third quintile,Housing energy,11.829998658029
+SK,0.010167243792824,Third quintile,Motor fuels and vehicle operation,4.74970537179214
+SK,0.010167243792824,Fourth quintile,Food products,28.8712349050666
+SK,0.010167243792824,Fourth quintile,Non-energy industrial goods,24.8437694885463
+SK,0.010167243792824,Fourth quintile,Services,30.5147167902574
+SK,0.010167243792824,Fourth quintile,Housing energy,11.1437327160447
+SK,0.010167243792824,Fourth quintile,Motor fuels and vehicle operation,4.62654610016162
+SK,0.010167243792824,Fifth quintile,Food products,28.771779235654
+SK,0.010167243792824,Fifth quintile,Non-energy industrial goods,22.773272138805
+SK,0.010167243792824,Fifth quintile,Services,33.1993978968223
+SK,0.010167243792824,Fifth quintile,Housing energy,10.6803807485808
+SK,0.010167243792824,Fifth quintile,Motor fuels and vehicle operation,4.57516998029904

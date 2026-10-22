@@ -1,0 +1,26 @@
+income_quintile,product_group,share,countries,income_label
+First quintile,Services,34.2951154471774,18,Q1
+First quintile,Non-energy industrial goods,19.9358902731898,18,Q1
+First quintile,Motor fuels and vehicle operation,7.19572603412797,18,Q1
+First quintile,Housing energy,10.8919414942815,18,Q1
+First quintile,Food products,27.6813267517272,18,Q1
+Second quintile,Services,34.6247614436354,18,Q2
+Second quintile,Non-energy industrial goods,21.7349592250535,18,Q2
+Second quintile,Motor fuels and vehicle operation,9.05358276113586,18,Q2
+Second quintile,Housing energy,9.4831198766875,18,Q2
+Second quintile,Food products,25.1035766939695,18,Q2
+Third quintile,Services,34.9473822772834,18,Q3
+Third quintile,Non-energy industrial goods,23.2379264837469,18,Q3
+Third quintile,Motor fuels and vehicle operation,9.85883581136318,18,Q3
+Third quintile,Housing energy,8.3435858749655,18,Q3
+Third quintile,Food products,23.6122695522901,18,Q3
+Fourth quintile,Services,35.8492060809088,18,Q4
+Fourth quintile,Non-energy industrial goods,24.9606973318802,18,Q4
+Fourth quintile,Motor fuels and vehicle operation,9.81780037786108,18,Q4
+Fourth quintile,Housing energy,7.34529925397072,18,Q4
+Fourth quintile,Food products,22.02699695576,18,Q4
+Fifth quintile,Services,38.5113599075308,18,Q5
+Fifth quintile,Non-energy industrial goods,26.9466867115655,18,Q5
+Fifth quintile,Motor fuels and vehicle operation,9.72810301587737,18,Q5
+Fifth quintile,Housing energy,5.99679577941477,18,Q5
+Fifth quintile,Food products,18.8170545852612,18,Q5
